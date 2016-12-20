@@ -1,0 +1,1911 @@
+/*********************************************
+  :: Conor's Css
+********************************************/
+.row-002 {
+  display: flex;
+  justify-content: center; }
+
+.row-002 button {
+  margin: 0 1em; }
+
+/*********************************************
+  :: Course Css
+********************************************/
+.hand-arrow,
+.courseProgressBar .fixed {
+  display: none; }
+
+/* Colors */
+.jba-btn:focus,
+.course-button:focus {
+  text-decoration: none; }
+
+a.disable {
+  pointer-events: none;
+  cursor: default; }
+
+#yep,
+#nope {
+  width: 100%; }
+
+.centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+/*********************************************
+  :: Branding-02
+********************************************/
+/* button no outline */
+.course-btn-no-outline {
+  outline: none;
+  border: none;
+  background: none; }
+
+@media screen and (max-width: 480px) {
+  .branding-02-image {
+    overflow: hidden;
+    height: 100px; } }
+
+/*********************************************
+  :: Branding-03
+********************************************/
+.course-lg-btn-no-outline {
+  outline: none;
+  border: none; }
+
+/*********************************************
+  :: Branding-08
+********************************************/
+.branding-08-phone-container {
+  pointer-events: none;
+  position: fixed;
+  height: calc(100%);
+  width: calc(100%);
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999999;
+  display: flex;
+  opacity: 0;
+  transition: .2s all;
+  align-items: center;
+  justify-content: center; }
+  .branding-08-phone-container .branding-08-phone {
+    transition: .2s all;
+    transform: translateX(-100px);
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    max-height: 667px;
+    max-width: 375px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    @media (min-width: 1025px) {
+      .branding-08-phone-container .branding-08-phone {
+        height: 95%; } }
+    .branding-08-phone-container .branding-08-phone .branding-08-phone-status {
+      height: 4%;
+      width: 100%;
+      background: url("../img/course/brandingPhoneBar-01.png");
+      background-size: contain;
+      background-position: top;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: space-between; }
+      .branding-08-phone-container .branding-08-phone .branding-08-phone-status .branding-08-status-left p {
+        margin: 0 .5em; }
+      .branding-08-phone-container .branding-08-phone .branding-08-phone-status .branding-08-status-middle p {
+        margin-right: 4em; }
+      .branding-08-phone-container .branding-08-phone .branding-08-phone-status .branding-08-status-right {
+        margin-right: .5em; }
+      .branding-08-phone-container .branding-08-phone .branding-08-phone-status div {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding-left: .5em;
+        color: white; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-status div .fa-circle {
+          font-size: 8px; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-status div i {
+          padding: .1em; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-status div p {
+          margin-top: 10px;
+          font-size: 12px;
+          text-shadow: none; }
+    .branding-08-phone-container .branding-08-phone .branding-08-phone-content {
+      position: relative;
+      transition: .2s all;
+      height: 77%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center; }
+      .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image {
+        position: absolute;
+        top: 5%;
+        height: 60%;
+        width: 90%;
+        padding-top: 2em;
+        transition: .2s all;
+        display: flex;
+        flex-direction: column; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header {
+          transform: scale(0.8) translateY(100px);
+          transition: .3s all;
+          opacity: 0;
+          height: 20%;
+          display: flex; }
+          .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-profile {
+            height: 100%;
+            width: 24%;
+            background: url("../img/course/temo-16.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat; }
+          .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-content {
+            width: 76%;
+            height: 100%;
+            display: flex;
+            flex-direction: column; }
+            .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-content div {
+              display: flex;
+              flex-direction: column;
+              justify-content: center; }
+              .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-content div p {
+                margin: 0; }
+            .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-content .branding-08-cat-name {
+              height: 60%; }
+            .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-content .branding-08-cat-location {
+              height: 40%; }
+              .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-content .branding-08-cat-location p {
+                color: grey;
+                font-size: 12px; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-title {
+          height: 10%;
+          transform: scale(0.8) translateY(100px);
+          transition: .3s all;
+          opacity: 0; }
+          .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-title p {
+            padding-top: .5em;
+            font-size: 12px; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-actual-image {
+          height: 70%;
+          transition: .2s all;
+          background: url("../img/course/gif/cat.gif");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          margin-bottom: 1em; }
+      .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments {
+        height: 50%;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment {
+          transform: scale(0.8) translateY(100px);
+          transition: .3s all;
+          opacity: 0;
+          background: white;
+          height: 25%;
+          width: 100%;
+          display: flex;
+          border-top: 1px solid #F1E9E0;
+          border-bottom: 1px solid #F1E9E0; }
+          .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-profile {
+            height: 100%;
+            width: 24%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat; }
+          .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content {
+            display: flex;
+            height: 100%;
+            width: 76%;
+            background: white;
+            flex-direction: column; }
+            .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row {
+              height: 33.33%;
+              display: flex;
+              align-items: center; }
+              .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row p {
+                font-size: 12px;
+                margin: 0; }
+                .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row p span {
+                  color: grey;
+                  font-size: 10px; }
+              .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row span {
+                color: grey;
+                font-size: 10px;
+                margin: 0; }
+              .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row i {
+                color: grey; }
+              .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row .fa-circle {
+                font-size: 4px;
+                margin: 0 2em; }
+              .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row .fa-thumbs-up {
+                margin: 0 .2em;
+                margin-left: 1em;
+                transform: scale(1);
+                transition: .2s all; }
+              .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row .fa-thumbs-down {
+                margin: 0 .2em; }
+      .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-filter {
+        background: url("../img/course/gif/cat2.gif") !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important; }
+      .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-background-position {
+        background-position: bottom;
+        height: 50%; }
+    .branding-08-phone-container .branding-08-phone .branding-08-phone-button {
+      height: 20%;
+      width: 100%;
+      background: #69bccf;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .branding-08-phone-container .branding-08-phone .branding-08-phone-button .branding-08-slider {
+        width: 100%;
+        height: 100%; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-button .branding-08-slider .branding-08-slider-slides {
+          width: 33%; }
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 680px) and (orientation: landscape) {
+  .branding-08-phone-container {
+    pointer-events: none;
+    position: fixed;
+    height: calc(100%);
+    width: calc(100%);
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999999;
+    display: flex;
+    opacity: 0;
+    transition: .2s all;
+    align-items: center;
+    justify-content: center; }
+    .branding-08-phone-container .branding-08-phone {
+      transition: .2s all;
+      transform: translateX(-100px);
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      max-height: 667px;
+      max-width: 200px;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; } }
+    @media only screen and (min-device-width: 300px) and (max-device-width: 680px) and (orientation: landscape) and (min-width: 1025px) {
+      .branding-08-phone-container .branding-08-phone {
+        height: 95%; } }
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 680px) and (orientation: landscape) {
+      .branding-08-phone-container .branding-08-phone .branding-08-phone-status {
+        height: 4%;
+        width: 100%;
+        background: url("../img/course/brandingPhoneBar-01.png");
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-status .branding-08-status-left p {
+          margin: 0 .5em; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-status .branding-08-status-middle p {
+          margin-right: 4em; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-status .branding-08-status-right {
+          margin-right: .5em; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-status div {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          padding-left: .5em;
+          color: white; }
+          .branding-08-phone-container .branding-08-phone .branding-08-phone-status div .fa-circle {
+            font-size: 8px; }
+          .branding-08-phone-container .branding-08-phone .branding-08-phone-status div i {
+            padding: .1em; }
+          .branding-08-phone-container .branding-08-phone .branding-08-phone-status div p {
+            margin-top: 10px;
+            font-size: 12px;
+            text-shadow: none; }
+      .branding-08-phone-container .branding-08-phone .branding-08-phone-content {
+        position: relative;
+        transition: .2s all;
+        height: 77%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image {
+          position: absolute;
+          top: 5%;
+          height: 60%;
+          width: 90%;
+          padding-top: 0em;
+          transition: .2s all;
+          display: flex;
+          flex-direction: column; }
+          .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header {
+            transform: scale(0.8) translateY(100px);
+            transition: .3s all;
+            opacity: 0;
+            height: 25%;
+            display: flex; }
+            .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-profile {
+              height: 100%;
+              width: 24%;
+              background: url("../img/course/temo-16.png");
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat; }
+            .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-content {
+              width: 76%;
+              height: 100%;
+              display: flex;
+              flex-direction: column; }
+              .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-content div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center; }
+                .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-content div p {
+                  margin: 0; }
+              .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-content .branding-08-cat-name {
+                height: 40%;
+                font-size: 8px; }
+                .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-content .branding-08-cat-name p {
+                  font-size: 8px; }
+              .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-content .branding-08-cat-location {
+                height: 40%; }
+                .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-header .branding-08-cat-content .branding-08-cat-location p {
+                  color: grey;
+                  font-size: 8px; }
+          .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-title {
+            height: 10%;
+            transform: scale(0.8) translateY(100px);
+            transition: .3s all;
+            opacity: 0; }
+            .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-cat-title p {
+              padding-top: 0em;
+              padding: 0 2em;
+              font-size: 8px;
+              margin-top: 15px; }
+          .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image .branding-08-actual-image {
+            height: 70%;
+            transition: .2s all;
+            background: url("../img/course/gif/cat.gif");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            margin-bottom: 1em; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments {
+          height: 56%;
+          width: 100%;
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transform: translateY(28%); }
+          .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment {
+            transform: scale(0.8) translateY(100px);
+            transition: .3s all;
+            opacity: 0;
+            background: white;
+            height: 33%;
+            width: 100%;
+            display: flex;
+            border-top: 1px solid #F1E9E0;
+            border-bottom: 1px solid #F1E9E0; }
+            .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-profile {
+              height: 100%;
+              width: 24%;
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat; }
+            .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content {
+              display: flex;
+              height: 100%;
+              width: 76%;
+              background: white;
+              flex-direction: column; }
+              .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row {
+                height: 33.33%;
+                display: flex;
+                align-items: center; }
+                .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row p {
+                  font-size: 8px;
+                  margin: 0; }
+                  .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row p span {
+                    color: grey;
+                    font-size: 6px; }
+                .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row span {
+                  color: grey;
+                  font-size: 6px;
+                  margin: 0; }
+                .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row i {
+                  color: grey; }
+                .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row .fa-circle {
+                  font-size: 4px;
+                  margin: 0 2em; }
+                .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row .fa-thumbs-up {
+                  margin: 0 .2em;
+                  margin-left: 1em;
+                  transform: scale(1);
+                  transition: .2s all; }
+                .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-comments .branding-08-comment .branding-08-comment-content .branding-08-comment-row .fa-thumbs-down {
+                  margin: 0 .2em; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-filter {
+          background: url("../img/course/gif/cat2.gif") !important;
+          background-size: contain !important;
+          background-repeat: no-repeat !important;
+          background-position: center !important; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-background-position {
+          background-position: bottom;
+          height: 50%; }
+      .branding-08-phone-container .branding-08-phone .branding-08-phone-button {
+        height: 20%;
+        width: 100%;
+        background: #69bccf;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .branding-08-phone-container .branding-08-phone .branding-08-phone-button .branding-08-slider {
+          width: 100%;
+          height: 100%; }
+          .branding-08-phone-container .branding-08-phone .branding-08-phone-button .branding-08-slider .branding-08-slider-slides {
+            width: 33%; }
+            .branding-08-phone-container .branding-08-phone .branding-08-phone-button .branding-08-slider .branding-08-slider-slides img {
+              height: 50px;
+              width: auto; }
+  .branding-08-recording-container {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(40px) !important; }
+    .branding-08-recording-container .branding-08-recording-dot {
+      display: none;
+      height: 20px;
+      width: 20px;
+      background: red;
+      float: right;
+      border-radius: 1000px;
+      animation: recordingPulse 1.5s ease;
+      animation-iteration-count: infinite; } }
+
+@media screen and (max-width: 480px) {
+  .branding-08-recording-container {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100px) !important; }
+    .branding-08-recording-container .branding-08-recording-dot {
+      display: none;
+      height: 20px;
+      width: 20px;
+      background: red;
+      float: right;
+      border-radius: 1000px;
+      animation: recordingPulse 1.5s ease;
+      animation-iteration-count: infinite; }
+  .branding-08-cat-header {
+    transform: scale(0.8) translateY(100px);
+    transition: .3s all;
+    opacity: 0;
+    height: 25%;
+    display: flex; }
+    .branding-08-cat-header .branding-08-cat-profile {
+      height: 100%;
+      width: 24%;
+      background: url("../img/course/temo-16.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat; }
+    .branding-08-cat-header .branding-08-cat-content {
+      width: 76%;
+      height: 100%;
+      display: flex;
+      flex-direction: column; }
+      .branding-08-cat-header .branding-08-cat-content div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .branding-08-cat-header .branding-08-cat-content div p {
+          margin: 0; }
+    .branding-08-cat-header .branding-08-cat-name {
+      height: 40%;
+      font-size: 8px; }
+      .branding-08-cat-header .branding-08-cat-name p {
+        font-size: 8px; }
+    .branding-08-cat-header .branding-08-cat-location {
+      height: 40%; }
+      .branding-08-cat-header .branding-08-cat-location p {
+        color: grey;
+        font-size: 8px; }
+  .branding-08-cat-title {
+    height: 10%;
+    transform: scale(0.8) translateY(100px);
+    transition: .3s all;
+    opacity: 0; }
+    .branding-08-cat-title p {
+      padding-top: 0em;
+      padding: 0 2em;
+      font-size: 8px;
+      margin-top: 15px; } }
+
+.branding-08-actual-image {
+  height: 70%;
+  transition: .2s all;
+  background: url("../img/course/gif/cat.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 1em; }
+
+.branding-08-comment1 .branding-08-profile {
+  background-image: url("../img/course/profile1.png"); }
+
+.branding-08-comment2 .branding-08-profile {
+  background-image: url("../img/course/profile2.png"); }
+
+.branding-08-comment3 .branding-08-profile {
+  background-image: url("../img/course/profile3.png"); }
+
+.branding-08-button-hidden {
+  display: none; }
+
+.branding-08-button1 {
+  transition: .4s all;
+  transform: scale(0.5); }
+
+.branding-08-button2 {
+  transition: .4s all;
+  transform: scale(0.5); }
+
+.branding-08-button3 {
+  transition: .2s all;
+  transform: scale(0.5); }
+
+.branding-08-button4 {
+  transition: .4s all;
+  transform: scale(0.5); }
+
+.branding-08-flex-start {
+  top: 0% !important; }
+
+.branding-08-comments-appear {
+  display: flex !important; }
+
+.comment-appear {
+  transform: scale(1) translateY(0) !important;
+  opacity: 1 !important; }
+
+.thumb-pop {
+  transform: scale(1.3) !important;
+  color: #59C7D9 !important; }
+
+.branding-08-popup {
+  opacity: 1;
+  margin-left: -15px;
+  pointer-events: auto; }
+
+.branding-phone-in {
+  transform: translateX(0px) !important;
+  opacity: 1 !important; }
+
+#branding-08-container-fluid {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+#branding-08-container-fluid {
+  padding-left: 0px;
+  padding-right: 0px; }
+  @media (min-width: 1025px) {
+    #branding-08-container-fluid {
+      padding-left: 15px;
+      padding-right: 15px; } }
+
+#branding-08-container-fluid {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+#branding-08-container-fluid {
+  padding-left: 0px;
+  padding-right: 0px; }
+  @media (min-width: 1025px) {
+    #branding-08-container-fluid {
+      padding-left: 15px;
+      padding-right: 15px; } }
+
+.branding-08-init {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.slick-button-active {
+  transform: scale(0.9) !important; }
+
+.slick-center {
+  transform: scale(0.9);
+  transition: .2s all; }
+  .slick-center:hover {
+    transform: scale(0.95);
+    cursor: pointer; }
+
+.branding-08-recording-container {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(145px); }
+  .branding-08-recording-container .branding-08-recording-dot {
+    display: none;
+    height: 20px;
+    width: 20px;
+    background: red;
+    float: right;
+    border-radius: 1000px;
+    animation: recordingPulse 1.5s ease;
+    animation-iteration-count: infinite; }
+
+#timerUpdate {
+  display: none;
+  padding: 0 1em; }
+
+@keyframes recordingPulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0; }
+  75% {
+    transform: scale(1);
+    opacity: 1; }
+  100% {
+    transform: scale(0.8);
+    opacity: 0; } }
+
+/*********************************************
+  :: Branding-14
+********************************************/
+.vertical-align-slider-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; }
+
+@media only screen and (max-width: 600px) {
+  .course-progress-bar-padding {
+    padding-left: 15px;
+    padding-right: 15px; } }
+
+/*********************************************
+  :: Branding-43
+********************************************/
+#branding-43-1 p {
+  width: 80%;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+#branding-43-1 .speech-bubble2 {
+  transform: translateX(-28px) translateY(-6px);
+  right: 15%;
+  left: auto;
+  border-left: none;
+  border-bottom: 25px solid;
+  border-right: 10px solid;
+  border-color: #F79131 #F79131 transparent transparent; }
+
+#branding-43-2 p {
+  width: 80%;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+#branding-43-2 .speech-bubble2 {
+  transform: translateX(-28px) translateY(-6px);
+  right: 15%;
+  left: auto;
+  border-left: none;
+  border-bottom: 25px solid;
+  border-right: 10px solid;
+  border-color: #F79131 #F79131 transparent transparent; }
+
+#branding-43-3 p {
+  width: 80%;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 15px; }
+
+#branding-43-3 .speech-bubble2 {
+  transform: translateX(-28px) translateY(-6px);
+  right: 15%;
+  left: auto;
+  border-left: none;
+  border-bottom: 25px solid;
+  border-right: 10px solid;
+  border-color: #F79131 #F79131 transparent transparent; }
+
+/*********************************************
+  :: Branding-38
+********************************************/
+#branding-38-ul {
+  padding-left: 1em; }
+
+/*********************************************
+  :: Branding-44
+********************************************/
+#branding-44-text {
+  color: #38B449; }
+  #branding-44-text img {
+    height: 50px;
+    width: auto; }
+
+.rulerPoint {
+  transform: scale(1);
+  transition: .2s all; }
+  .rulerPoint:hover {
+    cursor: pointer;
+    transform: scale(1.3); }
+
+.testLG,
+.testShell,
+.testMTV {
+  width: 100%;
+  max-width: 500px; }
+
+.goodjob {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: #6C1F5D; }
+  .goodjob i {
+    font-size: 50px; }
+
+.correcto {
+  opacity: 0; }
+
+@keyframes correctoanimation {
+  0% {
+    transform: translateY(0%);
+    opacity: 0; }
+  10% { }
+  50% {
+    transform: translateY(-50%);
+    opacity: 1; }
+  90% { }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0; } }
+
+.correcto-anim {
+  animation: correctoanimation 1s; }
+
+/*********************************************
+  :: Branding-32
+********************************************/
+.branding32 .desktop-blob .blob {
+  width: 300px !important; }
+
+/*********************************************
+  :: Branding-20
+********************************************/
+.Branding20 #slider-vertical {
+  background-image: url(../img/forms/grey-squiggle.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%; }
+
+.vs {
+  margin-top: 60px;
+  font-weight: bold;
+  text-align: center; }
+
+#revealCourseTextbox {
+  margin-bottom: 0 !important; }
+
+.ui-input-text {
+  margin: 0 !important; }
+
+.movingHand {
+  width: 100px !important; }
+  .movingHand img {
+    width: 50% !important;
+    float: left !important; }
+  .movingHand p {
+    width: 50%;
+    padding-top: 10PX; }
+
+.branding98 p,
+.branding99 p {
+  color: #ffffff; }
+
+.four-Button {
+  text-decoration: none;
+  font-size: 12px;
+  padding-right: 10px !important; }
+
+.branding98 ul li .imgWrap {
+  margin-right: 10px; }
+
+.button-img-xs {
+  margin-right: 10px;
+  cursor: pointer; }
+  .button-img-xs:hover {
+    cursor: pointer; }
+
+.tab-height {
+  height: 200px; }
+
+/*********************************************
+  :: Branding-12
+********************************************/
+.branding12 {
+  position: relative; }
+  .branding12 .imgWrap {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    z-index: 10; }
+    .branding12 .imgWrap img {
+      width: 100%; }
+
+.matching-button {
+  background: url("../img/buttons/matching-button.svg");
+  width: 100%;
+  padding: 1em !important;
+  color: white;
+  transition: .15s all;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+  z-index: 1; }
+
+.branding-line {
+  transform: rotateZ(225deg);
+  background-image: url(../img/progressBar/progress.svg);
+  transform-origin: bottom right; }
+  @media (min-width: 320px) and (max-width: 360px) {
+    .branding-line {
+      transform: rotateZ(234deg);
+      bottom: 10px; } }
+  @media (min-width: 1200px) and (min-width: 1599px) {
+    .branding-line {
+      bottom: 10px; }
+      .branding-line.b-line-showing {
+        width: 200px !important; } }
+  @media (min-width: 1600px) and (max-width: 1900px) {
+    .branding-line {
+      transform: rotateZ(220deg); }
+      .branding-line.b-line-showing {
+        width: 150px; } }
+
+.marketing-line {
+  transform: rotateZ(135deg);
+  background-image: url(../img/progressBar/blue-line.svg);
+  transform-origin: top right; }
+  @media (min-width: 1200px) and (min-width: 1599px) {
+    .marketing-line {
+      bottom: 10px; }
+      .marketing-line.b-line-showing {
+        width: 200px !important; } }
+  @media (min-width: 1600px) and (max-width: 1900px) {
+    .marketing-line {
+      transform: rotateZ(140deg); }
+      .marketing-line.b-line-showing {
+        width: 200px !important; } }
+
+.branding-line,
+.marketing-line {
+  width: 0px;
+  height: 10px;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: default; }
+  .branding-line.b-line-showing,
+  .marketing-line.b-line-showing {
+    width: 150px;
+    transition: width 0.3s linear; }
+
+@media (max-width: 340px) {
+  .marketingLeftPosition {
+    position: relative;
+    left: -7px; }
+  .brandingLeftPosition {
+    position: relative;
+    left: -4px; }
+  .blue-text {
+    padding: 0 !important; } }
+
+.marketingLeftPosition,
+.brandingLeftPosition {
+  text-align: center; }
+
+.branding-line {
+  background-color: #F79131 !important; }
+
+.marketing-line {
+  background-color: #59C7D9 !important; }
+
+/*********************************************
+  :: Branding-15
+********************************************/
+.imgWrap {
+  width: 95%;
+  margin: 0 auto; }
+  .imgWrap a {
+    display: inline-block; }
+    .imgWrap a img {
+      width: 100%; }
+
+/*********************************************
+  :: Branding-16
+********************************************/
+@media (min-width: 340px) {
+  .branding16P {
+    margin-bottom: 20px !important; } }
+
+.branding16 .imgWrap {
+  width: 75%;
+  max-width: 310px; }
+  @media (min-width: 340px) {
+    .branding16 .imgWrap {
+      width: 90%; } }
+  .branding16 .imgWrap img {
+    width: 100%; }
+
+/*********************************************
+  :: Branding-20
+********************************************/
+.sliderInput {
+  width: 100%; }
+
+.Branding20 #slider-vertical {
+  margin: 12px 0 0 1.5em;
+  border: none;
+  float: left; }
+
+.Branding20 .sliderAnswer {
+  float: left; }
+  .Branding20 .sliderAnswer ul li {
+    padding-bottom: 18px !important; }
+
+.branding20Popup p.bold {
+  width: 100%;
+  text-align: left; }
+  @media (min-width: 330px) {
+    .branding20Popup p.bold {
+      font-size: 15px; } }
+
+/*********************************************
+  :: Branding-27
+********************************************/
+.branding27 p {
+  max-width: 522px; }
+
+.branding27 span {
+  max-width: 522px;
+  padding: 0 1em 1em; }
+  @media (min-width: 768px) {
+    .branding27 span {
+      margin-bottom: 5%; } }
+
+.branding27 .accordion-wrap {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 2%; }
+  .branding27 .accordion-wrap .title {
+    width: 100%;
+    padding: 1px 1em;
+    position: relative;
+    z-index: 2; }
+    .branding27 .accordion-wrap .title span {
+      width: 80%;
+      line-height: 36px;
+      margin: 0;
+      padding: 5px 0;
+      display: inline-block; }
+    .branding27 .accordion-wrap .title .arrow-wrap {
+      width: 15%;
+      padding: 5px 0;
+      display: inline-block; }
+  .branding27 .accordion-wrap .accordion .accordion-container {
+    position: relative;
+    width: 90%;
+    top: -9px;
+    left: 5%;
+    z-index: 1; }
+    .branding27 .accordion-wrap .accordion .accordion-container p {
+      padding: 15px 10px 0 10px; }
+    .branding27 .accordion-wrap .accordion .accordion-container .bot-squiggle {
+      height: 12px !important; }
+
+/*********************************************
+  :: Branding-28
+********************************************/
+.branding28 img {
+  max-height: 350px;
+  width: auto; }
+
+.branding28 .mobile-blob {
+  position: absolute;
+  top: -15px;
+  right: -10px; }
+  @media (min-width: 768px) {
+    .branding28 .mobile-blob {
+      display: none !important; } }
+  .branding28 .mobile-blob p {
+    padding: 0 !important; }
+  .branding28 .mobile-blob .blob {
+    width: 170px;
+    margin: 10px 20px !important;
+    padding: 17px !important; }
+  .branding28 .mobile-blob .speech-bubble {
+    left: 75px;
+    top: -13px;
+    transform: rotate(180deg); }
+
+.branding28 .desktop-blob {
+  position: absolute;
+  top: -15px; }
+  @media (max-width: 767px) {
+    .branding28 .desktop-blob {
+      display: none !important; } }
+  .branding28 .desktop-blob p {
+    padding: 0 !important; }
+  .branding28 .desktop-blob .blob {
+    width: 170px;
+    margin: 10px 20px !important;
+    padding: 17px !important; }
+  .branding28 .desktop-blob .speech-bubble {
+    left: 182px;
+    top: -27px;
+    transform: rotate(130deg); }
+
+.branding28 img {
+  width: 100%;
+  max-width: 150px;
+  max-height: 300px;
+  margin-top: 55px;
+  width: auto; }
+  @media (max-width: 350px) {
+    .branding28 img {
+      max-height: 180px !important;
+      margin-top: 80px !important; } }
+  @media (min-width: 768px) {
+    .branding28 img {
+      width: 50%; } }
+  @media (min-width: 1024px) {
+    .branding28 img {
+      width: 55%; } }
+
+.movingHand {
+  position: absolute;
+  width: 25px;
+  bottom: -15%;
+  right: 0;
+  transition: all 1s ease; }
+  .movingHand .color {
+    color: #59C7D9;
+    text-align: right; }
+  .movingHand.active {
+    position: absolute;
+    bottom: 5%;
+    right: 15%; }
+    @media (min-width: 768px) {
+      .movingHand.active {
+        right: 25%;
+        bottom: 15%; } }
+    @media (min-width: 992px) {
+      .movingHand.active {
+        right: 25%;
+        bottom: 0%; } }
+    @media (min-width: 1224px) {
+      .movingHand.active {
+        right: 25%;
+        bottom: 15%; } }
+    .movingHand.active.scale {
+      transform: scale(0.8); }
+  .movingHand img {
+    width: 100%; }
+
+/*********************************************
+  :: Branding-32
+********************************************/
+@media (min-width: 768px) {
+  .branding32 {
+    padding-top: 100px; } }
+
+.branding32 .marB50 {
+  margin-bottom: 50px !important; }
+
+.branding32 .mobile-blob {
+  position: relative; }
+  @media (max-width: 768px) {
+    .branding32 .mobile-blob {
+      margin-left: 15px; } }
+  @media (min-width: 768px) {
+    .branding32 .mobile-blob {
+      display: none !important; } }
+  .branding32 .mobile-blob p {
+    padding: 0 !important; }
+  .branding32 .mobile-blob .blob {
+    width: 170px;
+    margin: 10px 20px !important;
+    padding: 17px !important; }
+  .branding32 .mobile-blob .speech-bubble {
+    left: 75px;
+    top: -13px;
+    transform: rotate(180deg); }
+
+.branding32 .desktop-blob {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  @media (max-width: 767px) {
+    .branding32 .desktop-blob {
+      display: none !important; } }
+  @media (min-width: 992px) {
+    .branding32 .desktop-blob {
+      right: -30%; } }
+  @media (min-width: 1224px) {
+    .branding32 .desktop-blob {
+      right: -10%; } }
+  .branding32 .desktop-blob p {
+    padding: 0 !important; }
+  .branding32 .desktop-blob .blob {
+    width: 170px;
+    margin: 10px 20px !important;
+    padding: 17px !important; }
+  .branding32 .desktop-blob .speech-bubble {
+    left: 75px;
+    top: -13px;
+    transform: rotate(180deg); }
+
+.branding32 img {
+  width: 100%;
+  max-width: 160px; }
+  @media (max-width: 360px) {
+    .branding32 img {
+      max-width: 110px; } }
+  @media (min-width: 992px) {
+    .branding32 img {
+      width: 55%; } }
+
+.branding32 .movingHand {
+  position: absolute;
+  width: 25px;
+  bottom: 0;
+  left: 90%;
+  transition: all 1s ease; }
+  .branding32 .movingHand .color {
+    color: #59C7D9;
+    text-align: right; }
+  .branding32 .movingHand.active {
+    position: absolute;
+    bottom: 10%;
+    left: 35%; }
+    @media (min-width: 768px) {
+      .branding32 .movingHand.active {
+        left: 20%;
+        bottom: 15%; } }
+    @media (min-width: 992px) {
+      .branding32 .movingHand.active {
+        left: 45%;
+        bottom: 0%; } }
+    @media (min-width: 1224px) {
+      .branding32 .movingHand.active {
+        left: 35%;
+        bottom: 10%; } }
+    .branding32 .movingHand.active.scale {
+      transform: scale(0.8); }
+  .branding32 .movingHand img {
+    width: 100%; }
+
+/*********************************************
+  :: Branding-36
+********************************************/
+.branding36 .mobile-blob {
+  position: relative; }
+  @media (max-width: 768px) {
+    .branding36 .mobile-blob {
+      margin-left: 15px; } }
+  @media (min-width: 768px) {
+    .branding36 .mobile-blob {
+      display: none !important; } }
+  .branding36 .mobile-blob p {
+    padding: 0 !important; }
+  .branding36 .mobile-blob .blob {
+    width: 170px;
+    margin: 10px 20px !important;
+    padding: 17px !important; }
+  .branding36 .mobile-blob .speech-bubble {
+    left: 75px;
+    top: -13px;
+    transform: rotate(180deg); }
+
+.branding36 .desktop-blob {
+  position: absolute;
+  top: 0;
+  left: 20%; }
+  @media (max-width: 767px) {
+    .branding36 .desktop-blob {
+      display: none !important; } }
+  @media (min-width: 992px) {
+    .branding36 .desktop-blob {
+      left: 60%; } }
+  .branding36 .desktop-blob p {
+    padding: 0 !important; }
+  .branding36 .desktop-blob .blob {
+    width: 170px;
+    margin: 10px 20px !important;
+    padding: 17px !important; }
+  .branding36 .desktop-blob .speech-bubble {
+    left: 8px;
+    top: -51px;
+    transform: rotate(240deg); }
+
+.branding36 img {
+  width: 100%;
+  max-width: 130px; }
+  @media (max-width: 360px) {
+    .branding36 img {
+      max-width: 90px; } }
+  @media (min-width: 992px) {
+    .branding36 img {
+      width: 55%; } }
+
+.branding36 .movingHand {
+  position: absolute;
+  width: 25px;
+  bottom: 0;
+  left: 90%;
+  transition: all 1s ease; }
+  .branding36 .movingHand .color {
+    color: #59C7D9;
+    text-align: right; }
+  .branding36 .movingHand.active {
+    position: absolute;
+    bottom: 0%;
+    left: 35%; }
+    @media (min-width: 768px) {
+      .branding36 .movingHand.active {
+        left: 20%;
+        bottom: 15%; } }
+    @media (min-width: 992px) {
+      .branding36 .movingHand.active {
+        left: 45%;
+        bottom: 0%; } }
+    @media (min-width: 1224px) {
+      .branding36 .movingHand.active {
+        left: 35%;
+        bottom: 10%; } }
+    .branding36 .movingHand.active.scale {
+      transform: scale(0.8); }
+  .branding36 .movingHand img {
+    width: 100%; }
+
+/*********************************************
+  :: Branding-46
+********************************************/
+.branding46 {
+  max-width: 600px;
+  margin: 0 auto; }
+  .branding46 .textWrap {
+    width: 102%;
+    margin: 0 auto 20px auto; }
+  .branding46 p {
+    margin-bottom: 30px; }
+  .branding46 span {
+    color: #59C7D9; }
+  .branding46 .imgWrap {
+    width: 35%;
+    max-width: 250px;
+    margin: 0 auto 50px; }
+    @media (min-width: 1025px) {
+      .branding46 .imgWrap {
+        width: 30%; } }
+    .branding46 .imgWrap img {
+      width: 100%; }
+  .branding46 .buttonWrap {
+    width: 100%; }
+    .branding46 .buttonWrap a {
+      text-decoration: none;
+      width: 30%;
+      margin: 0 1.6%; }
+      .branding46 .buttonWrap a p {
+        font-size: 13px;
+        padding: 0; }
+  .branding46 .paddingTB20 {
+    padding: 20px 0; }
+
+/*********************************************
+  :: Branding-48
+********************************************/
+.branding48 .marB50 {
+  margin-bottom: 50px !important; }
+
+.branding48 .mobile-blob {
+  position: relative;
+  left: 20%; }
+  @media (min-width: 768px) {
+    .branding48 .mobile-blob {
+      display: none !important; } }
+  .branding48 .mobile-blob p {
+    padding: 0 !important; }
+  .branding48 .mobile-blob .blob {
+    width: 170px;
+    padding: 17px !important; }
+  .branding48 .mobile-blob .speech-bubble {
+    left: 75px;
+    top: -13px;
+    transform: scale(1, -1); }
+
+.branding48 .desktop-blob {
+  position: absolute;
+  left: 285px;
+  bottom: 250px; }
+  @media (max-width: 767px) {
+    .branding48 .desktop-blob {
+      display: none !important; } }
+  .branding48 .desktop-blob p {
+    padding: 0 !important; }
+  .branding48 .desktop-blob .blob {
+    width: 170px;
+    padding: 17px !important;
+    position: absolute; }
+  .branding48 .desktop-blob .speech-bubble {
+    left: 166px;
+    top: 39px;
+    transform: scale(1, -1) rotate(30deg); }
+
+.branding48 img {
+  width: 100%;
+  max-width: 130px; }
+  @media (max-width: 360px) {
+    .branding48 img {
+      max-width: 70px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .branding48 img {
+      max-width: 200px; } }
+  @media (min-width: 992px) {
+    .branding48 img {
+      width: 70%; } }
+
+.branding48 .tapme {
+  position: absolute;
+  bottom: 0;
+  right: 30%; }
+  @media (min-width: 401px) and (max-width: 991px) {
+    .branding48 .tapme {
+      left: 30%; } }
+  .branding48 .tapme .erika {
+    width: 100px;
+    font-size: 11px; }
+
+/*********************************************
+  :: Branding-74
+********************************************/
+.branding74 {
+  position: relative; }
+  .branding74 .imgWrap {
+    position: relative;
+    width: auto;
+    max-height: 400px;
+    margin: 0 auto 0 0; }
+    .branding74 .imgWrap img {
+      width: 75%; }
+    .branding74 .imgWrap .rulerPoint.market {
+      position: absolute;
+      top: 58px;
+      left: 68px; }
+    .branding74 .imgWrap .rulerPoint.social {
+      position: absolute;
+      top: 179px;
+      left: 68px; }
+    .branding74 .imgWrap .rulerPoint.campaign {
+      position: absolute;
+      top: 251px;
+      left: 68px; }
+  .branding74 .popMarket {
+    width: 65% !important;
+    position: absolute;
+    top: 0;
+    left: 100px; }
+    .branding74 .popMarket p {
+      font-size: 13px; }
+      @media (max-width: 330px) {
+        .branding74 .popMarket p {
+          padding: 0 1em;
+          font-size: 12px; }
+          .branding74 .popMarket p:nth-of-type(1) {
+            margin-bottom: 7px; } }
+  .branding74 .popSocial {
+    width: 65% !important;
+    position: absolute;
+    top: 100px;
+    left: 100px; }
+    @media screen and (max-width: 480px) {
+      .branding74 .popSocial {
+        top: 0px; } }
+    .branding74 .popSocial p {
+      font-size: 13px; }
+      @media (max-width: 330px) {
+        .branding74 .popSocial p {
+          padding: 0 1em;
+          font-size: 12px; }
+          .branding74 .popSocial p:nth-of-type(1) {
+            margin-bottom: 7px; } }
+  .branding74 .popCampaign {
+    width: 65% !important;
+    position: absolute;
+    top: 130px;
+    left: 100px; }
+    @media screen and (max-width: 480px) {
+      .branding74 .popCampaign {
+        top: -20px; } }
+    .branding74 .popCampaign p {
+      font-size: 13px; }
+      @media (max-width: 330px) {
+        .branding74 .popCampaign p {
+          padding: 0 1em;
+          font-size: 12px; }
+          .branding74 .popCampaign p:nth-of-type(1) {
+            margin-bottom: 7px; } }
+
+.tapme-76 {
+  left: 58px;
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  transition: .2s all; }
+  .tapme-76 img {
+    transform: scaleY(-1) rotate(-90deg);
+    height: 40px;
+    width: auto; }
+  .tapme-76 p {
+    transform: translateY(30px); }
+
+/*********************************************
+  :: Branding-81
+********************************************/
+.branding81 .fourButton {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto; }
+  .branding81 .fourButton a {
+    text-decoration: none;
+    width: 42%;
+    margin: 2px 4%;
+    float: left;
+    font-size: 12px; }
+    @media (min-width: 370px) {
+      .branding81 .fourButton a {
+        margin: 5px 2.5%;
+        width: 45%;
+        font-size: 14px; } }
+
+/*********************************************
+  :: Branding-82
+********************************************/
+@media (max-width: 339px) {
+  .branding82 p {
+    padding: 0 7px !important; }
+  .branding82 p:nth-child(1) {
+    padding: 0 7px !important; }
+  .pad0 {
+    padding: 0; } }
+
+.branding82 .secondP {
+  max-width: 450px; }
+
+/*********************************************
+  :: Branding-97
+********************************************/
+.branding97 .imgWrap {
+  width: 100%;
+  max-width: 400px; }
+  .branding97 .imgWrap img {
+    width: 100%;
+    padding: 0 5px; }
+
+.branding97 p {
+  max-width: 590px; }
+
+@media (min-width: 339px) {
+  .branding97 p:nth-of-type(2) {
+    margin-bottom: 20px; } }
+
+/*********************************************
+  :: Branding-98
+********************************************/
+.purpleBack {
+  background-color: #6C1F5D; }
+
+.branding98 .marL5 {
+  margin-left: 5% !important; }
+
+.branding98 ul li {
+  list-style-type: none;
+  display: flex;
+  align-items: center; }
+  .branding98 ul li .imgWrap {
+    width: 15%;
+    max-width: 60px;
+    position: relative;
+    z-index: 10050; }
+    .branding98 ul li .imgWrap img {
+      display: block; }
+    .branding98 ul li .imgWrap .back {
+      width: 100%; }
+    .branding98 ul li .imgWrap .front {
+      position: absolute;
+      z-index: 10080;
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      transform: translate(-50%, -50%); }
+  .branding98 ul li p {
+    float: left;
+    width: 85%; }
+    @media (max-width: 340px) {
+      .branding98 ul li p {
+        padding: 8px !important; } }
+
+/*********************************************
+  :: Branding-99
+********************************************/
+.branding99 .buttonWrap {
+  margin-top: 50%;
+  transform: translateY(-50%); }
+  .branding99 .buttonWrap a {
+    max-width: 50%;
+    margin: 0 auto;
+    text-decoration: none; }
+
+/*********************************************
+  :: Branding-71
+********************************************/
+.class-a {
+  opacity: 0 !important;
+  transform: translateY(20px) !important; }
+
+.seventyone-button {
+  position: relative; }
+
+.seventyone-button img {
+  position: absolute;
+  height: 100%;
+  right: -45%;
+  bottom: 20%;
+  opacity: 1;
+  transform: translateY(0);
+  transition: .4s all; }
+
+/*********************************************
+  :: Responsive
+********************************************/
+.jba-btn-scroll {
+  background: url("../img/buttons/circle-button.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  color: white;
+  padding: 0 12px; }
+
+.jba-btn-scroll i {
+  font-size: 30px;
+  animation: arrowPulse 1.5s;
+  animation-iteration-count: infinite; }
+
+.actual100 {
+  height: 100% !important; }
+
+.container-fluid {
+  transition: .2s all; }
+
+.content-row {
+  transition: .5s all; }
+
+@keyframes arrowPulse {
+  0% {
+    transform: translateY(-10px); }
+  50% {
+    transform: translateY(0px); }
+  100% {
+    transform: translateY(-10px); } }
+
+/*********************************************
+  :: Svg bubbles
+********************************************/
+.svg-bubble {
+  opacity: 0;
+  transform-origin: center; }
+
+.svg-character:hover {
+  cursor: pointer; }
+
+.svg-bubble-popin {
+  animation: svgBubblePop .2s;
+  animation-fill-mode: forwards; }
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  .branding11-fix img {
+    height: 400px;
+    width: auto; } }
+
+.svg-bubble-master {
+  position: absolute;
+  height: 100%;
+  max-width: 100%;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.svg-tapme {
+  animation: svgTapme 2s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  transform: scale(1);
+  fill: #75cee2; }
+
+@keyframes svgBubblePop {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  90% {
+    transform: scale(1.02);
+    opacity: 1; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes svgTapme {
+  0% {
+    transform: scale(1); }
+  30% {
+    transform: scale(0.8); }
+  50% {
+    transform: scale(1); } }
+
+.seventyone-button-purple {
+  background: url("../img/buttons/rectangle-button-visited.svg") !important;
+  background-repeat: no-repeat; }
+
+/*********************************************
+  :: Responsive
+********************************************/
+/* Mobile large */
+/* Mobile Small */
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  .branding02-fix img {
+    max-width: 300px; } }
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 680px) and (orientation: landscape) {
+  .branding-08-landscape {
+    display: flex;
+    align-items: center; }
+  .brand09-img {
+    height: 100px;
+    width: auto; }
+  .branding11-fix img {
+    height: 240px;
+    width: auto; }
+  .testLG img, .testShell img, .testMTV img {
+    max-height: 100px !important;
+    width: auto !important; }
+  .hvr-push {
+    max-width: 100px !important; }
+  .branding46 img {
+    margin-right: 45px; }
+  .branding59 .col-xs-6 {
+    padding-right: 0px;
+    padding-left: 0px; }
+  .branding-63-1 img {
+    max-width: 22%; }
+  .branding-63-2 img {
+    max-width: 15%; }
+  .jba-slider #slider-vertical {
+    margin: 12px 0 20px 1.5em; }
+  .branding19 {
+    width: 50%;
+    margin-left: 0px;
+    float: left; }
+    .branding19 .col-xs-8 {
+      width: 100%;
+      margin-left: 0px !important; }
+      .branding19 .col-xs-8 img {
+        height: 100px;
+        width: auto; }
+      .branding19 .col-xs-8 .bic {
+        height: 75px;
+        width: auto;
+        margin-top: 10px; }
+  .branding03 {
+    width: 33%;
+    margin-left: 0px !important; }
+  .branding14 {
+    max-width: 24% !important; }
+  .branding33 {
+    margin-top: 35px; }
+  .branding33-mac {
+    width: 100% !important; }
+  .branding37-1 {
+    margin-top: 30px; }
+  .branding37-2 {
+    margin-top: 15px;
+    width: 100% !important; }
+    .branding37-2 img {
+      width: 60% !important; }
+  .branding37-3 {
+    margin-top: 15px; }
+  .goat img {
+    height: 100px;
+    width: auto; }
+  .branding63 {
+    max-width: 30%; }
+  .branding63-facebook {
+    margin-top: 20px;
+    max-width: 65%; } }
+
+.header-row {
+  margin-top: 20px; }
+
+.new-main-content h2 {
+  margin: 0 !important; }
+
+#wrapper {
+  transition: padding .35s ease-in !important; }
+  #wrapper #page-content-wrapper {
+    margin: 0 !important;
+    transition: margin .35s ease-in !important; }
+    #wrapper #page-content-wrapper .popup, #wrapper #page-content-wrapper .purple-bk-popup {
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      left: 0;
+      position: absolute !important; }
+  #wrapper.toggled #page-content-wrapper {
+    margin-left: 230px !important; }
+    @media (min-width: 480px) and (max-width: 650px) {
+      #wrapper.toggled #page-content-wrapper {
+        margin-left: 0 !important; } }
+    @media (min-width: 1025px) {
+      #wrapper.toggled #page-content-wrapper {
+        margin-left: 0 !important; } }
+  #wrapper #sidebar-wrapper {
+    transition: width .35s ease-in !important; }
+
+@media (min-width: 1025px) {
+  .container-fluid {
+    height: 100vh !important;
+    padding: 0 !important; } }
+
+.progressWrap {
+  display: flex;
+  align-items: center; }
+  .progressWrap .progress-row {
+    position: relative !important; }
+
+.header-row {
+  margin-top: 0 !important;
+  padding-top: 20px !important; }
+
+.progressContainer .row {
+  display: flex;
+  align-items: center; }
+  .progressContainer .row .courseProgressBar {
+    top: 0 !important; }
+  .progressContainer .row .jba-btn-locked {
+    background: url(/images/course-assets/buttons/rectangle-button-locked.svg) no-repeat !important;
+    background-size: 100% 100% !important; }
+  .progressContainer .row .next-button-locked {
+    margin-top: 10px; }
+  .progressContainer .row .jba-course-submit {
+    padding: 10px 16px;
+    font-size: 16px; }
+    @media (max-width: 480px) {
+      .progressContainer .row .jba-course-submit {
+        padding: 10px;
+        font-size: 12px; } }
+  .progressContainer .row .next-button, .progressContainer .row .prev-button {
+    margin-top: 10px; }
+  .progressContainer .row .page64 .arrowLock {
+    transform: translateX(15px) translateY(-10px); }
+
+@media (max-width: 480px) {
+  .slick-next {
+    right: 0 !important; }
+  .slick-prev {
+    left: 0 !important; } }
+
+.page44 {
+  min-height: 310px; }
+
+.jba-btn, .courseProgressBar, .percentageProgress, .matching-button {
+  background-size: 100% 100% !important; }
+
+.z-index0 {
+  z-index: 0 !important; }
+
+.hint-container {
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important; }
+
+@-moz-document url-prefix() {
+  .content-row {
+    overflow-x: hidden;
+    overflow-y: visible !important; }
+  .jba-btn, .jba-btn:hover, .progressContainer .row .jba-btn-locked {
+    background-position: center !important; }
+  .flexy-image img, .flexy-image svg, .flexy-image-width img, .flexy-image-width svg {
+    top: 0; }
+  #courseFormWrapperDiv1 textarea, #courseFormWrapperDiv2 textarea, #courseFormWrapperDiv3 textarea, #courseFormWrapperDiv4 textarea {
+    overflow-y: visible !important; }
+  .arrowLock {
+    transform: translateX(-15px) translateY(-10px) !important; }
+  .branding-08-phone-container .branding-08-phone .branding-08-phone-content .branding-08-cat-image {
+    left: 5%; } }
+
+.flexy-parent .flexy-image-width {
+  justify-content: flex-start; }
+
+.branding03 .brightness800 {
+  filter: brightness(80%); }
+
+button.jba-btn, button.jba-btn:hover {
+  -webkit-transition: all 1ms ease;
+  -moz-transition: all 1ms ease;
+  -ms-transition: all 1ms ease;
+  transition: all 1ms ease; }
+
+.branding03 .branding-03-button {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: url(/images/course-assets/buttons/rectangle-button.svg);
+  background-repeat: no-repeat;
+  color: white;
+  transition: .15s all;
+  transform: scale(1);
+  border-width: 0px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333; }
+
+.branding-03-button-hover {
+  background: url(/images/course-assets/buttons/rectangle-button-visited.svg) !important;
+  background-repeat: no-repeat !important; }
+
+.disabled-v {
+  pointer-events: none !important; }
