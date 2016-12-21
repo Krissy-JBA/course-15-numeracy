@@ -1909,3 +1909,39 @@ button.jba-btn, button.jba-btn:hover {
 
 .disabled-v {
   pointer-events: none !important; }
+
+.num-graph-wrap {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .num-graph-wrap .num-graph {
+    position: relative;
+    left: 0;
+    transform: translateX(0); }
+
+.z10 {
+  z-index: 10; }
+
+.green-text {
+  color: #38B449; }
+
+.m0auto {
+  margin: 0 auto; }
+
+.prelative {
+  position: relative !important; }
+
+.f-space {
+  justify-content: space-around; }
+
+.f-center {
+  align-items: center; }
+
+.f-direct {
+  flex-direction: row !important; }
+
+.mw100 {
+  max-width: 100px !important; }
+
+.bor-dot {
+  border-top: 1px dotted #ddd; }
