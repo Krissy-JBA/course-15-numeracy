@@ -2312,7 +2312,8 @@ button.jba-btn, button.jba-btn:hover {
     pointer-events: none !important;
 }
 
-//course-numeracy
+//course-numeracy by Martin
+
 .num-graph-wrap {
   position:absolute;
   top:0;
@@ -2336,12 +2337,15 @@ button.jba-btn, button.jba-btn:hover {
   position: relative !important;
 }
 .f-space {
+  display: flex;
   justify-content: space-around;
 }
 .f-center {
+  display: flex;
   align-items: center;
 }
 .f-direct {
+  display: flex;
   flex-direction: row !important;
 }
 .mw100 {
@@ -2350,3 +2354,24 @@ button.jba-btn, button.jba-btn:hover {
 .bor-dot {
   border-top: 1px dotted #ddd;
 }
+.wspace-normal {
+  white-space: normal !important;
+}
+.btn-lg-padding {
+  padding:25px 35px !important;
+}
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.fa.btn-locked {
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #888;
+}
+.pabsolute-right {
+  right:0;
+}
+//course-numeracy by Martin
