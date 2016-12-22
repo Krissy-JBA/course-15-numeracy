@@ -1,0 +1,132 @@
+<div class="purple-bk-popup" data-popup="popup-1">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content white-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <h4 class="w100 green-text">Floor Maths</h4>
+                            <p class="w100 ib tleft">
+                              The total floor area of the studio is 6metres by
+                              6metres which equals 36 square metres.
+                            </p>
+                            <p class="w100 ib tleft">
+                              We can ignore the bits that won’t be covered, i.e.
+                              the storage areas and toilet.
+                            </p>
+                            <p class="w100 ib tleft mtb">
+                              So as an equation, it looks like this:
+                            </p>
+                            <p class="w100 ib tleft mts tlarger">
+                              - (<span class="purple-text">Toilet area</span> + <span class="purple-text">Storage area</span>)
+                            </p>
+                            <p class="w100 ib tleft mts tlarger">
+                              - ( <span class="purple-text">4m<sup>2</sup></span> + <span class="purple-text">6m<sup>2</sup></span> )
+                            </p>
+                            <p class="w100 ib tleft mts tlarger">
+                              - <span class="purple-text">10 m<sup>2</sup></span>
+                            </p>
+                            <p class="w100 ib tleft mtb">
+                              The answer for the builder is that the area to be
+                              covered is <span class="tlarger">24</span> square metres
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+        </div>
+        <a data-popup-close="popup-1" href="#">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
+<div class="container-fluid h100">
+    <div class="row header-row  ">
+        <div class="col-md-12 col-xs-8 col-xs-offset-2 col-md-offset-0">
+            <div class="new-main-content pop-in">
+                <h2>Quote for the builder</h2>
+                <!-- Change Header -->
+            </div>
+        </div>
+    </div>
+    <div class="row content-row  ">
+        <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3  col-xs-12">
+            <div class="squiggle-container pop-in">
+                <div class="top-squiggle"><img src="/course-files/course-22-branding/img/squiggle/white-top.svg" alt=""></div>
+                <div class="squiggle-content white-squiggle">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                <!-- put all of your content into here div -->
+                                <p>
+                                  Zoey’s thinking about getting a second
+                                  sewing machine and putting new flooring
+                                  in. She needs to let the builder know the
+                                  floor area to be covered. Using the floor
+                                  plan and dimensions provided, work out the
+                                  surface area to be covered (yellow). The
+                                  toilet and storage areas aren’t going to
+                                  be carpeted.
+                                </p>
+
+                                <div class="flexy-image">
+                                  <img src="/images/course-numeracy/Numeracy-58.png" class="num-graph" style="max-width:250px;">
+                                </div>
+
+                                <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv">
+                                  <textarea v-on:keyup="validateInputFields" v-model="pageData.quote" v-on:change="$parent.saveData( 'quote-for-the-builder.quote', pageData.quote )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white light-beige-textbox"></textarea>
+                                </div>
+
+                                <div class="flexy-image" data-popup-open="popup-1">
+                                  <img src="/images/course-numeracy/Numeracy-60.png" class="prelative" alt="">
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="bot-squiggle"><img src="/course-files/course-22-branding/img/squiggle/white-bottom.svg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <!-- end  content -->
+    <!-- =========================== -->
+    <!-- footer start -->
+    <div class="row progressWrap">
+        <div class="col-xs-12 col-pad0">
+            <!-- S:Progress Bar -->
+            <div class="progress-row">
+                <div class="hand-arrow">
+                    <div class="percentageTxt hidden">
+                        <p>60%</p>
+                    </div>
+                    <img class="percentageArrow hidden" src="/images/course-assets/img/progressBar/hand_arrow.png" alt="" />
+                </div>
+                <div class="container progressContainer">
+                    <div class="row">
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                            <a href="#034" class="course-button prev-button"></a>
+                        </div>
+                        <!-- leftArrow -->
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
+                            <div class="course-progress-bar-wrap">
+                                <div class="courseProgressBar">
+                                    <p class="fixed hidden">60%</p>
+                                    <div class="percentageProgress"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                           <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
+                            <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
+                        </div>
+                        <!-- rightArrow -->
+                    </div>
+                </div>
+            </div>
+            <!-- E:Progress Bar -->
+        </div>
+    </div>
+</div>
