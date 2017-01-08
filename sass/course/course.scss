@@ -2324,14 +2324,22 @@ button.jba-btn, button.jba-btn:hover {
   left:0 !important;
   transform:translateX(0) !important;
 }
+.num-graph-r {
+  position: relative !important;
+  left:100% !important;
+  transform:translateX(0) !important;
+}
 .z10 {
   z-index: 10;
 }
 .green-text {
-  color:#38B449;
+  color:#38B449 !important;
+}
+.red-text {
+  color:#E61C32 !important;
 }
 .purple-text {
-  color:#6C1F5D;
+  color:#6C1F5D !important;
 }
 .black-text {
   color:#000 !important;
@@ -2353,6 +2361,9 @@ button.jba-btn, button.jba-btn:hover {
 .f-direct {
   display: flex;
   flex-direction: row !important;
+}
+.mw70 {
+  max-width: 70px !important;
 }
 .mw100 {
   max-width: 100px !important;
@@ -2383,10 +2394,26 @@ a.disabled {
 .pabsolute-right {
   right:0;
 }
-.red-text {
-  color:red;
-}
 .wauto {
   width:auto !important;
+}
+.magenta-squiggle {
+  background-color: #D51A68 !important;
+  color: white;
+}
+.magenta-blob {
+  background: url(/images/course-assets/blob-box/magenta-blob-box.svg);
+  background-repeat: no-repeat;
+  padding: 2em;
+  color: white;
+  transition: .15s all;
+  display: block;
+  text-decoration: none;
+}
+.numeracy-check {
+  position: absolute;
+  top: -7px;
+  width: 65%;
+  left: 13px;
 }
 //course-numeracy by Martin
