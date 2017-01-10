@@ -50,7 +50,7 @@ pageComponentry = {
     courseFeatureJBA.activateDataPopups();
 
     //load data on page load
-    this.pageData.standFor = this.exerciseData['numeracy-vs-maths.what'];
+    this.pageData.what = this.exerciseData['numeracy-vs-maths.what'];
     //populate data before calling the validate function
     this.validateInputFields();
   }

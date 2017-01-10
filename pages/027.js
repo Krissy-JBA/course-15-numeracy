@@ -5,7 +5,6 @@ pageComponentry = {
         appeal: '',
         difference: ''
       },
-
       hideLocked: false,
       disabledInput: true
 
@@ -51,7 +50,7 @@ pageComponentry = {
 
     //load data on page load
     this.pageData.appeal = this.exerciseData['getting-zoeys-buy-in.appeal'];
-    this.pageData.diffrence = this.exerciseData['getting-zoeys-buy-in.difference'];
+    this.pageData.difference = this.exerciseData['getting-zoeys-buy-in.difference'];
 
     //populate data before calling the validate function
     this.validateInputFields();

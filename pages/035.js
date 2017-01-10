@@ -20,7 +20,7 @@ pageComponentry = {
             }, 200);
         });
         setTimeout(function(){
-          window.location.href = "#036";
+          window.location.href = "#016";
         },1000)
     },
 

@@ -6,6 +6,7 @@ pageComponentry = {
   },
   methods: {
     // Any page specific methods go here.
+    
   },
   ready: function() {
     // Ready will be fired when the page is loaded.

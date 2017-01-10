@@ -50,8 +50,8 @@ pageComponentry = {
     courseFeatureJBA.activateTextBoxUi();
 
     //load data on page load
-    this.pageData.symbol = this.exerciseData['activity-time.remember'];
-    this.pageData.decimal = this.exerciseData['activity-time.consider'];
+    this.pageData.remember = this.exerciseData['activity-time.remember'];
+    this.pageData.consider = this.exerciseData['activity-time.consider'];
 
     //populate data before calling the validate function
     this.validateInputFields();

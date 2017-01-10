@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-md-12 ">
                         <div class="squiggle-container flex-center">
-                            <h4 class="w100 green-text">Floor Maths</h4>
+                            <h4 class="w100 black-text">Floor Maths</h4>
                             <p class="w100 ib tleft">
                               The total floor area of the studio is 6metres by
                               6metres which equals 36 square metres.
@@ -52,42 +52,54 @@
             </div>
         </div>
     </div>
-    <div class="row content-row  ">
+    <div class="row content-row pop-in">
         <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3  col-xs-12">
-            <div class="squiggle-container pop-in">
+            <div class="squiggle-container">
                 <div class="top-squiggle"><img src="/course-files/course-22-branding/img/squiggle/white-top.svg" alt=""></div>
                 <div class="squiggle-content white-squiggle">
                     <div class="row">
                         <div class="col-md-12">
+                            <!-- put all of your content into here div -->
+                            <p>
+                              Zoey’s thinking about getting a second
+                              sewing machine and putting new flooring
+                              in. She needs to let the builder know the
+                              floor area to be covered. Using the floor
+                              plan and dimensions provided, work out the
+                              surface area to be covered (yellow). The
+                              toilet and storage areas aren’t going to
+                              be carpeted.
+                            </p>
 
-                                <!-- put all of your content into here div -->
-                                <p>
-                                  Zoey’s thinking about getting a second
-                                  sewing machine and putting new flooring
-                                  in. She needs to let the builder know the
-                                  floor area to be covered. Using the floor
-                                  plan and dimensions provided, work out the
-                                  surface area to be covered (yellow). The
-                                  toilet and storage areas aren’t going to
-                                  be carpeted.
-                                </p>
-
-                                <div class="flexy-image">
-                                  <img src="/images/course-numeracy/Numeracy-58.png" class="num-graph" style="max-width:250px;">
+                            <div class="flexy-image">
+                              <img src="/images/course-numeracy/Numeracy-58.png" class="num-graph mw200">
+                            </div>
+                            <div class="squiggle-container">
+                                <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
+                                <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                    <div class="squiggle-container">
+                                        <!-- put all of your content into here div -->
+                                        <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv">
+                                          <textarea v-on:keyup="validateInputFields" v-model="pageData.quote" v-on:change="$parent.saveData( 'quote-for-the-builder.quote', pageData.quote )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white light-beige-textbox"></textarea>
+                                        </div>
+                                        <!-- End Content -->
+                                    </div>
                                 </div>
-
-                                <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv">
-                                  <textarea v-on:keyup="validateInputFields" v-model="pageData.quote" v-on:change="$parent.saveData( 'quote-for-the-builder.quote', pageData.quote )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white light-beige-textbox"></textarea>
-                                </div>
-
-                                <div class="flexy-image" data-popup-open="popup-1">
-                                  <img src="/images/course-numeracy/Numeracy-60.png" class="prelative" alt="">
-                                </div>
-
+                                <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="bot-squiggle"><img src="/course-files/course-22-branding/img/squiggle/white-bottom.svg" alt=""></div>
+            </div>
+            <div class="flexy-parent flexy-image pop-in cpointer" data-popup-open="popup-1">
+              <img src="/images/course-numeracy/Numeracy-60.png" class="num-graph mw200" alt="">
+            </div>
+            <div class="row f-jcenter one-line">
+              <div class="ib" style="width:20px">
+                <img src="/images/course-assets/pointer.png" alt="">
+              </div>
+              <span class="blue-text">Tap me to see an example</span>
             </div>
         </div>
     </div>
