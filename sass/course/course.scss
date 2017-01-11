@@ -2469,6 +2469,40 @@ a.hvr-url:hover {
       transform:translate(-50%,-50%);
     }
 }
+ul.rewind {
+  li {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      .imgWrap {
+          width: 15%;
+          max-width: 60px;
+          position: relative;
+          z-index: 10050;
+          img {
+              display: block;
+          }
+          .back {
+              width: 100%;
+          }
+          .front {
+              position: absolute;
+              z-index: 10080;
+              top: 50%;
+              left: 50%;
+              width: 50%;
+              transform: translate(-50%, -50%);
+          }
+      } //imgWrap
+      p {
+          float: left;
+          width: 85%;
+          @media (max-width: 340px) {
+              padding: 8px !important;
+          }
+      }
+  } //li
+}
 //course-numeracy by Martin
 
 

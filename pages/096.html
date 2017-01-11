@@ -1,8 +1,37 @@
+<div class="purple-bk-popup" data-popup="popup-1">
+    <div class="popup-inner ">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content white-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <h4 class="w100 black-text tcenter">Cashflow runway</h4>
+                            <p class="w100 ib tleft bold">
+                              Cashflow runway solution:
+                            </p>
+                            <p class="w100 ib tleft">
+                              If Zoey’s business has $20,000 in cash reserves, it has
+                              cashflow runway of 10 weeks. ($20,000 reserve ÷ $2,000
+                              weekly cash burn = 10 weeks runway)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+        </div>
+        <a data-popup-close="popup-1" href="#">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
 <div class="container-fluid h100">
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
                <div class="new-main-content">
-                   <h2>Cash Burn</h2>
+                   <h2>Cashflow runway</h2>
                    <!-- Change Header -->
                </div>
            </div>
@@ -17,21 +46,23 @@
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
                                   <p class="db w100 tleft">
-                                    Zoey has cash reserves from funding of $20,000 and
-                                    receives $1,000 a week from clothes’ sales. Her
-                                    expenses are $3,000 a week, but she only gets that
-                                    $1,000 a week from sales.
+                                    Cashflow runway is the length of time a business can
+                                    continue to operate before it uses up all of its cash
+                                    reserves!
                                   </p>
                                   <p class="db w100 tleft">
-                                    Cash burn formula
+                                    Cashflow runway is calculated using the following
+                                    formula:
                                   </p>
                                   <p class="db w100 tleft mbm">
-                                    Operating cash spend for the period – operating cash
-                                    income for the period = cash burn for the period.
+                                    Cash reserves ÷ cash burn by period = number of
+                                    periods of cashflow runway
                                   </p>
                                   <p class="db w100 tleft">
-                                    Can you workout what Zoey's cash burn rate is? Write
-                                    your ‘per week’ answer below.
+                                    If Zoey’s business has $20,000 in cash reserves and
+                                    weekly cash burn of $2,000, what length of time is
+                                    Zoey's cashflow runway i.e. how long will her cash
+                                    last? Have a go at the answer below.
                                   </p>
                                   <div class="squiggle-container">
                                       <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
@@ -39,7 +70,7 @@
                                           <div class="squiggle-container">
                                               <!-- put all of your content into here div -->
                                               <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv">
-                                                  <textarea v-on:keyup="validateInputFields" v-model="pageData.burn" v-on:change="$parent.saveData( 'cash-burn.burn', pageData.burn )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
+                                                  <textarea v-on:keyup="validateInputFields" v-model="pageData.flow" v-on:change="$parent.saveData( 'cashflow-runway.flow', pageData.flow )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
                                               </div>
                                               <!-- End Content -->
                                           </div>
@@ -54,8 +85,8 @@
                    </div>
                    <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
                </div>
-               <div class="flexy-image flexy-image-mob-fix pop-in one-line">
-                   <img src="/images/course-numeracy/Numeracy-92.png" class="num-graph mw100">
+               <div class="flexy-image flexy-image-mob-fix pop-in one-line" data-popup-open="popup-1">
+                   <img src="/images/course-numeracy/Numeracy-89.png" class="num-graph mw100">
                </div>
            </div>
        </div>
@@ -87,7 +118,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a href="#097" class="course-button next-button"></a>
+                             <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
+                              <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

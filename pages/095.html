@@ -1,3 +1,38 @@
+<div class="purple-bk-popup" data-popup="popup-1">
+    <div class="popup-inner ">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content white-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <h4 class="w100 black-text tcenter">Cash Burn</h4>
+                            <p class="w100 ib tleft bold">
+                              Cash burn formula:
+                            </p>
+                            <p class="w100 ib tleft mbm">
+                              Operating cash spend for the period – operating cash
+                              income for the period = cash burn for the period.
+                            </p>
+                            <p class="w100 ib tleft bold">
+                              Solution:
+                            </p>
+                            <p class="w100 ib tleft">
+                              This business has a cash burn of $2,000 per week
+                              ($3,000 - $1,000 = $2,000)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+        </div>
+        <a data-popup-close="popup-1" href="#">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
 <div class="container-fluid h100">
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
@@ -54,7 +89,7 @@
                    </div>
                    <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
                </div>
-               <div class="flexy-image flexy-image-mob-fix pop-in one-line">
+               <div class="flexy-image flexy-image-mob-fix pop-in one-line" data-popup-open="popup-1">
                    <img src="/images/course-numeracy/Numeracy-92.png" class="num-graph mw100">
                </div>
            </div>
@@ -87,7 +122,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a href="#096" class="course-button next-button"></a>
+                             <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
+                              <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>
