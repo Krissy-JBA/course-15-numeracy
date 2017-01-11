@@ -1,8 +1,44 @@
+<div class="purple-bk-popup" data-popup="popup-1">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content white-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <h4 class="w100 black-text tcenter">Floor Maths</h4>
+                            <p class="w100 ib tleft">
+                              Let’s say that the:
+                            </p>
+                            <p class="w100 ib tleft mbm">
+                              Average revenue per year is $2,000
+                            </p>
+                            <p class="w100 ib tleft mbm">
+                              Average costs per year are $1,500
+                            </p>
+                            <p class="w100 ib tleft">
+                              Solution
+                            </p>
+                            <p class="w100 ib tleft mtb">
+                              In this case = 7 years x ($2000 - $1500) = 7 x $500 = $3,500
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+        </div>
+        <a data-popup-close="popup-1" href="#">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
 <div class="container-fluid h100">
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
                <div class="new-main-content">
-                   <h2>Activity time</h2>
+                   <h2>Lifetime value of a customer</h2>
                    <!-- Change Header -->
                </div>
            </div>
@@ -16,10 +52,27 @@
                        <div class="row">
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
+                                  <p class="db w100 tleft mbm">
+                                    To calculate the lifetime value of a customer, we
+                                    need to know the average length of time a business
+                                    retains a customer (usually expressed in years).
+                                    Zoey’s business keeps customers for 7 years. Let’s
+                                    picture her business sometime in the future and
+                                    imagine it being really successful!
+                                  </p>
+                                  <p class="db w100 tleft pb0">
+                                    We’ll say that:
+                                  </p>
+                                  <p class="db w100 tleft pb0 pt0">
+                                    Average revenue per year is $2,000
+                                  </p>
+                                  <p class="db w100 tleft mbm pt0">
+                                    Average costs per year are $1,500
+                                  </p>
                                   <p class="db w100 tleft">
-                                    Explain what cash burn is and give an example to back
-                                    up your explanation. You can make it up, but you still
-                                    have to demonstrate it by showing the calculations.
+                                    So, lifetime value = No of years a customer will be
+                                    retained x (average revenue per year – average costs
+                                    per year). Have a go below!
                                   </p>
                                   <div class="squiggle-container">
                                       <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
@@ -27,7 +80,7 @@
                                           <div class="squiggle-container">
                                               <!-- put all of your content into here div -->
                                               <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv">
-                                                  <textarea v-on:keyup="validateInputFields" v-model="pageData.demonstrate" v-on:change="$parent.saveData( 'activity-time.demonstrate', pageData.demonstrate )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
+                                                  <textarea v-on:keyup="validateInputFields" v-model="pageData.retained" v-on:change="$parent.saveData( 'activity-time.retained', pageData.retained )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white" style="height:40px;"></textarea>
                                               </div>
                                               <!-- End Content -->
                                           </div>
@@ -41,6 +94,15 @@
                        </div>
                    </div>
                    <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
+               </div>
+               <div class="flexy-image flexy-image-mob-fix pop-in one-line" data-popup-open="popup-1">
+                   <img src="/images/course-numeracy/Numeracy-102.png" class="num-graph mw100">
+               </div>
+               <div class="row f-jcenter one-line">
+                <div class="ib" style="width:20px">
+                  <img src="/images/course-assets/pointer.png" alt="">
+                </div>
+                <span class="blue-text">Tap me for solution</span>
                </div>
            </div>
        </div>

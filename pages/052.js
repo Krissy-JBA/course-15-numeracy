@@ -1,18 +1,28 @@
 pageComponentry = {
   data: function() {
     return {
+      // Any data goes here.
       pageData: {
-        budget: '',
-        challenge: ''
+        download: ''
       },
 
-      hideLocked: false,
-      disabledInput: true
+      disabledInput: true,
+      hideLocked: false
 
     }
   },
   methods: {
-    callPageTransition: function(){
+    validateInputFields: function(){
+      if(!this.pageData.download){
+        this.hideLocked = false,
+        this.disabledInput = true
+      } else {
+        this.hideLocked = true,
+        this.disabledInput = false
+      }
+    },
+
+   callPageTransition: function(){
       var poppedElement = $(".pop-in");
         $(poppedElement).each(function() {
             var thisPop = this;
@@ -25,34 +35,22 @@ pageComponentry = {
         },1000)
     },
 
-    validateInputFields: function(){
-      if(!this.pageData.budget || !this.pageData.challenge){
-        this.hideLocked = false,
-        this.disabledInput = true
-      } else {
-        this.hideLocked = true,
-        this.disabledInput = false
-      }
-    },
-
     sendData: function(){
-      var obj = this.pageData;
       if(this.disabledInput){
         return;
       } else {
         this.callPageTransition();
       }
-    }
-
+    },
   },
   ready: function() {
+    //call transition
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateTextBoxUi();
+    courseFeatureJBA.activateDataPopups();
 
     //load data on page load
-    this.pageData.budget = this.exerciseData['activity-time.budget'];
-    this.pageData.challenge = this.exerciseData['activity-time.challenge'];
-
+    this.pageData.download = this.exerciseData['your-numeracy-skill.download'];
     //populate data before calling the validate function
     this.validateInputFields();
   }

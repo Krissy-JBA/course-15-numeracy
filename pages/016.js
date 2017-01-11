@@ -16,17 +16,18 @@ pageComponentry = {
     ready: function() {
         courseFeatureJBA.transitionIn();
         courseFeatureJBA.activateDataPopups();
+
         var currentPage = this.exerciseData['page.max']
-        if (currentPage >= 36) {
+        if (currentPage >= 35) {
             this.module2 = true;
         }
-        if (currentPage >= 78) {
+        if (currentPage >= 75) {
             this.module3 = true;
         }
-        if (currentPage >= 87) {
+        if (currentPage >= 84) {
             this.module4 = true;
         }
-        if (currentPage >= 108) {
+        if (currentPage >= 105) {
             this.module5 = true;
         }
 

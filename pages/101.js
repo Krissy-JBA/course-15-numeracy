@@ -2,10 +2,12 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        snapshot: ''
+        lifetime: ''
       },
+
       hideLocked: false,
       disabledInput: true
+
     }
   },
   methods: {
@@ -23,7 +25,7 @@ pageComponentry = {
     },
 
     validateInputFields: function(){
-      if(!this.pageData.snapshot ){
+      if(!this.pageData.lifetime ){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -48,7 +50,7 @@ pageComponentry = {
     courseFeatureJBA.activateTextBoxUi();
 
     //load data on page load
-    this.pageData.snapshot = this.exerciseData['activity-time.snapshot'];
+    this.pageData.lifetime = this.exerciseData['activity-time.lifetime'];
 
     //populate data before calling the validate function
     this.validateInputFields();

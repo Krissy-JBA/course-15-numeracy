@@ -2,7 +2,7 @@
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
                <div class="new-main-content">
-                   <h2>Sales targets</h2>
+                   <h2>Activity time</h2>
                    <!-- Change Header -->
                </div>
            </div>
@@ -17,33 +17,31 @@
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
                                   <p class="db w100 tleft">
-                                    Are you meeting the sales targets you set? How about the
-                                    quantity targets – are you meeting them as well as meeting
-                                    your $ targets?  A business can meet its $ targets by
-                                    slashing prices and selling its product cheaply. But
-                                    meeting targets this way sacrifices profitability, and
-                                    so isn’t very good as a long term strategy!
+                                    Explain why detailed business metrics like the ones
+                                    you’ve covered in this section, help give an overall
+                                    snapshot of the business and why getting a snapshot
+                                    is valuable.
                                   </p>
-                                  <p class="db w100 tleft">
-                                    If you’re meeting your targets, identify what’s going well
-                                    and try to do more of whatever it is!
-                                  </p>
-                                  <p class="db w100 tleft">
-                                    If you’re not meeting targets, are you missing out on
-                                    customer numbers, volume of product and $?  Focus on
-                                    both the strongest and the weakest area.  Try to make
-                                    the strongest area better, and to improve (or eliminate)
-                                    the weakest area.
-                                  </p>
+                                  <div class="squiggle-container">
+                                      <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
+                                      <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                          <div class="squiggle-container">
+                                              <!-- put all of your content into here div -->
+                                              <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv">
+                                                  <textarea v-on:keyup="validateInputFields" v-model="pageData.snapshot" v-on:change="$parent.saveData( 'activity-time.snapshot', pageData.snapshot )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
+                                              </div>
+                                              <!-- End Content -->
+                                          </div>
+                                      </div>
+                                      <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
+                                  </div>
+
                                    <!-- End Content -->
                                </div>
                            </div>
                        </div>
                    </div>
                    <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
-               </div>
-               <div class="flexy-image flexy-image-mob-fix pop-in one-line">
-                   <img src="/images/course-numeracy/Numeracy-86.png" class="num-graph mw200">
                </div>
            </div>
        </div>
@@ -75,7 +73,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a href="#099" class="course-button next-button"></a>
+                             <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
+                              <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

@@ -3,7 +3,7 @@ pageComponentry = {
     return {
       // Any data goes here.
       pageData: {
-        fabric: ''
+        everyday: ''
       },
       disabledInput: true,
       hideLocked: false
@@ -12,7 +12,7 @@ pageComponentry = {
   },
   methods: {
     validateInputFields: function(){
-      if(!this.pageData.fabric){
+      if(!this.pageData.everyday){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -49,7 +49,7 @@ pageComponentry = {
     courseFeatureJBA.activateDataPopups();
 
     //load data on page load
-    this.pageData.fabric = this.exerciseData['bringing-it-all-together.fabric'];
+    this.pageData.everyday = this.exerciseData['activity-time.everyday'];
     //populate data before calling the validate function
     this.validateInputFields();
   }

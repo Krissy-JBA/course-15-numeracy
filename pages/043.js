@@ -2,8 +2,8 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        addition: '',
-        subtraction: ''
+        multiplication: '',
+        division: ''
       },
 
       hideLocked: false,
@@ -26,7 +26,7 @@ pageComponentry = {
     },
 
     validateInputFields: function(){
-      if(!this.pageData.addition || !this.pageData.subtraction){
+      if(!this.pageData.multiplication || !this.pageData.division){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -50,8 +50,8 @@ pageComponentry = {
     courseFeatureJBA.activateTextBoxUi();
 
     //load data on page load
-    this.pageData.addition = this.exerciseData['activity-time.addition'];
-    this.pageData.subtraction = this.exerciseData['activity-time.subtraction'];
+    this.pageData.multiplication = this.exerciseData['activity-time.multiplication'];
+    this.pageData.division = this.exerciseData['activity-time.division'];
 
     //populate data before calling the validate function
     this.validateInputFields();

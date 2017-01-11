@@ -2,8 +2,8 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        inch: '',
-        writeLength: ''
+        capacity: '',
+        weight: ''
       },
 
       hideLocked: false,
@@ -26,7 +26,7 @@ pageComponentry = {
     },
 
     validateInputFields: function(){
-      if(!this.pageData.inch || !this.pageData.writeLength){
+      if(!this.pageData.capacity || !this.pageData.weight){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -50,8 +50,8 @@ pageComponentry = {
     courseFeatureJBA.activateTextBoxUi();
 
     //load data on page load
-    this.pageData.inch = this.exerciseData['activity-time.inch'];
-    this.pageData.writeLength = this.exerciseData['activity-time.writeLength'];
+    this.pageData.capacity = this.exerciseData['activity-time.capacity'];
+    this.pageData.weight = this.exerciseData['activity-time.weight'];
 
     //populate data before calling the validate function
     this.validateInputFields();

@@ -2,8 +2,8 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        link: '',
-        puzzles: ''
+        apps: '',
+        enhance: ''
       },
 
       hideLocked: false,
@@ -21,12 +21,12 @@ pageComponentry = {
             }, 200);
         });
         setTimeout(function(){
-          window.location.href = "#085";
+          window.location.href = "#016";
         },1000)
     },
 
     validateInputFields: function(){
-      if(!this.pageData.link || !this.pageData.puzzles){
+      if(!this.pageData.apps || !this.pageData.enhance){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -50,8 +50,8 @@ pageComponentry = {
     courseFeatureJBA.activateTextBoxUi();
 
     //load data on page load
-    this.pageData.link = this.exerciseData['activity-time.link'];
-    this.pageData.puzzles = this.exerciseData['activity-time.puzzles'];
+    this.pageData.apps = this.exerciseData['activity-time.apps'];
+    this.pageData.enhance = this.exerciseData['activity-time.enhance'];
 
     //populate data before calling the validate function
     this.validateInputFields();

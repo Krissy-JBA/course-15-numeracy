@@ -1,58 +1,21 @@
 pageComponentry = {
   data: function() {
     return {
-      pageData: {
-        lifetime: ''
-      },
-
-      hideLocked: false,
-      disabledInput: true
+      // Any data goes here.
 
     }
   },
   methods: {
-    callPageTransition: function(){
-      var poppedElement = $(".pop-in");
-        $(poppedElement).each(function() {
-            var thisPop = this;
-            setInterval(function() {
-                $(thisPop).addClass("popOut");
-            }, 200);
-        });
-        setTimeout(function(){
-          window.location.href = "#105";
-        },1000)
-    },
-
-    validateInputFields: function(){
-      if(!this.pageData.lifetime ){
-        this.hideLocked = false,
-        this.disabledInput = true
-      } else {
-        this.hideLocked = true,
-        this.disabledInput = false
-      }
-    },
-
-    sendData: function(){
-      var obj = this.pageData;
-      if(this.disabledInput){
-        return;
-      } else {
-        this.callPageTransition();
-      }
-    }
 
   },
   ready: function() {
+    //call transition
     courseFeatureJBA.transitionIn();
-    courseFeatureJBA.activateDataPopups();
-    courseFeatureJBA.activateTextBoxUi();
-
-    //load data on page load
-    this.pageData.lifetime = this.exerciseData['activity-time.lifetime'];
-
-    //populate data before calling the validate function
-    this.validateInputFields();
+    $(".firstCheck, .secondCheck, .thirdCheck, .fourthCheck, .fifthCheck").hide();
+    setTimeout(function() { $(".firstCheck").show(200) }, 1000);
+    setTimeout(function() { $(".secondCheck").show(200) }, 2000);
+    setTimeout(function() { $(".thirdCheck").show(200) }, 3000);
+    setTimeout(function() { $(".fourthCheck").show(200) }, 4000);
+    setTimeout(function() { $(".fifthCheck").show(200) }, 5000);
   }
 }

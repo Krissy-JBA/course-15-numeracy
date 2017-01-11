@@ -17,9 +17,8 @@
                             <div class="squiggle-container flex-center">
                                 <!-- put all of your content into here div -->
                                 <p class="db w100 tleft">
-                                  Search the web and find a numeracy challenge that you
-                                  really enjoy. Post the link here and explain why you
-                                  think it’s a valuable challenge to do.
+                                  Search the web and find two numeracy apps that you
+                                  felt were really valuable.
                                 </p>
                                 <div class="squiggle-container">
                                     <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
@@ -27,7 +26,7 @@
                                         <div class="squiggle-container">
                                             <!-- put all of your content into here div -->
                                             <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv">
-                                                <textarea v-on:keyup="validateInputFields" v-model="pageData.link" v-on:change="$parent.saveData( 'activity-time.link', pageData.link )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
+                                                <textarea v-on:keyup="validateInputFields" v-model="pageData.apps" v-on:change="$parent.saveData( 'activity-time.apps', pageData.apps )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
                                             </div>
                                             <!-- End Content -->
                                         </div>
@@ -35,8 +34,9 @@
                                     <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
                                 </div>
                                 <p class="db w100 tleft mtb">
-                                  Go and find two numeracy websites with games/puzzles
-                                  write them down below with a bit of a description.
+                                  Take one of the apps you found and give a brief
+                                  description about how it helps to enhance numeracy
+                                  skills.
                                 </p>
                                 <div class="squiggle-container">
                                     <div class="top-squiggle top-squiggle-change-2"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
@@ -44,7 +44,7 @@
                                         <div class="squiggle-container">
                                             <!-- put all of your content into here div -->
                                             <div id="courseFormWrapperDiv2" class="course-form-padding courseFormWrapDiv">
-                                                <textarea v-on:keyup="validateInputFields" v-model="pageData.puzzles" v-on:change="$parent.saveData( 'activity-time.puzzles', pageData.puzzles )" placeholder="Enter Text Here..." placeholder="E" class="form-control form-control-2 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
+                                                <textarea v-on:keyup="validateInputFields" v-model="pageData.enhance" v-on:change="$parent.saveData( 'activity-time.enhance', pageData.enhance )" placeholder="Enter Text Here..." placeholder="E" class="form-control form-control-2 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
                                             </div>
                                             <!-- End Content -->
                                         </div>

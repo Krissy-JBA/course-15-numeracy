@@ -75,10 +75,10 @@
                </div>
 
                <ul class="row pl0 flexy-parent two-line">
-                 <li class="col-xs-4 ml0 jba-btn tcenter mbm tlarger" data-popup-open="popup-1">No</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mbm tlarger" data-popup-open="popup-2">Yes</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mbm tlarger" data-popup-open="popup-1">Maybe</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mbm tlarger" data-popup-open="popup-1">Not sure</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">No</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger" v-bind:class="{'branding-03-button-hover' : pageData.correct}" v-on:click="clickCorrect('correct')" data-popup-open="popup-2">Yes</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">Maybe</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">Not sure</li>
                  <div class="w50 flexy-image flexy-image-mob-fix pop-in num-graph-wrap">
                    <img src="/images/course-numeracy/Numeracy-08.png" class="num-graph">
                  </div>
@@ -119,7 +119,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a href="#009" class="course-button next-button"></a>
+                             <button v-on:click="nextPageBtn"  type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked' : buttonValidate}" >Submit</button>
+                           <i class="arrowLock fa fa-lock" v-bind:class="{'display-n' : !buttonValidate}" aria-hidden="true"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

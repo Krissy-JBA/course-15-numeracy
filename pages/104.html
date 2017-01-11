@@ -2,7 +2,7 @@
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
                <div class="new-main-content">
-                   <h2>Activity time</h2>
+                   <h2>Let’s rewind</h2>
                    <!-- Change Header -->
                </div>
            </div>
@@ -16,29 +16,46 @@
                        <div class="row">
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
-                                  <p class="db w100 tleft mbm">
-                                    Using the calculation for lifetime value of a
-                                    customer, put yourself in the customer’s shoes.
-                                    Think of a brand you’ve been with for a while,
-                                    and try to work out your value to that business
-                                    (you’ll have to make up the cost figure, but
-                                    that’s for the purpose of this exercise). Maybe
-                                    use your mobile phone provider for this exercise,
-                                    as you’ve probably been with them for a while.
+                                  <p class="db w100 tleft plb">
+                                    In this module you learned:
                                   </p>
-                                  <div class="squiggle-container">
-                                      <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
-                                      <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                          <div class="squiggle-container">
-                                              <!-- put all of your content into here div -->
-                                              <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv">
-                                                  <textarea v-on:keyup="validateInputFields" v-model="pageData.lifetime" v-on:change="$parent.saveData( 'activity-time.lifetime', pageData.lifetime )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
-                                              </div>
-                                              <!-- End Content -->
+                                  <ul class="two-line rewind">
+                                      <li>
+                                          <div class="imgWrap">
+                                              <img class="back" src="/images/course-assets/check/green-circle.svg" alt="" />
+                                              <img class="front firstCheck" src="/images/course-assets/check/checking.svg" alt="" />
                                           </div>
-                                      </div>
-                                      <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
-                                  </div>
+                                          <p class="tlarger">What numeracy is and why it’s so important</p>
+                                      </li>
+                                      <li class="two-line">
+                                          <div class="imgWrap">
+                                              <img class="back" src="/images/course-assets/check/green-circle.svg" alt="" />
+                                              <img class="front secondCheck" src="/images/course-assets/check/checking.svg" alt="" />
+                                          </div>
+                                          <p class="tlarger">How to apply maths to scenarios (numeracy)</p>
+                                      </li>
+                                      <li class="two-line">
+                                          <div class="imgWrap">
+                                              <img class="back" src="/images/course-assets/check/green-circle.svg" alt="" />
+                                              <img class="front thirdCheck" src="/images/course-assets/check/checking.svg" alt="" />
+                                          </div>
+                                          <p class="tlarger">How to confidently solve issues with numbers.</p>
+                                      </li>
+                                      <li class="two-line">
+                                          <div class="imgWrap">
+                                              <img class="back" src="/images/course-assets/check/green-circle.svg" alt="" />
+                                              <img class="front fourthCheck" src="/images/course-assets/check/checking.svg" alt="" />
+                                          </div>
+                                          <p class="tlarger">Some great techniques to keep on top of your numeracy skills.</p>
+                                      </li>
+                                      <li class="two-line">
+                                          <div class="imgWrap">
+                                              <img class="back" src="/images/course-assets/check/green-circle.svg" alt="" />
+                                              <img class="front fifthCheck" src="/images/course-assets/check/checking.svg" alt="" />
+                                          </div>
+                                          <p class="tlarger">Some of the critical numeric components in the business world.</p>
+                                      </li>
+                                  </ul>
 
                                    <!-- End Content -->
                                </div>
@@ -77,8 +94,7 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                             <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
-                              <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
+                               <a href="#105" class="course-button next-button"></a>
                            </div>
                            <!-- rightArrow -->
                        </div>

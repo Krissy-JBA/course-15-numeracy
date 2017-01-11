@@ -1,195 +1,87 @@
-<div class="purple-bk-popup" data-popup="popup-1">
-    <div class="popup-inner ">
-        <div class="squiggle-container ">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content white-squiggle">
-                <div class="row">
-                    <div class="col-md-12 ">
-                        <div class="squiggle-container flex-center">
-                            <h4 class="w100 black-text">Floor Maths</h4>
-                            <p class="w100 w100 tleft pb0">
-                              Yellow
-                            </p>
-                            <p class="w100 w100 tleft pt0">
-                              4 ÷ 20 x 100 = 0.20 x .100 = 20%
-                            </p>
-                            <p class="w100 w100 tleft pb0">
-                              Orange
-                            </p>
-                            <p class="w100 w100 tleft pt0">
-                              4 ÷ 20 x 100 = 0.20 x .100 = 20%
-                            </p>
-                            <p class="w100 w100 tleft pb0">
-                              Red
-                            </p>
-                            <p class="w100 w100 tleft two-line-bot pt0">
-                              5 ÷ 20 x 100 = 0.25 x .100 = 25%
-                            </p>
-                            <p class="w100 w100 tleft">
-                              So we know that our fabric rolls are :
-                            </p>
-                            <p class="w100 w100 tleft prelative">
-                              Blue
-                              <span class="pabsolute pos-right10">35%</span>
-                            </p>
-                            <p class="w100 w100 tleft">
-                              Yellow
-                              <span class="pabsolute pos-right10">20%</span>
-                            </p>
-                            <p class="w100 w100 tleft">
-                              Orange
-                              <span class="pabsolute pos-right10">20%</span>
-                            </p>
-                            <p class="w100 w100 tleft">
-                              Red
-                              <span class="pabsolute pos-right10">25%</span>
-                            </p>
-                            <p class="w100 w100 tleft">
-                              This adds up tp
-                              <span class="pabsolute pos-right10">100%</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
-        </div>
-        <a data-popup-close="popup-1" href="#">
-            <div class="course-button back-button"></div>
-        </a>
-    </div>
-</div>
-<div class="purple-bk-popup" data-popup="popup-2">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content white-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                            <p class="db w100 tleft">
-                              Hint: For each colour divide the quantity of that colour
-                              over total quantity, then multiply by 100.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
-        </div>
-        <a class="popup-back" data-popup-close="popup-2" href="#">
-            <div class="course-button back-button"></div>
-        </a>
-    </div>
-</div>
+
 <div class="container-fluid h100">
-       <div class="row header-row">
-           <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
-               <div class="new-main-content">
-                   <h2>Bringing it all together</h2>
-                   <!-- Change Header -->
-               </div>
-           </div>
-       </div>
+    <div class="row header-row  ">
+        <div class="col-md-12 col-xs-8 col-xs-offset-2 col-md-offset-0">
+            <div class="new-main-content pop-in">
+                <h2>Activity time</h2>
+                <!-- Change Header -->
+            </div>
+        </div>
+    </div>
+    <div class="row content-row pop-in">
+        <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
+            <div class="squiggle-container">
+                <div class="top-squiggle"><img src="/course-files/course-22-branding/img/squiggle/white-top.svg" alt=""></div>
+                <div class="squiggle-content white-squiggle">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="squiggle-container flex-center">
+                                <!-- put all of your content into here div -->
+                                <p class="db w100 tleft">
+                                  It’s time to think about how you use numeracy everyday.
+                                  (This might require you to go away and do a bit of
+                                  thinking). Write down examples of how you apply numeracy
+                                  daily, in the box below.
+                                </p>
+                                <div class="squiggle-container">
+                                    <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
+                                    <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                        <div class="squiggle-container">
+                                            <!-- put all of your content into here div -->
+                                            <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv">
+                                                <textarea v-on:keyup="validateInputFields" v-model="pageData.everyday" v-on:change="$parent.saveData( 'activity-time.everyday', pageData.everyday )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
+                                            </div>
+                                            <!-- End Content -->
+                                        </div>
+                                    </div>
+                                    <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
+                                </div>
 
-       <div class="row content-row flexy-parent pop-in">
-           <div class="col-md-6 col-md-offset-3 col-xs-12 break-point">
-               <div class="squiggle-container">
-                   <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-                   <div class="squiggle-content white-squiggle">
-                       <div class="row">
-                           <div class="col-md-12">
-                               <div class="squiggle-container flex-center">
-                                  <p class="db w100 tleft mbm">
-                                    What % of the fabrics are red? What % are yellow?
-                                    And what percentage are orange?!
-                                  </p>
-                                  <p class="db w100 tleft">
-                                    Have a go at working out the percentage of each fabric
-                                    and write your answers below.
-                                  </p>
-                                  <div class="squiggle-container">
-                                      <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
-                                      <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                          <div class="squiggle-container">
-                                              <!-- put all of your content into here div -->
-                                              <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv">
-                                                  <textarea v-on:keyup="validateInputFields" v-model="pageData.fabric" v-on:change="$parent.saveData( 'bringing-it-all-together.fabric', pageData.fabric )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white" style="height:60px;"></textarea>
-                                              </div>
-                                              <!-- End Content -->
-                                          </div>
-                                      </div>
-                                      <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
-                                      <div class="hint-container" data-popup-open="popup-2">
-                                          <div class="hint-bulb"></div>
-                                          <p>Hint</p>
-                                      </div>
-                                  </div>
-                                  <p class="db w100 tleft two-line">
-                                    All of the percentages should add up to 100%. If
-                                    they don’t, it means that there
-                                    is a counting error – or a calculation error with a
-                                    percentage. Or maybe you’ve left one out when you
-                                    added them up?
-                                  </p>
-
-                                   <!-- End Content -->
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
-               </div>
-               <div class="flexy-image flexy-image-mob-fix pop-in one-line">
-                 <img src="/images/course-numeracy/Numeracy-29.png" class="num-graph mw100" data-popup-open="popup-1">
-               </div>
-                <div class="row f-jcenter one-line">
-                  <div class="ib" style="width:20px">
-                    <img src="/images/course-assets/pointer.png" alt="">
-                  </div>
-                  <span class="blue-text">Tap on scissors for the solution</span>
+                                <!-- End Content -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-           </div>
-       </div>
-       <!-- end  content -->
-       <!-- =========================== -->
-       <!-- footer start -->
-       <div class="row progressWrap">
-           <div class="col-xs-12 col-pad0">
-               <!-- S:Progress Bar -->
-               <div class="progress-row">
-                   <div class="hand-arrow">
-                       <div class="percentageTxt hidden">
-                           <p>60%</p>
-                       </div>
-                       <img class="percentageArrow hidden" src="/images/course-assets/progressBar/hand_arrow.png" alt="" />
-                   </div>
-                   <div class="container progressContainer">
-                       <div class="row">
-                           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                             <a href="#072" class="course-button prev-button"></a>
-                           </div>
-                           <!-- leftArrow -->
-                           <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
-                               <div class="course-progress-bar-wrap">
-                                   <div class="courseProgressBar">
-                                       <p class="fixed hidden">60%</p>
-                                       <div class="percentageProgress"></div>
-                                   </div>
-                               </div>
-                           </div>
-                           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                             <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
-                              <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
-                           </div>
-                           <!-- rightArrow -->
-                       </div>
-                   </div>
-               </div>
-               <!-- E:Progress Bar -->
-           </div>
-       </div>
-   </div>
+                <div class="bot-squiggle"><img src="/course-files/course-22-branding/img/squiggle/white-bottom.svg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <!-- end  content -->
+    <!-- =========================== -->
+    <!-- footer start -->
+    <div class="row progressWrap">
+        <div class="col-xs-12 col-pad0">
+            <!-- S:Progress Bar -->
+            <div class="progress-row">
+                <div class="hand-arrow">
+                    <div class="percentageTxt hidden">
+                        <p>60%</p>
+                    </div>
+                    <img class="percentageArrow hidden" src="/images/course-assets/img/progressBar/hand_arrow.png" alt="" />
+                </div>
+                <div class="container progressContainer">
+                    <div class="row">
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                            <a href="#072" class="course-button prev-button"></a>
+                        </div>
+                        <!-- leftArrow -->
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
+                            <div class="course-progress-bar-wrap">
+                                <div class="courseProgressBar">
+                                    <p class="fixed hidden">60%</p>
+                                    <div class="percentageProgress"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                           <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
+                            <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
+                        </div>
+                        <!-- rightArrow -->
+                    </div>
+                </div>
+            </div>
+            <!-- E:Progress Bar -->
+        </div>
+    </div>
+</div>

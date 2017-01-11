@@ -2,7 +2,7 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        retained: ''
+        insights: ''
       },
 
       hideLocked: false,
@@ -25,7 +25,7 @@ pageComponentry = {
     },
 
     validateInputFields: function(){
-      if(!this.pageData.retained ){
+      if(!this.pageData.insights ){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -50,7 +50,7 @@ pageComponentry = {
     courseFeatureJBA.activateTextBoxUi();
 
     //load data on page load
-    this.pageData.retained = this.exerciseData['activity-time.retained'];
+    this.pageData.insights = this.exerciseData['applying-numeracy.insights'];
 
     //populate data before calling the validate function
     this.validateInputFields();

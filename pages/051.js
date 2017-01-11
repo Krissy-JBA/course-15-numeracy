@@ -2,8 +2,8 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        timeline: '',
-        considerations: ''
+        budget: '',
+        challenge: ''
       },
 
       hideLocked: false,
@@ -26,7 +26,7 @@ pageComponentry = {
     },
 
     validateInputFields: function(){
-      if(!this.pageData.timeline || !this.pageData.considerations){
+      if(!this.pageData.budget || !this.pageData.challenge){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -50,8 +50,8 @@ pageComponentry = {
     courseFeatureJBA.activateTextBoxUi();
 
     //load data on page load
-    this.pageData.timeline = this.exerciseData['activity-time.timeline'];
-    this.pageData.considerations = this.exerciseData['activity-time.considerations'];
+    this.pageData.budget = this.exerciseData['activity-time.budget'];
+    this.pageData.challenge = this.exerciseData['activity-time.challenge'];
 
     //populate data before calling the validate function
     this.validateInputFields();

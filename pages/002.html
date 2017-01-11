@@ -74,12 +74,12 @@
 
                <ul class="row pl0 flexy-parent two-line">
                  <!-- <button v-bind:class="{'branding-03-button-hover' : pageData.logo}" v-on:click="clickBrand('logo')" type="button" class="branding-03-button"> -->
-                 <li class="col-xs-4 ml0 jba-btn tcenter mbm tlarger" data-popup-open="popup-1">1:15 am</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mbm tlarger" data-popup-open="popup-2">6:45 am</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mbm tlarger" data-popup-open="popup-1">8:00 am</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mbm tlarger" data-popup-open="popup-1">6:30 am</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">1:15 am</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger" v-bind:class="{'branding-03-button-hover' : pageData.correct}" v-on:click="clickCorrect('correct')" data-popup-open="popup-2">6:45 am</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">8:00 am</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">6:30 am</li>
                  <div class="w50 flexy-image flexy-image-mob-fix pop-in num-graph-wrap">
-                   <img src="/images/course-numeracy/Numeracy-02.png" class="num-graph" alt="">
+                   <img src="/images/course-numeracy/Numeracy-02.png" class="num-graph pt0" alt="">
                  </div>
                </ul>
                <div class="row plb">
@@ -118,7 +118,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a href="#003" class="course-button next-button"></a>
+                             <button v-on:click="nextPageBtn"  type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked' : buttonValidate}" >Submit</button>
+                             <i class="arrowLock fa fa-lock" v-bind:class="{'display-n' : !buttonValidate}" aria-hidden="true"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

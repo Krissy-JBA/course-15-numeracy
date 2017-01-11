@@ -2,7 +2,7 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        flow: ''
+        demonstrate: ''
       },
 
       hideLocked: false,
@@ -25,7 +25,7 @@ pageComponentry = {
     },
 
     validateInputFields: function(){
-      if(!this.pageData.flow ){
+      if(!this.pageData.demonstrate ){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -50,7 +50,7 @@ pageComponentry = {
     courseFeatureJBA.activateTextBoxUi();
 
     //load data on page load
-    this.pageData.flow = this.exerciseData['cashflow-runway.flow'];
+    this.pageData.demonstrate = this.exerciseData['activity-time.demonstrate'];
 
     //populate data before calling the validate function
     this.validateInputFields();

@@ -2375,6 +2375,9 @@ button.jba-btn, button.jba-btn:hover {
 .mw100 {
   max-width: 100px !important;
 }
+.mw150 {
+  max-width: 150px !important;
+}
 .mw200 {
   max-width: 200px !important;
 }
@@ -2503,6 +2506,19 @@ ul.rewind {
       }
   } //li
 }
+.fa-check.num {
+  position: absolute;
+  font-size: 30px;
+  right: 0;
+  top: 0;
+  color: #38B449;
+}
+.arrowLock.num {
+  top: 0;
+  right: 0;
+  transform: translateX(-7px) translateY(7px) !important;
+}
+
 //course-numeracy by Martin
 
 

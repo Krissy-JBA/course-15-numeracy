@@ -74,12 +74,12 @@
                </div>
 
                <ul class="row pl0 flexy-parent two-line">
-                 <li class="col-xs-4 ml0 jba-btn tcenter mbm tlarger" data-popup-open="popup-1">4</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mbm tlarger" data-popup-open="popup-1">1</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mbm tlarger" data-popup-open="popup-1">2</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mbm tlarger" data-popup-open="popup-2">3</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">4</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">1</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">2</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger" v-bind:class="{'branding-03-button-hover' : pageData.correct}" v-on:click="clickCorrect('correct')" data-popup-open="popup-2">3</li>
                  <div class="w50 flexy-image flexy-image-mob-fix pop-in num-graph-wrap">
-                   <img src="/images/course-numeracy/Numeracy-06.png" class="num-graph">
+                   <img src="/images/course-numeracy/Numeracy-06.png" class="num-graph mw150 pt0">
                  </div>
                </ul>
                <div class="row plb">
@@ -118,7 +118,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a href="#007" class="course-button next-button"></a>
+                             <button v-on:click="nextPageBtn"  type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked' : buttonValidate}" >Submit</button>
+                             <i class="arrowLock fa fa-lock" v-bind:class="{'display-n' : !buttonValidate}" aria-hidden="true"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

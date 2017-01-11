@@ -2,8 +2,8 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        metric: '',
-        ratio: ''
+        percentages: '',
+        decisions: ''
       },
 
       hideLocked: false,
@@ -26,7 +26,7 @@ pageComponentry = {
     },
 
     validateInputFields: function(){
-      if(!this.pageData.metric || !this.pageData.ratio){
+      if(!this.pageData.percentages || !this.pageData.decisions){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -50,8 +50,8 @@ pageComponentry = {
     courseFeatureJBA.activateTextBoxUi();
 
     //load data on page load
-    this.pageData.metric = this.exerciseData['activity-time.metric'];
-    this.pageData.ratio = this.exerciseData['activity-time.ratio'];
+    this.pageData.percentages = this.exerciseData['activity-time.percentages'];
+    this.pageData.decisions = this.exerciseData['activity-time.decisions'];
 
     //populate data before calling the validate function
     this.validateInputFields();
