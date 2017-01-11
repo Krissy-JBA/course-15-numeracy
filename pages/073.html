@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-md-12 ">
                         <div class="squiggle-container flex-center">
-                            <h4 class="w100 green-text">Floor Maths</h4>
+                            <h4 class="w100 black-text">Floor Maths</h4>
                             <p class="w100 w100 tleft pb0">
                               Yellow
                             </p>
@@ -60,7 +60,30 @@
         </a>
     </div>
 </div>
-
+<div class="purple-bk-popup" data-popup="popup-2">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content white-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                            <p class="db w100 tleft">
+                              Hint: For each colour divide the quantity of that colour
+                              over total quantity, then multiply by 100.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+        </div>
+        <a class="popup-back" data-popup-close="popup-2" href="#">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
 <div class="container-fluid h100">
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
@@ -71,15 +94,15 @@
            </div>
        </div>
 
-       <div class="row content-row flexy-parent">
+       <div class="row content-row flexy-parent pop-in">
            <div class="col-md-6 col-md-offset-3 col-xs-12 break-point">
                <div class="squiggle-container">
                    <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
                    <div class="squiggle-content white-squiggle">
-                       <div class="row two-line two-line-bot">
+                       <div class="row">
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
-                                  <p class="db w100 tleft mbb">
+                                  <p class="db w100 tleft mbm">
                                     What % of the fabrics are red? What % are yellow?
                                     And what percentage are orange?!
                                   </p>
@@ -87,17 +110,26 @@
                                     Have a go at working out the percentage of each fabric
                                     and write your answers below.
                                   </p>
-                                  <p class="db w100 tleft" style="padding:8px;border:2px solid #333;border-radius:10px;">
-                                    Hint: For each colour divide the quantity of that colour over total quantity, then multiply by 100.
-                                  </p>
-                                  <div class="flexy-image flexy-image-mob-fix pop-in mbb">
-                                    <img src="/images/course-numeracy/Numeracy-29.png" class="prelative mw200" data-popup-open="popup-1">
+                                  <div class="squiggle-container">
+                                      <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
+                                      <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                          <div class="squiggle-container">
+                                              <!-- put all of your content into here div -->
+                                              <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv">
+                                                  <textarea v-on:keyup="validateInputFields" v-model="pageData.fabric" v-on:change="$parent.saveData( 'bringing-it-all-together.fabric', pageData.fabric )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white" style="height:60px;"></textarea>
+                                              </div>
+                                              <!-- End Content -->
+                                          </div>
+                                      </div>
+                                      <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
+                                      <div class="hint-container" data-popup-open="popup-2">
+                                          <div class="hint-bulb"></div>
+                                          <p>Hint</p>
+                                      </div>
                                   </div>
-                                  <p class="db w100 tleft">
+                                  <p class="db w100 tleft two-line">
                                     All of the percentages should add up to 100%. If
                                     they don’t, it means that there
-                                  </p>
-                                  <p class="db w100 tleft">
                                     is a counting error – or a calculation error with a
                                     percentage. Or maybe you’ve left one out when you
                                     added them up?
@@ -110,6 +142,16 @@
                    </div>
                    <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
                </div>
+               <div class="flexy-image flexy-image-mob-fix pop-in one-line">
+                 <img src="/images/course-numeracy/Numeracy-29.png" class="num-graph mw100" data-popup-open="popup-1">
+               </div>
+                <div class="row f-jcenter one-line">
+                  <div class="ib" style="width:20px">
+                    <img src="/images/course-assets/pointer.png" alt="">
+                  </div>
+                  <span class="blue-text">Tap on scissors for the solution</span>
+                </div>
+
            </div>
        </div>
        <!-- end  content -->
@@ -140,7 +182,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a href="#074" class="course-button next-button"></a>
+                             <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
+                              <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

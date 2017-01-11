@@ -1,6 +1,6 @@
 
 <div class="container-fluid h100">
-    <div class="row header-row  ">
+    <div class="row header-row">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 col-md-offset-0">
             <div class="new-main-content pop-in">
                 <h2>Activity time</h2>
@@ -8,9 +8,9 @@
             </div>
         </div>
     </div>
-    <div class="row content-row  ">
-        <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3  col-xs-12">
-            <div class="squiggle-container pop-in">
+    <div class="row content-row pop-in">
+        <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
+            <div class="squiggle-container">
                 <div class="top-squiggle"><img src="/course-files/course-22-branding/img/squiggle/white-top.svg" alt=""></div>
                 <div class="squiggle-content white-squiggle">
                     <div class="row">
@@ -44,7 +44,7 @@
                                         <div class="squiggle-container">
                                             <!-- put all of your content into here div -->
                                             <div id="courseFormWrapperDiv2" class="course-form-padding courseFormWrapDiv">
-                                                <textarea v-on:keyup="validateInputFields" v-model="pageData.personal" v-on:change="$parent.saveData( 'activity.personal', pageData.personal )" placeholder="Enter Text Here..." placeholder="E" class="form-control form-control-2 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
+                                                <textarea v-on:keyup="validateInputFields" v-model="pageData.personal" v-on:change="$parent.saveData( 'activity-time.personal', pageData.personal )" placeholder="Enter Text Here..." placeholder="E" class="form-control form-control-2 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
                                             </div>
                                             <!-- End Content -->
                                         </div>
@@ -55,11 +55,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flexy-image flexy-image-mob-fix pop-in">
-                        <img src="/images/course-numeracy/richard.png" class="prelative mw70">
-                    </div>
                 </div>
                 <div class="bot-squiggle"><img src="/course-files/course-22-branding/img/squiggle/white-bottom.svg" alt=""></div>
+            </div>
+            <div class="flexy-image flexy-image-mob-fix pop-in one-line">
+                <img src="/images/course-numeracy/richard.png" class="num-graph mw70">
             </div>
         </div>
     </div>

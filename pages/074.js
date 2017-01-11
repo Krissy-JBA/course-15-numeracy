@@ -49,7 +49,7 @@ pageComponentry = {
     courseFeatureJBA.activateDataPopups();
 
     //load data on page load
-    this.pageData.standFor = this.exerciseData['activity-time.everyday'];
+    this.pageData.everyday = this.exerciseData['activity-time.everyday'];
     //populate data before calling the validate function
     this.validateInputFields();
   }

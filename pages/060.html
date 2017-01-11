@@ -1,3 +1,44 @@
+<div class="popupNew" v-show="popup1 == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/red-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content red-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p><strong>Not quite</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/red-bottom.svg" alt=""></div>
+        </div>
+        <a class="course-button close-button popup-close-test" @click="">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="popupNew" v-show="popup2 == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content green-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p><strong>Nice job!</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
+        </div>
+        <a class="course-button close-button popup-close-test" @click="redirect">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </a>
+    </div>
+</div>
 <div class="container-fluid h100">
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
@@ -8,85 +49,52 @@
            </div>
        </div>
 
-       <div class="row content-row flexy-parent">
+       <div class="row content-row flexy-parent pop-in">
            <div class="col-md-6 col-md-offset-3 col-xs-12 break-point">
                <div class="squiggle-container">
                    <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
                    <div class="squiggle-content white-squiggle">
-                       <div class="row two-line two-line-bot">
+                       <div class="row">
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
                                   <p class="db w100 tleft mbb">
                                     See if you can distinguish between the different
-                                    kinds of data. Click on the boxes that are
-                                    quantitative. Hit submit when you’re ready.
+                                    kinds of data.
                                   </p>
-                                  <ul class="w100 pl0">
-                                    <li class="row">
-                                      <p class="col-xs-10 magenta-blob plb pbm ptm tleft">
-                                        The fabric is reddish orange
-                                      </p>
-                                      <div class="col-xs-2 plm prm">
-                                        <div class="imgWrap">
-                                          <img src="/images/course-numeracy/checkbox.png" alt="">
-                                        </div>
-                                        <div class="numeracy-check">
-                                          <img src="/images/course-numeracy/check.png" alt="">
-                                        </div>
-                                      </div>
-                                    </li>
-                                    <li class="row">
-                                      <p class="col-xs-10 magenta-blob plb pbm ptm tleft">
-                                        The fabric weight is 3 kg
-                                      </p>
-                                      <div class="col-xs-2 plm prm">
-                                        <div class="imgWrap">
-                                          <img src="/images/course-numeracy/checkbox.png" alt="">
-                                        </div>
-                                        <div class="numeracy-check">
-                                          <img src="/images/course-numeracy/check.png" alt="">
-                                        </div>
-                                      </div>
-                                    </li>
-                                    <li class="row">
-                                      <p class="col-xs-10 magenta-blob plb pbm ptm tleft">
-                                        The fabric is 1 metre wide
-                                      </p>
-                                      <div class="col-xs-2 plm prm">
-                                        <div class="imgWrap">
-                                          <img src="/images/course-numeracy/checkbox.png" alt="">
-                                        </div>
-                                        <div class="numeracy-check">
-                                          <img src="/images/course-numeracy/check.png" alt="">
-                                        </div>
-                                      </div>
-                                    </li>
-                                    <li class="row">
-                                      <p class="col-xs-10 magenta-blob plb pbm ptm tleft">
-                                        The fabric is furry
-                                      </p>
-                                      <div class="col-xs-2 plm prm">
-                                        <div class="imgWrap">
-                                          <img src="/images/course-numeracy/checkbox.png" alt="">
-                                        </div>
-                                        <div class="numeracy-check">
-                                          <img src="/images/course-numeracy/check.png" alt="">
-                                        </div>
-                                      </div>
-                                    </li>
-                                    <li class="row">
-                                      <p class="col-xs-10 magenta-blob plb pbm ptm tleft">
-                                        The fabric is 100% cotton
-                                      </p>
-                                      <div class="col-xs-2 plm prm">
-                                        <div class="imgWrap">
-                                          <img src="/images/course-numeracy/checkbox.png" alt="">
-                                        </div>
-                                        <div class="numeracy-check">
-                                          <img src="/images/course-numeracy/check.png" alt="">
-                                        </div>
-                                      </div>
-                                    </li>
+                                  <p class="db w100 tcenter blue-text pb0">
+                                    Click on the boxes that are quantitative.
+                                  </p>
+                                  <p class="db w100 tcenter blue-text pt0">
+                                    Hit submit when you’re ready.
+                                  </p>
+                                  <form class="jba-checkbox one-line one-line-bot" action="#">
+                                     <p>
+                                       <input type="checkbox" id="test1" value="orange," v-model="inputfield1" v-on:change="saveInputData(inputfield1)"/>
+                                       <label class="tlarger" for="test1">The fabric is reddish orange</label>
+                                     </p>
+                                     <p>
+                                       <input type="checkbox" id="test2" value="3kg," v-model="inputfield2" v-on:change="saveInputData(inputfield2)"/>
+                                       <label class="tlarger" for="test2">The fabric weight is 3kg</label>
+                                     </p>
+                                     <p>
+                                       <input type="checkbox" id="test3" value="1metre," v-model="inputfield3" v-on:change="saveInputData(inputfield3)"/>
+                                       <label class="tlarger" for="test3">The fabric is 1 metre wide</label>
+                                     </p>
+                                     <p>
+                                       <input type="checkbox" id="test4" value="furry," v-model="inputfield4" v-on:change="saveInputData(inputfield4)"/>
+                                       <label class="tlarger" for="test4">The fabric is furry</label>
+                                     </p>
+                                     <p>
+                                       <input type="checkbox" id="test5" value="cotton," v-model="inputfield5" v-on:change="saveInputData(inputfield5)"/>
+                                       <label class="tlarger" for="test5">The fabric is 100% cotton</label>
+                                     </p>
+                                     <p>
+                                       <input type="checkbox" id="test6" value="50metres," v-model="inputfield6" v-on:change="saveInputData(inputfield6)"/>
+                                       <label class="tlarger" for="test6">The fabric roll is 50 metres long</label>
+                                     </p>
+                                   </form>
+                                  <!-- <ul class="w100 pl0">
+
                                     <li class="row">
                                       <p class="col-xs-10 magenta-blob plb pbm ptm tleft">
                                         The fabric roll is 50 metres long
@@ -100,7 +108,7 @@
                                         </div>
                                       </div>
                                     </li>
-                                  </ul>
+                                  </ul> -->
 
                                    <!-- End Content -->
                                </div>
@@ -140,7 +148,7 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                             <button type="button" class="jba-btn jba-course-submit">Submit</button>
+                             <a @click="answerPopup" class="jba-btn jba-btn-lg">Submit</a>
                            </div>
                            <!-- rightArrow -->
                        </div>
