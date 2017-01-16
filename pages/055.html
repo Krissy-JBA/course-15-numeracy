@@ -1,47 +1,22 @@
-<div class="popup-bk popup" data-popup="popup-1">
+<div class="popupNew" v-show="popup1 == true">
     <div class="popup-inner">
         <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/purple-top.svg" alt=""></div>
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
             <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content purple-squiggle">
+            <div class="squiggle-content green-squiggle">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="squiggle-container flex-center">
-                            <p class="db w100 tcenter green-text">
-                              Good job!
-                            </p>
+                          <p><strong>Nice job!</strong></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/purple-bottom.svg" alt=""></div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
         </div>
-        <div class="course-button close-button popup-close-test" data-popup-close="popup-1">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
-        </div>
-    </div>
-</div>
-<div class="popup-bk popup" data-popup="popup-2">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/purple-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content purple-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <p class="db w100 tcenter red-text">
-                            Not quite...
-                          </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/purple-bottom.svg" alt=""></div>
-        </div>
-        <div class="course-button close-button popup-close-test" data-popup-close="popup-2">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
-        </div>
+        <a class="course-button close-button popup-close-test" href="#056">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+        </a>
     </div>
 </div>
 <div class="container-fluid h100">
@@ -55,56 +30,60 @@
        </div>
 
        <div class="row content-row flexy-parent pop-in">
-           <div class="col-md-6 col-md-offset-3 col-xs-12 break-point">
+           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
                <div class="squiggle-container">
                    <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
                    <div class="squiggle-content white-squiggle">
                        <div class="row">
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
-                                  <p class="db w100 tleft mbm">
-                                    Measurements can be made by counting things,
-                                    by recording observations or by calculation from
-                                    other records.
-                                  </p>
-                                  <p class="db w100 tcenter blue-text">
-                                    Drag the boxes to match the description.
-                                  </p>
-                                  <p class="db w100 tleft">
-                                    <div class="row f-center mbb">
-                                      <div class="col-xs-5">
-                                        <div class="top-squiggle"><img src="/images/course-assets/squiggle/magenta-top.svg" alt=""/></div>
-                                        <p class="db w100 tcenter magenta-squiggle">Observation</p>
-                                        <div class="bot-squiggle"><img src="/images/course-assets/squiggle/magenta-bottom.svg" alt=""/></div>
-                                      </div>
-                                      <div class="col-xs-7">
-                                        <p class="db w100 tleft black-text">Stock-take – measuring</p>
-                                        <p class="db w100 tleft black-text">stock</p>
-                                      </div>
-                                    </div>
-                                    <div class="row f-center mbb">
-                                      <div class="col-xs-5">
-                                        <div class="top-squiggle"><img src="/images/course-assets/squiggle/magenta-top.svg" alt=""/></div>
-                                        <p class="db w100 tcenter magenta-squiggle">Calculation</p>
-                                        <div class="bot-squiggle"><img src="/images/course-assets/squiggle/magenta-bottom.svg" alt=""/></div>
-                                      </div>
-                                      <div class="col-xs-7">
-                                        <p class="db w100 tleft black-text">The employee workload</p>
-                                        <p class="db w100 tleft black-text">Is being measured</p>
-                                      </div>
-                                    </div>
-                                    <div class="row f-center mbb">
-                                      <div class="col-xs-5">
-                                        <div class="top-squiggle"><img src="/images/course-assets/squiggle/magenta-top.svg" alt=""/></div>
-                                        <p class="db w100 tcenter magenta-squiggle">Counting</p>
-                                        <div class="bot-squiggle"><img src="/images/course-assets/squiggle/magenta-bottom.svg" alt=""/></div>
-                                      </div>
-                                      <div class="col-xs-7">
-                                        <p class="db w100 tleft black-text">The business workspace</p>
-                                        <p class="db w100 tleft black-text">Is being measured</p>
-                                      </div>
-                                    </div>
-                                  </p>
+                                 <div class="row">
+                                   <div class="col-md-12">
+                                     <p>
+                                       Measurements can be made by counting things,
+                                       by recording observations or by calculation from
+                                       other records.
+                                     </p>
+                                     <p class="tcenter blue-text two-line-bot">
+                                       Drag the boxes to match the description.
+                                     </p>
+
+                                     <div class="row">
+                                       <ul class="col-xs-5 one-line" id="sortable">
+                                         <li class="squiggle-container one-line-bot" id="observation">
+                                           <p class="db w100 tcenter magenta-blob-box" style="padding:25px 0">Observation</p>
+                                           <i class="num"></i>
+                                         </li>
+                                         <li class="squiggle-container one-line-bot" id="calculation">
+                                           <p class="db w100 tcenter magenta-blob-box" style="padding:25px 0">Calculation</p>
+                                           <i class="num"></i>
+                                         </li>
+                                         <li class="squiggle-container one-line-bot" id="counting">
+                                           <p class="db w100 tcenter magenta-blob-box" style="padding:25px 0">Counting</p>
+                                           <i class="num"></i>
+                                         </li>
+
+                                       </ul>
+                                       <div class="col-xs-7">
+                                         <div class="row one-line one-line-bot f-center" style="height:70px;">
+                                           <div class="col-md-12">
+                                             <p>Stock-take – measuring stock</p>
+                                           </div>
+                                         </div>
+                                         <div class="row one-line-bot f-center" style="height:70px;">
+                                           <div class="col-md-12">
+                                             <p class="pb0">Employee workload is being measured</p>
+                                           </div>
+                                         </div>
+                                         <div class="row one-line-bot f-center" style="height:70px;">
+                                           <div class="col-md-12">
+                                             <p class="pb0">Employee workspace is being measured</p>
+                                           </div>
+                                         </div>
+                                       </div>
+                                     </div>
+                                   </div>
+                                 </div>
                                    <!-- End Content -->
                                </div>
                            </div>
@@ -145,7 +124,7 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a href="#056" class="course-button next-button"></a>
+                              <a @click="submitCheck" class="course-button jba-btn next-button disabled" v-bind:class="{'next-button-locked':locked}"></a>
                            </div>
                            <!-- rightArrow -->
                        </div>

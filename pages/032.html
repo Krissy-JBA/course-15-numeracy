@@ -9,19 +9,23 @@
        </div>
 
        <div class="row content-row flexy-parent pop-in">
-           <div class="col-md-6 col-md-offset-3 col-xs-12 break-point">
+           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
                <div class="squiggle-container">
                    <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
                    <div class="squiggle-content white-squiggle">
                        <div class="row">
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
-                                  <p class="db w100 tleft">
-                                    Time to work out the cost of producing a piece of clothing, Zoey’s top selling shirt.
-                                  </p>
-                                  <p class="db w100 tleft">
-                                    Choose the items you’d like to add to the shirt and your total cost will appear in the box below.
-                                  </p>
+                                 <div class="row">
+                                   <div class="col-md-12">
+                                     <p>
+                                       Time to work out the cost of producing a piece of clothing, Zoey’s top selling shirt.
+                                     </p>
+                                     <p>
+                                       Choose the items you’d like to add to the shirt and your total cost will appear in the box below.
+                                     </p>
+                                   </div>
+                                 </div>
                                   <!-- End Content -->
                                </div>
                            </div>
@@ -29,7 +33,32 @@
                    </div>
                    <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
                </div>
-               <p class="blue-text tcenter">Drag the materials you want to the box below and tap NEXT when you’ve finished.</p>
+               <p class="blue-text tcenter one-line">Drag the materials you want to the box below and tap NEXT when you’ve finished.</p>
+               <div class="drag-drop">
+
+                   <div class="drag row pabsolute" style="min-height:100px;">
+                     <div class="row" id="drag-num">
+                       <li class="col-xs-3 mls mrs magenta-blob tcenter" id="cotton"><input type="hidden" value="0.10" />Cotton</li>
+                       <li class="col-xs-3 mls mrs magenta-blob tcenter" id="fabric"><input type="hidden" value="4.8" />Fabric</li>
+                       <li class="col-xs-3 mls mrs magenta-blob tcenter" id="zip"><input type="hidden" value="0.50" />Zip</li>
+                       <li class="col-xs-3 mls mrs magenta-blob tcenter" id="labels"><input type="hidden" value="0.10" />Labels</li>
+                       <li class="col-xs-3 mls mrs magenta-blob tcenter" id="buttons"><input type="hidden" value="0.20" />5 Buttons</li>
+                       <li class="col-xs-3 mls mrs magenta-blob tcenter" id="embroidery"><input type="hidden" value="0.10" />Embroidery</li>
+                     </div>
+                   </div>
+
+                   <div class="row pabsolute" style="border:2px #dfcdb9 dotted;border-radius:10px;top:16px">
+                     <div class="row" id="sort-num" style="height:150px;padding:20px;">
+                     </div>
+                   </div>
+
+                   <div class="row">
+                     <div class="col-xs-4 col-xs-offset-8" style="top:35px;">
+                       <p class="purple-blob-box mb0 ptm pbm">$ <span class="total-32" ><{ pageData.total }></span></p>
+                     </div>
+                   </div>
+
+               </div>
 
               <!-- End Content -->
            </div>
@@ -62,8 +91,7 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                              <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
-                               <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
+                            <a href="#033" class="course-button next-button"></a>
                            </div>
                            <!-- rightArrow -->
                        </div>

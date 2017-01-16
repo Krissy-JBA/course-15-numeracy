@@ -1,47 +1,22 @@
-<div class="popup-bk popup" data-popup="popup-1">
+<div class="popupNew" v-show="popup1 == true">
     <div class="popup-inner">
         <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/purple-top.svg" alt=""></div>
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
             <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content purple-squiggle">
+            <div class="squiggle-content green-squiggle">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="squiggle-container flex-center">
-                            <p class="db w100 tcenter green-text">
-                              Good job!
-                            </p>
+                          <p><strong>Nice job!</strong></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/purple-bottom.svg" alt=""></div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
         </div>
-        <div class="course-button close-button popup-close-test" data-popup-close="popup-1">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
-        </div>
-    </div>
-</div>
-<div class="popup-bk popup" data-popup="popup-2">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/purple-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content purple-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <p class="db w100 tcenter red-text">
-                            Not quite...
-                          </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/purple-bottom.svg" alt=""></div>
-        </div>
-        <div class="course-button close-button popup-close-test" data-popup-close="popup-2">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
-        </div>
+        <a class="course-button close-button popup-close-test" href="#057">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+        </a>
     </div>
 </div>
 <div class="container-fluid h100">
@@ -55,51 +30,59 @@
        </div>
 
        <div class="row content-row flexy-parent pop-in">
-           <div class="col-md-6 col-md-offset-3 col-xs-12 break-point">
+           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
                <div class="squiggle-container">
                    <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
                    <div class="squiggle-content white-squiggle">
                        <div class="row">
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
-                                  <p class="db w100 tleft mbm">
-                                    Measurements are made for a variety of reasons.
-                                  </p>
-                                  <p class="db w100 tcenter blue-text">
-                                    Drag the boxes to match the description.
-                                  </p>
-                                  <p class="db w100 tleft">
-                                    <div class="row f-center mbb">
-                                      <div class="col-xs-5">
-                                        <div class="top-squiggle"><img src="/images/course-assets/squiggle/magenta-top.svg" alt=""/></div>
-                                        <p class="db w100 tcenter magenta-squiggle">Customer Churn</p>
-                                        <div class="bot-squiggle"><img src="/images/course-assets/squiggle/magenta-bottom.svg" alt=""/></div>
-                                      </div>
-                                      <div class="col-xs-7">
-                                        <p class="db w100 tleft black-text">Calculate Pay</p>
-                                      </div>
-                                    </div>
-                                    <div class="row f-center mbb">
-                                      <div class="col-xs-5">
-                                        <div class="top-squiggle"><img src="/images/course-assets/squiggle/magenta-top.svg" alt=""/></div>
-                                        <p class="db w100 tcenter magenta-squiggle">Employee hours</p>
-                                        <div class="bot-squiggle"><img src="/images/course-assets/squiggle/magenta-bottom.svg" alt=""/></div>
-                                      </div>
-                                      <div class="col-xs-7">
-                                        <p class="db w100 tleft black-text">Business Success</p>
-                                      </div>
-                                    </div>
-                                    <div class="row f-center mbb">
-                                      <div class="col-xs-5">
-                                        <div class="top-squiggle"><img src="/images/course-assets/squiggle/magenta-top.svg" alt=""/></div>
-                                        <p class="db w100 tcenter magenta-squiggle">Profit and Capital</p>
-                                        <div class="bot-squiggle"><img src="/images/course-assets/squiggle/magenta-bottom.svg" alt=""/></div>
-                                      </div>
-                                      <div class="col-xs-7">
-                                        <p class="db w100 tleft black-text">Efficiency</p>
-                                      </div>
-                                    </div>
-                                  </p>
+                                 <div class="row">
+                                   <div class="col-md-12">
+                                     <p>
+                                       Measurements are made for a variety of reasons.
+                                     </p>
+                                     <p class="tcenter blue-text two-line-bot">
+                                       Drag the boxes to match the description.
+                                     </p>
+
+                                     <div class="row">
+                                       <ul class="col-xs-5 one-line" id="sortable">
+                                         <li class="squiggle-container one-line-bot" id="customer">
+                                           <p class="db w100 tcenter magenta-blob-box" style="padding:25px 0">Customer churn</p>
+                                           <i class="num"></i>
+                                         </li>
+                                         <li class="squiggle-container one-line-bot" id="employee">
+                                           <p class="db w100 tcenter magenta-blob-box" style="padding:25px 0">Employee hours</p>
+                                           <i class="num"></i>
+                                         </li>
+                                         <li class="squiggle-container one-line-bot" id="profit">
+                                           <p class="db w100 tcenter magenta-blob-box" style="padding:25px 0">Profit and capital</p>
+                                           <i class="num"></i>
+                                         </li>
+
+                                       </ul>
+                                       <div class="col-xs-7">
+                                         <div class="row one-line one-line-bot f-center" style="height:70px;">
+                                           <div class="col-md-12">
+                                             <p>Calculate Pay</p>
+                                           </div>
+                                         </div>
+                                         <div class="row one-line-bot f-center" style="height:70px;">
+                                           <div class="col-md-12">
+                                             <p class="pb0">Business Success</p>
+                                           </div>
+                                         </div>
+                                         <div class="row one-line-bot f-center" style="height:70px;">
+                                           <div class="col-md-12">
+                                             <p class="pb0">Efficiency</p>
+                                           </div>
+                                         </div>
+                                       </div>
+                                     </div>
+
+                                   </div>
+                                 </div>
                                    <!-- End Content -->
                                </div>
                            </div>

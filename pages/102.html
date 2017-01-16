@@ -9,32 +9,36 @@
        </div>
 
        <div class="row content-row flexy-parent pop-in">
-           <div class="col-md-6 col-md-offset-3 col-xs-12 break-point">
+           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
                <div class="squiggle-container">
                    <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
                    <div class="squiggle-content white-squiggle">
                        <div class="row">
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
-                                  <p class="db w100 tleft mbm">
-                                    Explain how your view and knowledge of what numeracy
-                                    has changed as a result of this course – and give us
-                                    some key insights that you’ve taken away. A short
-                                    paragraph will be just fine.
-                                  </p>
-                                  <div class="squiggle-container">
-                                      <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
-                                      <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                          <div class="squiggle-container">
-                                              <!-- put all of your content into here div -->
-                                              <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv">
-                                                  <textarea v-on:keyup="validateInputFields" v-model="pageData.insights" v-on:change="$parent.saveData( 'applying-numeracy.insights', pageData.insights )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
-                                              </div>
-                                              <!-- End Content -->
-                                          </div>
-                                      </div>
-                                      <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
-                                  </div>
+                                 <div class="row">
+                                   <div class="col-md-12">
+                                     <p>
+                                       Explain how your view and knowledge of what numeracy
+                                       has changed as a result of this course – and give us
+                                       some key insights that you’ve taken away. A short
+                                       paragraph will be just fine.
+                                     </p>
+                                     <div class="squiggle-container">
+                                       <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
+                                       <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                         <div class="squiggle-container">
+                                           <!-- put all of your content into here div -->
+                                           <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv large-textarea">
+                                             <textarea v-on:keyup="validateInputFields" v-model="pageData.insights" v-on:change="$parent.saveData( 'applying-numeracy.insights', pageData.insights )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
+                                           </div>
+                                           <!-- End Content -->
+                                         </div>
+                                       </div>
+                                       <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
+                                     </div>
+                                   </div>
+                                 </div>
 
                                    <!-- End Content -->
                                </div>

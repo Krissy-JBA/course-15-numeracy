@@ -2,6 +2,11 @@ pageComponentry = {
   data: function() {
     return {
       // Any page specific data goes here.
+      pageData:{
+        total: '0.00',
+        hour: '0.00',
+        skirt: '0.00',
+      }
     }
   },
   methods: {
@@ -9,7 +14,17 @@ pageComponentry = {
   },
   ready: function() {
     // Ready will be fired when the page is loaded.
+    var t = this;
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateDataPopups();
+
+    // funky shirt cost = material cost + assembly cost
+    this.pageData.total = this.exerciseData[ 'zoeys-clothing-cost.total' ];
+    this.pageData.hour = this.exerciseData[ 'zoeys-clothing-cost.hour' ];
+    this.pageData.skirt = this.exerciseData[ 'zoeys-clothing-cost.skirt' ];
+    // console.log(t.pageData.total , t.pageData.hour);
+    t.pageData.skirt = parseFloat(this.pageData.total) + parseFloat(this.pageData.hour);
+    t.$parent.saveData( 'zoeys-clothing-cost.skirt', t.pageData.skirt );
+
   }
 }

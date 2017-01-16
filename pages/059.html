@@ -1,4 +1,4 @@
-<div class="popupNew" v-show="popup1 == true" transition="popup">
+<div class="popupNew" v-show="popup2 == true">
     <div class="popup-inner">
         <div class="squiggle-container">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/red-top.svg" alt=""></div>
@@ -14,12 +14,12 @@
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/red-bottom.svg" alt=""></div>
         </div>
-        <a class="course-button close-button popup-close-test" @click="">
+        <a class="course-button close-button popup-close-test" v-on:click="popup2 = false">
           <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
         </a>
     </div>
 </div>
-<div class="popupNew" v-show="popup2 == true" transition="popup">
+<div class="popupNew" v-show="popup1 == true">
     <div class="popup-inner">
         <div class="squiggle-container">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
@@ -35,7 +35,7 @@
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
         </div>
-        <a class="course-button close-button popup-close-test" @click="redirect">
+        <a class="course-button close-button popup-close-test" href="#060">
             <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </a>
     </div>
 </div>
@@ -57,39 +57,40 @@
                        <div class="row">
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
-                                  <p class="db w100 tleft mbb">
+                                 <div class="row">
+                                     <div class="col-md-12">
+                                  <p>
                                     See if you can distinguish between the different
                                     kinds of data.
                                   </p>
-                                  <p class="db w100 tcenter blue-text pb0">
+                                  <p class="tcenter blue-text">
                                     Click on the boxes that are quantitative.
                                   </p>
-                                  <p class="db w100 tcenter blue-text pt0">
-                                    Hit submit when you’re ready.
-                                  </p>
+                                </div>
+                              </div>
                                   <form class="jba-checkbox one-line one-line-bot" action="#">
                                      <p>
-                                       <input type="checkbox" id="test1" value="orange," v-model="inputfield1" v-on:change="saveInputData(inputfield1)"/>
+                                       <input type="checkbox" id="test1" v-model="check1" v-on:change="$parent.saveData( 'check1', check1 ), toggleLocked()"/>
                                        <label class="tlarger" for="test1">The fabric is reddish orange</label>
                                      </p>
                                      <p>
-                                       <input type="checkbox" id="test2" value="3kg," v-model="inputfield2" v-on:change="saveInputData(inputfield2)"/>
+                                       <input type="checkbox" id="test2" v-model="check2" v-on:change="$parent.saveData( 'check2', check2 ), toggleLocked()"/>
                                        <label class="tlarger" for="test2">The fabric weight is 3kg</label>
                                      </p>
                                      <p>
-                                       <input type="checkbox" id="test3" value="1metre," v-model="inputfield3" v-on:change="saveInputData(inputfield3)"/>
+                                       <input type="checkbox" id="test3" v-model="check3" v-on:change="$parent.saveData( 'check3', check3 ), toggleLocked()"/>
                                        <label class="tlarger" for="test3">The fabric is 1 metre wide</label>
                                      </p>
                                      <p>
-                                       <input type="checkbox" id="test4" value="furry," v-model="inputfield4" v-on:change="saveInputData(inputfield4)"/>
+                                       <input type="checkbox" id="test4" v-model="check4" v-on:change="$parent.saveData( 'check4', check4 ), toggleLocked()"/>
                                        <label class="tlarger" for="test4">The fabric is furry</label>
                                      </p>
                                      <p>
-                                       <input type="checkbox" id="test5" value="cotton," v-model="inputfield5" v-on:change="saveInputData(inputfield5)"/>
+                                       <input type="checkbox" id="test5" v-model="check5" v-on:change="$parent.saveData( 'check5', check5 ), toggleLocked()"/>
                                        <label class="tlarger" for="test5">The fabric is 100% cotton</label>
                                      </p>
                                      <p>
-                                       <input type="checkbox" id="test6" value="50metres," v-model="inputfield6" v-on:change="saveInputData(inputfield6)"/>
+                                       <input type="checkbox" id="test6" v-model="check6" v-on:change="$parent.saveData( 'check6', check6 ), toggleLocked()"/>
                                        <label class="tlarger" for="test6">The fabric roll is 50 metres long</label>
                                      </p>
                                    </form>
@@ -148,7 +149,7 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                             <a @click="answerPopup" class="jba-btn jba-btn-lg">Submit</a>
+                               <a @click="submitCheck" class="course-button jba-btn jba-btn-submit2" v-bind:class="{'jba-btn-locked':locked}">Submit <i class="arrowLock-13 fa fa-lock"  v-show="locked" aria-hidden="true"></i></a>
                            </div>
                            <!-- rightArrow -->
                        </div>

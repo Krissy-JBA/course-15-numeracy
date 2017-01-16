@@ -3,20 +3,14 @@ pageComponentry = {
     return {
       // Any page specific data goes here.
       pageData: {
-        great: false,
-        good: false,
-        notbad: false,
-        help: false
+        
+        visited: 0
       }
     }
   },
   methods: {
     // Any page specific methods go here.
-    clickFeeling: function(feeling){
-     this.pageData[feeling] = !this.pageData[feeling];
-     this.$parent.saveData('how-feeling.' + feeling, this.pageData[feeling]);
 
-    },
     loadPageData: function(){
       for(var key in this.pageData){
         if(this.pageData.hasOwnProperty(key)){
@@ -37,5 +31,6 @@ pageComponentry = {
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateDataPopups();
     t.loadPageData();
+
   }
 }

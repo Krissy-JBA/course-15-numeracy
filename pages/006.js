@@ -4,6 +4,7 @@ pageComponentry = {
       // Any page specific data goes here.
       pageData: {
         correct: false,
+        visited: 0,
       },
       buttonValidate: true
     }
@@ -35,6 +36,7 @@ pageComponentry = {
               this.pageData[key] = (this.exerciseData['writing-in-the-diary.' + key] === true);
             }
           }
+            this.pageData.visited = 1;
         }
       }
     },

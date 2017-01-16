@@ -52,7 +52,7 @@
        </div>
 
        <div class="row content-row flexy-parent pop-in">
-           <div class="col-md-6 col-md-offset-3 col-xs-12 break-point">
+           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
                <div class="squiggle-container">
                    <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
                    <div class="squiggle-content white-squiggle">
@@ -75,7 +75,7 @@
 
                <ul class="row pl0 flexy-parent two-line">
                  <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">24</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger" v-bind:class="{'branding-03-button-hover' : pageData.correct}" v-on:click="clickCorrect('correct')" data-popup-open="popup-2">18</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger" v-bind:class="{'jba-visited' : pageData.visited == 1}" v-on:click="pageData.visited = 1" data-popup-open="popup-2">18</li>
                  <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">20</li>
                  <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">22</li>
                  <div class="w50 flexy-image flexy-image-mob-fix pop-in num-graph-wrap">

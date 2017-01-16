@@ -9,34 +9,38 @@
        </div>
 
        <div class="row content-row flexy-parent pop-in">
-           <div class="col-md-6 col-md-offset-3 col-xs-12 break-point">
+           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
              <div class="squiggle-container">
                  <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
                  <div class="squiggle-content white-squiggle">
                      <div class="row">
                          <div class="col-md-12">
                              <div class="squiggle-container flex-center">
-                                 <div class="row f-center mbb">
-                                   <div class="col-xs-5">
-                                     <p class="w100 tleft db mb0">Materials Cost</p>
+                               <div class="row">
+                                   <div class="col-md-12">
+                                     <div class="row f-center mbb">
+                                       <div class="col-xs-5">
+                                         <p>Materials Cost</p>
+                                       </div>
+                                       <div class="col-xs-5 col-xs-offset-1">
+                                         <span class="purple-text">Total: $ <{ pageData.total }></span>
+                                       </div>
+                                     </div>
+                                     <div class="row">
+                                       <div class="col-xs-12">
+                                         <p>
+                                           Now we’ll look at the cost of assembling the shirt.
+                                         </p>
+                                         <p>
+                                           Calculate the cost based on an hourly rate of $15
+                                           and the number of minutes you think it’d take to cut
+                                           and sew the garment together. It’s up to you to decide
+                                           the number of minutes
+                                         </p>
+                                       </div>
+                                     </div>
                                    </div>
-                                   <div class="col-xs-5 col-xs-offset-1 magenta-blob">
-                                     <span class="w100 db tleft mb0 plb">Total: $</span>
-                                   </div>
-                                 </div>
-                                 <div class="row">
-                                   <div class="col-xs-12">
-                                     <p class="db w100 tleft mb0">
-                                       Now we’ll look at the cost of assembling the shirt.
-                                     </p>
-                                     <p class="db w100 tleft mt0 mb0">
-                                       Calculate the cost based on an hourly rate of $15
-                                       and the number of minutes you think it’d take to cut
-                                       and sew the garment together. It’s up to you to decide
-                                       the number of minutes
-                                     </p>
-                                   </div>
-                                 </div>
+                               </div>
 
                                 <!-- End Content -->
                              </div>
@@ -45,10 +49,34 @@
                  </div>
                  <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
              </div>
-             <p class="db w100 tcenter blue-text">
-               Drag your chosen number of minutes to the ‘drop here’ box below and tap
-               NEXT when you’ve finished.
-             </p>
+             <div class="row two-line one-line-bot">
+               <div class="col-md-12">
+                 <p class="tcenter blue-text">
+                   Drag your chosen number of minutes to the ‘drop here’ box below and tap
+                   NEXT when you’ve finished.
+                 </p>
+               </div>
+             </div>
+
+             <ul class="row pl0" id="drag-num">
+               <li class="col-xs-2 pl0 pr0" id="one-num"><input type="hidden" value="1" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">1</span></li>
+               <li class="col-xs-2 pl0 pr0" id="two-num"><input type="hidden" value="2" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">2</span></li>
+               <li class="col-xs-2 pl0 pr0" id="three-num"><input type="hidden" value="3" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">3</span></li>
+               <li class="col-xs-2 pl0 pr0" id="four-num"><input type="hidden" value="4" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">4</span></li>
+               <li class="col-xs-2 pl0 pr0" id="five-num"><input type="hidden" value="5" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">5</span></li>
+               <li class="col-xs-2 pl0 pr0" id="six-num"><input type="hidden" value="6" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">6</span></li>
+             </ul>
+
+             <div class="row" >
+               <div class="col-xs-8 col-xs-offset-2 f-center" style="min-height:57px;"><span class="purple-text mb0 col-xs-8 tright">$ 15 per hour X </span><span class="ib mlm prelative mb0 col-xs-4" id="sort-num"><span class="pabsolute mb0 drop">Drop here</span></span></div>
+             </div>
+
+             <div class="row">
+               <div class="col-xs-4 col-xs-offset-8" style="top:35px;">
+                 <p class="purple-blob-box mb0 ptm pbm pl0 pr0">$ <span class="total-33"><{ pageData.hour }></span></p>
+               </div>
+             </div>
+
            </div>
        </div>
        <!-- end  content -->
@@ -79,8 +107,7 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                              <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
-                               <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
+                             <a href="#034" class="course-button next-button"></a>
                            </div>
                            <!-- rightArrow -->
                        </div>
