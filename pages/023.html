@@ -1,4 +1,4 @@
-<div class="purple-bk-popup" data-popup="popup-1">
+<div class="purple-bk-popup" v-show="popup1">
     <div class="popup-inner ">
         <div class="squiggle-container ">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
@@ -23,12 +23,12 @@
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
         </div>
-        <a data-popup-close="popup-1" href="#">
+        <a @click="popup1 = false">
             <div class="course-button back-button"></div>
         </a>
     </div>
 </div>
-<div class="purple-bk-popup" data-popup="popup-2">
+<div class="purple-bk-popup" v-show="popup2">
     <div class="popup-inner ">
         <div class="squiggle-container ">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
@@ -55,17 +55,14 @@
                     </div>
                 </div>
                 <div class="flexy-image flexy-image-mob-fix row">
-                  <div class="col-xs-4">
-                    <img src="/images/course-numeracy/Numeracy-44.png" class="prelative">
-                  </div>
-                  <div class="col-xs-4 prelative">
-                    <img src="/images/course-numeracy/Numeracy-20.png" class="prelative">
+                  <div class="col-xs-12 prelative">
+                    <img src="/images/course-numeracy/NumeracyArtboard 34.png" class="prelative mw200">
                   </div>
                 </div>
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
         </div>
-        <a data-popup-close="popup-2" href="#">
+        <a @click="popup2 = false">
             <div class="course-button back-button"></div>
         </a>
     </div>
@@ -110,10 +107,10 @@
            </div>
            <div class="flexy-image flexy-image-mob-fix pop-in row">
              <div class="col-xs-4">
-               <img src="/images/course-numeracy/Numeracy-43.png" class="prelative pt0 cpointer" data-popup-open="popup-1">
+               <img src="/images/course-numeracy/Numeracy-43.png" class="prelative pt0 cpointer" @click="popup1 = true">
              </div>
              <div class="col-xs-4 col-xs-offset-1">
-               <img src="/images/course-numeracy/Numeracy-14.png" class="prelative pt0 cpointer" data-popup-open="popup-2">
+               <img src="/images/course-numeracy/Numeracy-14.png" class="prelative pt0 cpointer" @click="popup2 = true">
              </div>
            </div>
            <div class="row plb f-jcenter">

@@ -1,4 +1,4 @@
-<div class="purple-bk-popup" data-popup="popup-1">
+<div class="purple-bk-popup" v-show="popup1">
     <div class="popup-inner ">
         <div class="squiggle-container ">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
@@ -23,13 +23,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="flexy-image flexy-image-mob-fix">
+                <!-- <div class="flexy-image flexy-image-mob-fix">
                   <img src="/images/course-numeracy/Numeracy-20.png" class="num-graph">
-                </div>
+                </div> -->
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
         </div>
-        <a data-popup-close="popup-1" href="#">
+        <a @click="popup1 = false">
             <div class="course-button back-button"></div>
         </a>
     </div>
@@ -83,7 +83,7 @@
                </div>
            </div>
            <div class="flexy-image flexy-image-mob-fix pop-in">
-             <img src="/images/course-numeracy/Numeracy-50.png" class="cpointer" data-popup-open="popup-1">
+             <img src="/images/course-numeracy/NumeracyArtboard 38.png" class="cpointer" @click="popup1 = true">
            </div>
            <div class="row f-jcenter one-line">
              <span class="blue-text tcenter">click on the photo to see the kind of things we mean.</span>

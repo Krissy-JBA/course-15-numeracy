@@ -1,24 +1,3 @@
-<div class="popup-bk popup" data-popup="popup-1">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/magenta-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content magenta-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                            <p>Not quite ...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/magenta-bottom.svg" alt=""></div>
-        </div>
-        <div class="course-button close-button popup-close-test" data-popup-close="popup-1">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
-        </div>
-    </div>
-</div>
 <div class="popup-bk popup" data-popup="popup-2">
     <div class="popup-inner">
         <div class="squiggle-container">
@@ -76,11 +55,11 @@
 
                <ul class="row pl0 flexy-parent two-line">
                  <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">No</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger" v-bind:class="{'jba-visited' : pageData.visited == 1}" v-on:click="pageData.visited = 1" data-popup-open="popup-2">Yes</li>
+                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger" v-bind:class="{'jba-visited' : pageData.visited == 1}" v-on:click="sendData" data-popup-open="popup-2">Yes</li>
                  <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">Maybe</li>
                  <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">Not sure</li>
                  <div class="w50 flexy-image flexy-image-mob-fix pop-in num-graph-wrap">
-                   <img src="/images/course-numeracy/Numeracy-08.png" class="num-graph pt0">
+                   <img src="/images/course-numeracy/NumeracyArtboard 10.png" class="num-graph mw150">
                  </div>
                </ul>
                <div class="row plb">
@@ -119,8 +98,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                             <button v-on:click="nextPageBtn"  type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked' : buttonValidate}" >Submit</button>
-                           <i class="arrowLock fa fa-lock" v-bind:class="{'display-n' : !buttonValidate}" aria-hidden="true"></i>
+                             <button v-on:click="nextPageBtn"  type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked' : pageData.visited !== 1 }" >Submit</button>
+                             <i class="arrowLock fa fa-lock" v-bind:class="{'display-n' : pageData.visited == 1 }" aria-hidden="true"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

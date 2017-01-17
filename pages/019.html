@@ -1,4 +1,4 @@
-<div class="purple-bk-popup" data-popup="popup-1">
+<div class="purple-bk-popup" v-show="popup1">
     <div class="popup-inner ">
         <div class="squiggle-container ">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
@@ -27,7 +27,214 @@
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
         </div>
-        <a data-popup-close="popup-1" href="#">
+        <a @click="popup1 = false">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
+<div class="popup-bk popup" v-show="pop1">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Being able to create an idea and produce a design either by hand or using computer-aided design.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a @click="pop1 = false">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
+<div class="popup-bk popup" v-show="pop2">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              The ability to use computer design packages and to deal with measurements and shapes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a @click="pop2 = false">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
+<div class="popup-bk popup" v-show="pop3">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Having a good eye for colour, texture and shape (requires use of geometry).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a @click="pop3 = false">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
+<div class="popup-bk popup" v-show="pop4">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Time Management - managing your own time and the time of others.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a @click="pop4 = false">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
+<div class="popup-bk popup" v-show="pop5">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Mathematics - knowledge of arithmetic.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a @click="pop5 = false">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
+<div class="popup-bk popup" v-show="pop6">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Being able to spot and develop trends. Using graphs and studies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a @click="pop6 = false">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
+<div class="popup-bk popup" v-show="pop7">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Technical skills like pattern cutting and sewing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a @click="pop7 = false">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
+<div class="popup-bk popup" v-show="pop8">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Managing marketing, finances and other business activities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a @click="pop8 = false">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
+<div class="popup-bk popup" v-show="pop9">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Sourcing, selecting and buying fabrics, trims, fastenings and decorative bits. Dealing with purchasing and costs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a @click="pop9 = false">
             <div class="course-button back-button"></div>
         </a>
     </div>
@@ -78,7 +285,7 @@
                                       </div>
                                     </div>
                                     <div class="col-xs-6">
-                                      <button class="jba-btn" data-popup-open="popup-1">Click</button>
+                                      <button class="jba-btn" @click="popup1 = true">Click</button>
                                     </div>
                                   </div>
                                    <!-- End Content -->
