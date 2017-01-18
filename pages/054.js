@@ -4,6 +4,9 @@ pageComponentry = {
       // Any page specific data goes here.
       popup1: false,
       locked: true,
+      pageData:{
+        measurement: '',
+      },
     }
   },
   methods: {
@@ -60,7 +63,11 @@ pageComponentry = {
           if( $( '#sortable li:eq( 0 )' ).attr('id') == 'dollor' && $( '#sortable li:eq( 1 )' ).attr('id') == 'hour' && $( '#sortable li:eq( 2 )' ).attr('id') == 'sizeArea' && $( '#sortable li:eq( 3 )' ).attr('id') == 'quantity' ){
             //popup for 'good job'
             $( '#sortable' ).sortable({destroy:true});
+            t.locked = false;
+
             t.popup1 = true;
+            var measurement = document.getElementById("sortable").innerHTML;
+            t.$parent.saveData('type-of-measurement.measurement', measurement );
           }
 
         }
@@ -68,7 +75,12 @@ pageComponentry = {
       $( "ul, li" ).disableSelection();
 
     });
-
+    t.pageData.measurement = t.exerciseData[ 'type-of-measurement.measurement' ];
+    if(t.pageData.measurement){
+      $('#sortable li').remove();
+      document.getElementById("sortable").innerHTML = t.pageData.measurement;
+      t.locked = false;
+    }
 
   }
 }

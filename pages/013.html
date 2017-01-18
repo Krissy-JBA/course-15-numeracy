@@ -1,4 +1,4 @@
-<div class="purple-bk-popup" v-show="popup1">
+<div class="purple-bk-popup" v-show="popup2">
     <div class="popup-inner ">
         <div class="squiggle-container ">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
@@ -23,12 +23,12 @@
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
         </div>
-        <a @click="popup1=false">
+        <a @click="popup2=false">
             <div class="course-button back-button"></div>
         </a>
     </div>
 </div>
-<div class="purple-bk-popup" v-show="popup2">
+<div class="purple-bk-popup" v-show="popup1">
     <div class="popup-inner ">
         <div class="squiggle-container ">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
@@ -51,7 +51,7 @@
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
         </div>
-        <a @click="popup2=false">
+        <a @click="popup1=false">
             <div class="course-button back-button"></div>
         </a>
     </div>
@@ -224,6 +224,10 @@
                </text>
                </g> -->
              </svg>
+           </div>
+           <div class="row one-line svg-tapme">
+
+             <p class="blue-text tcenter"><img src="/images/course-assets/pointer.png" style="max-width:30px"> Tap the images</p>
            </div>
        </div>
        <!-- end  content -->

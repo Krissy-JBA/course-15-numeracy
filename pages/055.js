@@ -4,6 +4,9 @@ pageComponentry = {
       // Any page specific data goes here.
       popup1: false,
       locked: true,
+      pageData:{
+        observation: '',
+      }
     }
   },
   methods: {
@@ -50,7 +53,10 @@ pageComponentry = {
           if( $( '#sortable li:eq( 0 )' ).attr('id') == 'counting' && $( '#sortable li:eq( 1 )' ).attr('id') == 'observation' && $( '#sortable li:eq( 2 )' ).attr('id') == 'calculation' ){
             //popup for 'good job'
             $( '#sortable' ).sortable({destroy:true});
+            t.locked = false;
             t.popup1 = true;
+            var observation = document.getElementById("sortable").innerHTML;
+            t.$parent.saveData('type-of-measurement.observation', observation );
           }
 
         }
@@ -58,7 +64,11 @@ pageComponentry = {
       $( "ul, li" ).disableSelection();
 
     });
-
-
+    t.pageData.observation = t.exerciseData[ 'type-of-measurement.observation' ];
+    if(t.pageData.observation){
+      $('#sortable li').remove();
+      document.getElementById("sortable").innerHTML = t.pageData.observation;
+      t.locked = false;
+    }
   }
 }

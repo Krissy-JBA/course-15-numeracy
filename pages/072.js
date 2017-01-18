@@ -5,6 +5,8 @@ pageComponentry = {
       pageData: {
         fabric: ''
       },
+      popup1:false,
+      popup2:false,
       disabledInput: true,
       hideLocked: false
 

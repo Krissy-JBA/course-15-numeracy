@@ -5,7 +5,7 @@ pageComponentry = {
       pageData:{
         total: '0.00',
         hour: '0.00',
-        skirt: '0.00',
+        shirt: '0.00',
       }
     }
   },
@@ -21,10 +21,10 @@ pageComponentry = {
     // funky shirt cost = material cost + assembly cost
     this.pageData.total = this.exerciseData[ 'zoeys-clothing-cost.total' ];
     this.pageData.hour = this.exerciseData[ 'zoeys-clothing-cost.hour' ];
-    this.pageData.skirt = this.exerciseData[ 'zoeys-clothing-cost.skirt' ];
+    this.pageData.shirt = this.exerciseData[ 'zoeys-clothing-cost.shirt' ];
     // console.log(t.pageData.total , t.pageData.hour);
-    t.pageData.skirt = parseFloat(this.pageData.total) + parseFloat(this.pageData.hour);
-    t.$parent.saveData( 'zoeys-clothing-cost.skirt', t.pageData.skirt );
+    t.pageData.shirt = parseFloat(this.pageData.total) + parseFloat(this.pageData.hour);
+    t.$parent.saveData( 'zoeys-clothing-cost.shirt', t.pageData.shirt );
 
   }
 }

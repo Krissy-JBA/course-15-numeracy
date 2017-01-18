@@ -4,7 +4,7 @@ pageComponentry = {
       pageData: {
         quote: ''
       },
-
+      popup1:false,
       hideLocked: false,
       disabledInput: true
 

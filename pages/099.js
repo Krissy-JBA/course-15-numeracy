@@ -4,7 +4,7 @@ pageComponentry = {
       pageData: {
         retained: ''
       },
-
+      popup1: false,
       hideLocked: false,
       disabledInput: true
 

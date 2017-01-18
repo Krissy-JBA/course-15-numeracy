@@ -131,7 +131,7 @@
                  <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
              </div>
                <div class="flexy-parent f-space f-center f-direct">
-                 <div class="jba-btn col-xs-7 ptb pbb" v-bind:class="{'branding-03-button-hover' : visited == 1}" v:model="visted = 1" v-on:click="$parent.saveData( 'visited', visited == 1 )" data-popup-open="popup-1"><span>Great</span></div>
+                 <div class="jba-btn col-xs-7 ptb pbb" v-bind:class="{'branding-03-button-hover' : pageData.visited == 1}" v-on:click="sendone" data-popup-open="popup-1"><span>Great</span></div>
                  <div class="flexy-image col-xs-4 col-xs-offset-1">
                    <img class="prelative pt0 mw70" src="/images/course-numeracy/NumeracyArtboard 18.png" alt="">
                  </div>
@@ -141,11 +141,11 @@
                  <div class="flexy-image col-xs-4">
                    <img class="prelative pt0 mw70" src="/images/course-numeracy/NumeracyArtboard 19.png" alt="">
                  </div>
-                 <div class="jba-btn col-xs-7 col-xs-offset-1 ptb pbb" v-bind:class="{'branding-03-button-hover' : visited == 2}" v:model="visited = 2" v-on:click="$parent.saveData( 'visited', visited == 2 )" data-popup-open="popup-2"><span>Pretty good</span></div>
+                 <div class="jba-btn col-xs-7 col-xs-offset-1 ptb pbb" v-bind:class="{'branding-03-button-hover' : pageData.visited == 2}" v-on:click="sendtwo" data-popup-open="popup-2"><span>Pretty good</span></div>
                </div>
                <hr class="bor-dot mtm mbm" />
                <div class="flexy-parent f-space f-center f-direct">
-                 <div class="jba-btn col-xs-7 ptb pbb btn-one" v-bind:class="{'branding-03-button-hover' : visited == 3}" v:model="visited = 3" v-on:click="$parent.saveData( 'visited', visited == 3 )" data-popup-open="popup-3"><span>Not bad, but can improve</span></div>
+                 <div class="jba-btn col-xs-7 ptb pbb btn-one" v-bind:class="{'branding-03-button-hover' : pageData.visited == 3}" v-on:click="sendthree" data-popup-open="popup-3"><span>Not bad, but can improve</span></div>
                  <div class="flexy-image col-xs-4 col-xs-offset-1">
                    <img class="prelative pt0 mw70" src="/images/course-numeracy/NumeracyArtboard 20.png" alt="">
                  </div>
@@ -155,7 +155,7 @@
                  <div class="flexy-image col-xs-4">
                    <img class="prelative pt0 mw70" src="/images/course-numeracy/NumeracyArtboard 21.png" alt="">
                  </div>
-                 <div class="jba-btn col-xs-7 col-xs-offset-1 ptb pbb" v-bind:class="{'branding-03-button-hover' : visited == 4}" v:model="visited = 4" v-on:click="$parent.saveData( 'visited', visited == 4 )" data-popup-open="popup-4"><span>Looking for help</span></div>
+                 <div class="jba-btn col-xs-7 col-xs-offset-1 ptb pbb" v-bind:class="{'branding-03-button-hover' : pageData.visited == 4}" v-on:click="sendfour" data-popup-open="popup-4"><span>Looking for help</span></div>
                </div>
            </div>
 

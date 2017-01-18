@@ -1976,7 +1976,7 @@ a.disable {
     }
     .svg-tapme {
         animation: svgTapme 2s;
-        animation-iteration-count: infinite;
+        animation-iteration-count: 2;
         transform-origin: center;
         transform: scale(1);
         fill: #75cee2;

@@ -4,7 +4,7 @@ pageComponentry = {
       pageData: {
         flow: ''
       },
-
+      popup1: false,
       hideLocked: false,
       disabledInput: true
 

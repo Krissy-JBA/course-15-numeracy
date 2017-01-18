@@ -4,6 +4,9 @@ pageComponentry = {
       // Any page specific data goes here.
       popup1: false,
       locked: true,
+      pageData: {
+        customer: '',
+      }
     }
   },
   methods: {
@@ -50,7 +53,10 @@ pageComponentry = {
           if( $( '#sortable li:eq( 0 )' ).attr('id') == 'employee' && $( '#sortable li:eq( 1 )' ).attr('id') == 'profit' && $( '#sortable li:eq( 2 )' ).attr('id') == 'customer' ){
             //popup for 'good job'
             $( '#sortable' ).sortable({destroy:true});
+            t.locked = false;
             t.popup1 = true;
+            var customer = document.getElementById("sortable").innerHTML;
+            t.$parent.saveData('type-of-measurement.customer', customer );
           }
 
         }
@@ -58,7 +64,11 @@ pageComponentry = {
       $( "ul, li" ).disableSelection();
 
     });
-
-
+    t.pageData.customer = t.exerciseData[ 'type-of-measurement.customer' ];
+    if(t.pageData.customer){
+      $('#sortable li').remove();
+      document.getElementById("sortable").innerHTML = t.pageData.customer;
+      t.locked = false;
+    }
   }
 }

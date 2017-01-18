@@ -6,7 +6,8 @@ pageComponentry = {
       pageData: {
         total:'0.00',
         hour:'0.00',
-        data33:'',
+        drag: '',
+        sort: '',
       }
     }
   },
@@ -38,21 +39,27 @@ pageComponentry = {
           var num = 0;
           if( $( '#sort-num #one-num' ).length ) {
             num = $('#one-num input').attr('value');
+            $('#drag-num #one-num').remove;
           }
           if( $( '#sort-num #two-num' ).length ) {
              num = Number($('#two-num input').attr('value'));
+             $('#drag-num #two-num').remove;
           }
           if( $( '#sort-num #three-num' ).length ) {
              num = Number($('#three-num input').attr('value'));
+             $('#drag-num #three-num').remove;
           }
           if( $( '#sort-num #four-num' ).length ) {
              num = Number($('#four-num input').attr('value'));
+             $('#drag-num #four-num').remove;
           }
           if( $( '#sort-num #five-num' ).length ) {
              num = Number($('#five-num input').attr('value'));
+             $('#drag-num #five-num').remove;
           }
           if( $( '#sort-num #six-num' ).length ) {
              num = Number($('#six-num input').attr('value'));
+             $('#drag-num #six-num').remove;
           }
           if( $( '#sort-num li').length ){
             $( '#sort-num' ).css( 'background-image','none' );
@@ -71,8 +78,10 @@ pageComponentry = {
             var sum = 15*(num/60);
             t.pageData.hour = sum;
             t.$parent.saveData( 'zoeys-clothing-cost.hour', t.pageData.hour );
-            t.pageData.data33 = $('#sort-num li').attr('id');
-            t.$parent.saveData( 'zoeys-clothing-cost.data33', t.pageData.data33 );
+            var drag = document.getElementById("drag-num").innerHTML;
+            var sort = document.getElementById("sort-num").innerHTML;
+            t.$parent.saveData('zoeys-clothing-cost2.drag', drag);
+            t.$parent.saveData('zoeys-clothing-cost2.sort', sort);
 
           }
 
@@ -83,5 +92,15 @@ pageComponentry = {
     courseFeatureJBA.activateDataPopups();
     this.pageData.total = this.exerciseData[ 'zoeys-clothing-cost.total' ];
     this.pageData.hour = this.exerciseData[ 'zoeys-clothing-cost.hour' ];
+    t.pageData.drag = t.exerciseData[ 'zoeys-clothing-cost2.drag' ];
+    t.pageData.sort = t.exerciseData[ 'zoeys-clothing-cost2.sort' ];
+
+   //  console.log(t.pageData.save);
+    if(t.pageData.drag){
+      document.getElementById("drag-num").innerHTML = t.pageData.drag;
+    }
+    if(t.pageData.sort){
+      document.getElementById("sort-num").innerHTML = t.pageData.sort;
+    }
   }
 }

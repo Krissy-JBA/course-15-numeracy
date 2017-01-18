@@ -1,4 +1,4 @@
-<div class="popupNew" v-show="popup1 == true">
+<div class="popupNew" v-show="popup1">
     <div class="popup-inner">
         <div class="squiggle-container">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
@@ -14,7 +14,7 @@
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
         </div>
-        <a class="course-button close-button popup-close-test" href="#056">
+        <a class="course-button close-button popup-close-test" @click="popup1 = false">
           <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
         </a>
     </div>
@@ -124,7 +124,7 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                              <a @click="submitCheck" class="course-button jba-btn next-button disabled" v-bind:class="{'next-button-locked':locked}"></a>
+                              <a href="#056" class="course-button jba-btn next-button" v-bind:class="{'next-button-locked disabled':locked}"></a>
                            </div>
                            <!-- rightArrow -->
                        </div>

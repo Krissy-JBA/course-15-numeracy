@@ -1,4 +1,4 @@
-<div class="popup-bk popup" data-popup="popup-1">
+<div class="popup-bk popup" v-show="popup1">
     <div class="popup-inner">
         <div class="squiggle-container">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
@@ -20,12 +20,12 @@
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
         </div>
-        <div class="course-button close-button popup-close-test" data-popup-close="popup-1">
+        <div class="course-button close-button popup-close-test" @click="popup1 = false">
             <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
         </div>
     </div>
 </div>
-<div class="popup-bk popup" data-popup="popup-2">
+<div class="popup-bk popup" v-show="popup2">
     <div class="popup-inner">
         <div class="squiggle-container">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
@@ -47,12 +47,12 @@
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
         </div>
-        <div class="course-button close-button popup-close-test" data-popup-close="popup-2">
+        <div class="course-button close-button popup-close-test" @click="popup2 = false">
             <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
         </div>
     </div>
 </div>
-<div class="popup-bk popup" data-popup="popup-3">
+<div class="popup-bk popup" v-show="popup3">
     <div class="popup-inner">
         <div class="squiggle-container">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
@@ -73,12 +73,12 @@
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
         </div>
-        <div class="course-button close-button popup-close-test" data-popup-close="popup-3">
+        <div class="course-button close-button popup-close-test" @click="popup3 = false">
             <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
         </div>
     </div>
 </div>
-<div class="popup-bk popup" data-popup="popup-4">
+<div class="popup-bk popup" v-show="popup4">
     <div class="popup-inner">
         <div class="squiggle-container">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
@@ -102,7 +102,7 @@
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
         </div>
-        <div class="course-button close-button popup-close-test" data-popup-close="popup-4">
+        <div class="course-button close-button popup-close-test" @click="popup4 = false">
             <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
         </div>
     </div>
@@ -136,29 +136,7 @@
                                    take this knowledge and make decisions based on your
                                    new-found wisdom.
                                  </p>
-                                 <p class="blue-text tcenter two-line-bot">
-                                   To see the relationship between the four, click on the titles below.
-                                 </p>
 
-                                 <div class="row">
-                                   <div class="col-xs-5 jba-btn ptb pbb" data-popup-open="popup-1">Data</div>
-                                   <div class="col-xs-2 ptb pbb">
-                                     <img src="" alt="">
-                                   </div>
-                                   <div class="col-xs-5 jba-btn ptb pbb" data-popup-open="popup-2">Information</div>
-                                 </div>
-                                 <div class="row">
-                                   <div class="col-xs-5 col-xs-offset-7">
-                                     <img src="" alt="">
-                                   </div>
-                                 </div>
-                                 <div class="row">
-                                   <div class="col-xs-5 jba-btn ptb pbb" data-popup-open="popup-3">Wisdom</div>
-                                   <div class="col-xs-2 ptb pbb">
-                                     <img src="" alt="">
-                                   </div>
-                                   <div class="col-xs-5 jba-btn ptb pbb" data-popup-open="popup-4">Knowledge</div>
-                                 </div>
                                </div>
                              </div>
                                <!-- End Content -->
@@ -169,6 +147,12 @@
                <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
            </div>
        </div>
+       <p class="blue-text tcenter two-line-bot">
+         To see the relationship between the four, click on the titles below.
+       </p>
+      <div class="flexy-image-svg one-line-bot">
+        
+      </div>
    </div>
    <!-- end  content -->
    <!-- =========================== -->
