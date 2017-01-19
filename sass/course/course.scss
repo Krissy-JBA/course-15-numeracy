@@ -348,6 +348,9 @@ a.disable {
 }
 
 @media only screen and (min-device-width: 300px) and (max-device-width: 680px) and (orientation: landscape) {
+  .num-graph-wrap img{
+    display: none!important;
+  }
   .squiggle-content {
     height:200px;
     overflow: scroll;
@@ -2572,7 +2575,7 @@ ul.rewind {
   }
   .drop {
     position: absolute;
-    width:100px;
+    width:75px;
     height:70px;
     border: 2px #dfcdb9 dotted;
     /* top: -23px; */

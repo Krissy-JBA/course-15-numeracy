@@ -73,7 +73,7 @@ pageComponentry = {
          t.pageData.total = sum;
          t.$parent.saveData('zoeys-clothing-cost.total', t.pageData.total);
          if( $( '#sort-num li').length ){
-           $('#sort-num li').addClass('tsmaller');
+           $('#sort-num li').addClass('tsmaller').removeAttr('style');
          }
 
          //example

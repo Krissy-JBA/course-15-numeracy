@@ -78,12 +78,11 @@ pageComponentry = {
             $( '#sort-num .drop').text('');
             $( '#sort-num li span' ).removeClass('magenta-blob').addClass('purple-blob-box');
             $( '#sort-num li' ).css({
-              'left': '50%',
               'top': '50%',
               'width': '50px',
               'height': '57px',
               'position': 'relative',
-              'transform': 'translate(-50%,-50%)'
+              'transform': 'translateY(-50%)'
             });
             // console.log();
             // $( '.total-33' ).text( 15*(num/60) );
