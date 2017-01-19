@@ -48,6 +48,7 @@ pageComponentry = {
   ready: function() {
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateTextBoxUi();
+    courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
     this.pageData.metric = this.exerciseData['activity-time.metric'];

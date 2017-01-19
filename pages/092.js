@@ -48,6 +48,7 @@ pageComponentry = {
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateDataPopups();
     courseFeatureJBA.activateTextBoxUi();
+    courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
     this.pageData.burn = this.exerciseData['cash-burn.burn'];

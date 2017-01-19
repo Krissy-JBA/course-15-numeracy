@@ -348,6 +348,10 @@ a.disable {
 }
 
 @media only screen and (min-device-width: 300px) and (max-device-width: 680px) and (orientation: landscape) {
+  .squiggle-content {
+    height:200px;
+    overflow: scroll;
+  }
     .branding-08-phone-container {
         pointer-events: none;
         position: fixed;
@@ -1976,7 +1980,7 @@ a.disable {
     }
     .svg-tapme {
         animation: svgTapme 2s;
-        animation-iteration-count: 2;
+        animation-iteration-count: 3;
         transform-origin: center;
         transform: scale(1);
         fill: #75cee2;
@@ -2145,10 +2149,10 @@ a.disable {
     margin:0 !important;
     transition:margin .35s ease-in !important;
     .popup, .purple-bk-popup {
-      width:100%;
+
       height:100%;
-      bottom:0;right:0;top:0;left:0;
-      position:absolute!important;
+      bottom:0;right:0;top:0;
+      position:fixed!important;
     }
   }
   &.toggled {
@@ -2392,6 +2396,10 @@ button.jba-btn, button.jba-btn:hover {
   display: flex;
   align-items: center;
 }
+.f-column {
+  display: flex;
+  flex-direction: column;
+}
 .f-direct {
   display: flex;
   flex-direction: row !important;
@@ -2563,6 +2571,7 @@ ul.rewind {
     }
   }
   .drop {
+    position: absolute;
     width:100px;
     height:70px;
     border: 2px #dfcdb9 dotted;
@@ -2570,82 +2579,148 @@ ul.rewind {
     border-radius: 5px;
     padding: 10px 20px;
     color: #e7daca;
+    left:0 !important;
   }
 }
 
-//course-numeracy by Martin
+/*********************************************
+  :: Testing Global Changes
+********************************************/
 
 
-.clearfix:after {
-   content: "";
-   visibility: hidden;
-   display: table;
-   height: 0;
-   clear: both;
-}
-#circle-list, #finance-perf, #customer-ms {
-  width:50%;
-  margin:0 auto;
-}
-.circleyellow {
-	width: 50px;
-	height: 50px;
-	background: #f8b500;
-	-moz-border-radius: 25px;
-	-webkit-border-radius: 25px;
-	-webkit-transition: background 1s;
-	border-radius: 25px;
-	float: left;
-	position: relative;
-}
-.circleyellow:hover {
-	background: #ffd35a;
-	-webkit-transition: background 1s;
-}
-#circle-list li:nth-child(2) {
-	margin: 0 0 10px 50px;
-}
-#circle-list li:nth-child(4) {
-	margin: 0 0 10px -50px;
-}
-#circle-list li:nth-child(5) {
-	position: absolute;
-	margin-left: 150px;
-	margin-bottom: 10px;
-}
-#circle-list li:nth-child(7) {
-	margin: 0 0 10px -50px;
-}
-#circle-list li:nth-child(8) {
-  position: absolute;
-  margin-left: 150px;
-  margin-bottom: 10px;
-}
-#circle-list li:nth-child(11) {
-	margin: 0 0 0px 50px;
+
+/*  Fixes the scrollbars showing up on firefox   */
+.form-control{
+    overflow-y:auto;
 }
 
-#finance-perf li:nth-child(1) {
-  margin: 0 0 10px -50px;
+@media only screen and (max-device-width: 680px) and (min-device-width: 300px) and (orientation: landscape) {
+    .flexy-image {
+        width: 50%;
+    }
 }
-#finance-perf li:nth-child(3) {
-  margin: 0 0 10px 100px;
+
+.hint-container{
+    background-size: 100% 100%;
 }
-#finance-perf li:nth-child(5) {
-  margin: 0 0 10px 0;
+
+
+.magenta-blob-box{
+  background-size:100% 100%;
 }
-#customer-ms li:nth-child(1) {
-  margin: 0 0 10px 25px;
+
+.blue-blob-box{
+  background-size:100% 100%;
 }
-#customer-ms li:nth-child(3) {
-  margin: 0 0 10px -50px;
+
+.orange-blob-box{
+  background-size:100% 100%;
 }
-#customer-ms li:nth-child(4) {
-  margin: 0 0 10px 100px;
+
+.blue-blob-box{
+  background-size:100% 100%;
 }
-#customer-ms li:nth-child(6) {
-  margin: 0 0 10px -50px;
+
+
+.flexy-image {
+    display:block!important;
+    /*align-items: -moz- center;*/
+    /*align-items:stretch;*/
+    /*justify-content:flex-start;*/
 }
-#customer-ms li:nth-child(7){
-  margin: 0 0 10px 100px;
+
+.flexy-image img {
+    /*position: static!important;*/
+    transform: none!important;
+    /*left: auto!important;*/
+    margin:auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.prev-button {
+    background-size: auto!important;
+}
+
+.prev-button {
+    background-size: auto!important;
+}
+
+.jba-btn {
+    background-size: 100% 100%!important;
+    transition: transform 0.15s!important;
+}
+
+.jba-btn:hover {
+    background-size: 100% 100%!important;
+}
+
+.courseProgressBar {
+    background-size: 100% 100%;
+}
+
+.course-button {
+    transition: .15s transform;
+}
+
+.jba-form-theme:focus {
+    outline: none!important;
+}
+
+/*.  Popup size fix.  */
+
+.toggled .popup{
+    width: 100vw;
+}
+
+.toggled .purple-bk-popup{
+    width: 100vw;
+}
+
+.popup{
+    width: calc(100vw - 230px);
+}
+
+.purple-bk-popup{
+    width: calc(100vw - 230px);
+}
+
+@media (max-width: 1024px) {
+    .toggled .popup{
+        width: calc(100vw - 230px);
+
+    }
+
+    .popup{
+        width: 100vw;
+    }
+
+
+    .toggled .purple-bk-popup{
+        width: calc(100vw - 230px);
+
+    }
+
+    .purple-bk-popup{
+        width: 100vw;
+    }
+
+
+}
+
+/*.  Popup size fix end.  */
+
+/*.  This part fixes the scrollbars on firefox.  */
+#courseFormWrapperDiv1 textarea, #courseFormWrapperDiv2 textarea, #courseFormWrapperDiv3 textarea, #courseFormWrapperDiv4 textarea {
+    overflow-y: auto !important;
+}
+
+
+/*   Fixes videos not appearing in firefox. Ugly though   */
+@-moz-document url-prefix() {
+  .aspect-ratio{
+    height:180px;
+  }
 }

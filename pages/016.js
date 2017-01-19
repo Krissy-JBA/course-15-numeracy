@@ -16,6 +16,7 @@ pageComponentry = {
     ready: function() {
         courseFeatureJBA.transitionIn();
         courseFeatureJBA.activateDataPopups();
+        courseFeatureJBA.flexySpeckCheck();
 
         var currentPage = this.exerciseData['page.max']
         if (currentPage >= 35) {

@@ -11,6 +11,7 @@ pageComponentry = {
   ready: function() {
     //call transition
     courseFeatureJBA.transitionIn();
+    courseFeatureJBA.flexySpeckCheck();
     $(".firstCheck, .secondCheck, .thirdCheck, .fourthCheck, .fifthCheck").hide();
     setTimeout(function() { $(".firstCheck").show(200) }, 1000);
     setTimeout(function() { $(".secondCheck").show(200) }, 2000);

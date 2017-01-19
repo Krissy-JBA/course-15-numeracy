@@ -48,11 +48,13 @@ pageComponentry = {
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateDataPopups();
     courseFeatureJBA.activateTextBoxUi();
+    courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
     this.pageData.quote = this.exerciseData['quote-for-the-builder.quote'];
 
     //populate data before calling the validate function
     this.validateInputFields();
+    
   }
 }

@@ -13,6 +13,17 @@ pageComponentry = {
   },
   methods: {
     // Any page specific methods go here.
+    clear: function(){
+      this.pageData.drag = '';
+      this.pageData.sort = '';
+      this.pageData.hour = '0.00';
+
+      this.$parent.saveData( 'zoeys-clothing-cost2.drag', this.pageData.drag );
+      this.$parent.saveData( 'zoeys-clothing-cost2.sort', this.pageData.sort );
+      this.$parent.saveData( 'zoeys-clothing-cost.hour', this.pageData.hour );
+
+      location.reload();
+    },
   },
   ready: function() {
     // Ready will be fired when the page is loaded.
@@ -24,6 +35,7 @@ pageComponentry = {
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateDataPopups();
     courseFeatureJBA.activateTextBoxUi();
+    courseFeatureJBA.flexySpeckCheck();
 
     $( function(){
       $("#drag-num li").draggable({

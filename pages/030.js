@@ -48,6 +48,7 @@ pageComponentry = {
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateTextBoxUi();
     courseFeatureJBA.activateDataPopups();
+    courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
     this.pageData.describe = this.exerciseData['workplace-numeracy.describe'];

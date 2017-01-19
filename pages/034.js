@@ -17,6 +17,7 @@ pageComponentry = {
     var t = this;
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateDataPopups();
+    courseFeatureJBA.flexySpeckCheck();
 
     // funky shirt cost = material cost + assembly cost
     this.pageData.total = this.exerciseData[ 'zoeys-clothing-cost.total' ];

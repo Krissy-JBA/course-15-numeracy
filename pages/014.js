@@ -31,6 +31,7 @@ pageComponentry = {
     var t = this;
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateDataPopups();
+    // courseFeatureJBA.flexySpeckCheck();
 
     t.pageData.visited = parseInt(t.exerciseData[ 'how-you-feeling.visited' ]);
 

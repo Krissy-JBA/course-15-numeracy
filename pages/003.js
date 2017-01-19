@@ -47,6 +47,7 @@ pageComponentry = {
     });
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateDataPopups();
+    courseFeatureJBA.flexySpeckCheck();
 
     t.pageData.visited = parseInt(t.exerciseData[ 'chatting-on-the-mobile.visited' ]);
     // t.buttonValidate = this.exerciseData[ 'chatting-on-the-mobile.buttonValidate' ];

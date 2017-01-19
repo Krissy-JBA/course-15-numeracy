@@ -14,9 +14,12 @@ pageComponentry = {
    clear: function(){
      this.pageData.drag = '';
      this.pageData.sort = '';
+     this.pageData.total = '0.00';
 
-     this.$parent.saveData('zoeys-clothing-cost.drag', this.pageData.drag );
-     this.$parent.saveData('zoeys-clothing-cost.sort', this.pageData.sort );
+     this.$parent.saveData( 'zoeys-clothing-cost.drag', this.pageData.drag );
+     this.$parent.saveData( 'zoeys-clothing-cost.sort', this.pageData.sort );
+     this.$parent.saveData( 'zoeys-clothing-cost.total', this.pageData.total );
+
      location.reload();
    },
  },
@@ -29,6 +32,7 @@ pageComponentry = {
    courseFeatureJBA.transitionIn();
    courseFeatureJBA.activateDataPopups();
    courseFeatureJBA.activateTextBoxUi();
+   courseFeatureJBA.flexySpeckCheck();
 
    $( function(){
      $("#drag-num li").draggable({

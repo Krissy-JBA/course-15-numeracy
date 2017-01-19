@@ -11,5 +11,6 @@ pageComponentry = {
   ready: function() {
     //call transition
     courseFeatureJBA.transitionIn();
+    courseFeatureJBA.flexySpeckCheck();
   }
 }

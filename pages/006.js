@@ -47,6 +47,7 @@ pageComponentry = {
     });
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateDataPopups();
+    courseFeatureJBA.flexySpeckCheck();
 
     t.pageData.visited = parseInt(t.exerciseData[ 'writing-in-the-diary.visited' ]);
     // t.buttonValidate = this.exerciseData[ 'writing-in-the-diary.buttonValidate' ];

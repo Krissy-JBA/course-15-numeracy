@@ -47,6 +47,7 @@ pageComponentry = {
     });
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateDataPopups();
+    courseFeatureJBA.flexySpeckCheck();
 
     t.pageData.visited = parseInt(t.exerciseData[ 'decorating-the-home.visited' ]);
     // t.buttonValidate = this.exerciseData[ 'decorating-the-home.buttonValidate' ];

@@ -47,6 +47,7 @@ pageComponentry = {
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateTextBoxUi();
     courseFeatureJBA.activateDataPopups();
+    courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
     this.pageData.everyday = this.exerciseData['activity-time.everyday'];

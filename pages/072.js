@@ -49,6 +49,7 @@ pageComponentry = {
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateTextBoxUi();
     courseFeatureJBA.activateDataPopups();
+    courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
     this.pageData.fabric = this.exerciseData['bringing-it-all-together.fabric'];
