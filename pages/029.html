@@ -1,51 +1,15 @@
-<div class="purple-bk-popup" v-show="popup1">
-    <div class="popup-inner ">
-        <div class="squiggle-container ">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content white-squiggle">
-                <div class="row">
-                    <div class="col-md-12 ">
-                        <div class="squiggle-container flex-center">
-                            <h4 class="w100 black-text tcenter">Model fitting day</h4>
-                            <p class="w100 ib tleft">
-                              With paid models coming in and limited hours
-                              available, Zoey needs to make some decisions.
-                              How many models are coming? How much time does
-                              she have? How long does it take for a model to
-                              get changed? How long will alterations take? How
-                              many times will a model need to change their
-                              outfit? What if someone’s sick? How many staff
-                              will Zoey need? By doing some maths, Zoey can
-                              come up with a plan to really get the best out
-                              of the day.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="flexy-image flexy-image-mob-fix">
-                  <img src="/images/course-numeracy/Numeracy-20.png" class="num-graph">
-                </div> -->
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
-        </div>
-        <a @click="popup1 = false">
-            <div class="course-button back-button"></div>
-        </a>
-    </div>
-</div>
 <div class="container-fluid h100">
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
                <div class="new-main-content">
-                   <h2>Workplace numeracy</h2>
+                   <h2>Numeracy vs Maths</h2>
                    <!-- Change Header -->
                </div>
            </div>
        </div>
 
        <div class="row content-row flexy-parent pop-in">
-           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12 two-column">
+           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
                <div class="squiggle-container">
                    <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
                    <div class="squiggle-content white-squiggle">
@@ -53,42 +17,35 @@
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
                                  <div class="row">
-                                     <div class="col-md-12">
-                                       <p>
-                                         Now we’re going to help Zoey with numeracy in
-                                         relation to her fashion line. So what is numeracy
-                                         in the workplace?
-                                       </p>
-                                       <p>
-                                         As you start to build your career, your ability
-                                         to do basic maths (and to interpret that data to
-                                         make decisions that are good for business) is
-                                         going to be essential.
-                                       </p>
-                                       <p>
-                                         Think about this quick scenario: Zoey’s got a
-                                         number of supermodels coming in on a particular
-                                         day to try on some outfits for her show. These
-                                         are paid models, so think about what Zoey needs
-                                         to do to get the best value out of that day.
-                                       </p>
+                                   <div class="col-md-12 col-pad0">
+                                     <p>
+                                       Being numerate means being able to do a
+                                       variety of things. Try to remember what they
+                                       are and describe them below. For example,
+                                       ‘interpret data’.
+                                     </p>
+                                     <div class="squiggle-container">
+                                       <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
+                                       <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                         <div class="squiggle-container">
+                                           <!-- put all of your content into here div -->
+                                           <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv large-textarea">
+                                             <textarea v-on:keyup="validateInputFields" v-on:change="$parent.saveData( 'numeracy-vs-maths.what', pageData.what )" v-model="pageData.what" placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black course-form-scroll-white jba-form-theme"></textarea>
+                                           </div>
+                                           <!-- End Content -->
+                                         </div>
+                                       </div>
+                                       <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
                                      </div>
+                                   </div>
                                  </div>
-                                   <!-- End Content -->
+                                  <!-- End Content -->
                                </div>
                            </div>
                        </div>
                    </div>
                    <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
                </div>
-           </div>
-           <div class="f-column flexy-image-svg">
-             <div class="flexy-image col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12 pop-in m0auto">
-               <img src="/images/course-numeracy/NumeracyArtboard 38.png" class="cpointer" @click="popup1 = true">
-             </div>
-             <div class="row f-jcenter col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12 one-line">
-               <span class="blue-text tcenter">click on the photo to see the kind of things we mean.</span>
-             </div>
            </div>
        </div>
        <!-- end  content -->
@@ -119,7 +76,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a href="#030" class="course-button next-button"></a>
+                              <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
+                               <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

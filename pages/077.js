@@ -1,19 +1,60 @@
 pageComponentry = {
   data: function() {
     return {
-      // Any page specific data goes here.
-      popup1:false,
-      popup2:false,
-      popup3:false,
+      pageData: {
+        percentages: '',
+        decisions: ''
+      },
+
+      hideLocked: false,
+      disabledInput: true
+
     }
   },
   methods: {
-    // Any page specific methods go here.
+    callPageTransition: function(){
+      var poppedElement = $(".pop-in");
+        $(poppedElement).each(function() {
+            var thisPop = this;
+            setInterval(function() {
+                $(thisPop).addClass("popOut");
+            }, 200);
+        });
+        setTimeout(function(){
+          window.location.href = "#078";
+        },1000)
+    },
+
+    validateInputFields: function(){
+      if(!this.pageData.percentages || !this.pageData.decisions){
+        this.hideLocked = false,
+        this.disabledInput = true
+      } else {
+        this.hideLocked = true,
+        this.disabledInput = false
+      }
+    },
+
+    sendData: function(){
+      var obj = this.pageData;
+      if(this.disabledInput){
+        return;
+      } else {
+        this.callPageTransition();
+      }
+    }
+
   },
   ready: function() {
-    // Ready will be fired when the page is loaded.
     courseFeatureJBA.transitionIn();
-    courseFeatureJBA.activateDataPopups();
+    courseFeatureJBA.activateTextBoxUi();
     courseFeatureJBA.flexySpeckCheck();
+
+    //load data on page load
+    this.pageData.percentages = this.exerciseData['activity-time.percentages'];
+    this.pageData.decisions = this.exerciseData['activity-time.decisions'];
+
+    //populate data before calling the validate function
+    this.validateInputFields();
   }
 }

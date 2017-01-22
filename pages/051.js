@@ -2,8 +2,8 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        budget: '',
-        challenge: ''
+        remember: '',
+        consider: ''
       },
 
       hideLocked: false,
@@ -26,7 +26,7 @@ pageComponentry = {
     },
 
     validateInputFields: function(){
-      if(!this.pageData.budget || !this.pageData.challenge){
+      if(!this.pageData.remember || !this.pageData.consider){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -51,8 +51,8 @@ pageComponentry = {
     courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
-    this.pageData.budget = this.exerciseData['activity-time.budget'];
-    this.pageData.challenge = this.exerciseData['activity-time.challenge'];
+    this.pageData.remember = this.exerciseData['activity-time.remember'];
+    this.pageData.consider = this.exerciseData['activity-time.consider'];
 
     //populate data before calling the validate function
     this.validateInputFields();

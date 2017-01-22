@@ -1,194 +1,161 @@
-<div class="popup-bk popup" v-show="popup1">
+<div class="popupNew" v-show="popup2 == true">
     <div class="popup-inner">
         <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/red-top.svg" alt=""></div>
             <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content orange-squiggle">
+            <div class="squiggle-content red-squiggle">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="squiggle-container flex-center">
-                            <h4>Data</h4>
-                            <p class="db w100 tleft">
-                              As a business, Yezo Clothing is made up of lots of data.
-                              Customer details, sales invoices and purchase invoices are
-                              just some of Zoey’s basic records that contain loads of
-                              business data.
-                            </p>
+                          <p><strong>Not quite</strong></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/red-bottom.svg" alt=""></div>
         </div>
-        <div class="course-button close-button popup-close-test" @click="popup1 = false">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
-        </div>
+        <a class="course-button close-button popup-close-test" v-on:click="popup2 = false">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+        </a>
     </div>
 </div>
-<div class="popup-bk popup" v-show="popup2">
+<div class="popupNew" v-show="popup1 == true">
     <div class="popup-inner">
         <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
             <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content orange-squiggle">
+            <div class="squiggle-content green-squiggle">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="squiggle-container flex-center">
-                          <h4>Information</h4>
-                          <p class="db w100 tleft">
-                            Information is data that’s been given meaning. In Zoey’s
-                            business, information might be spreadsheets of all the types
-                            and quantities of fabrics, buttons, cotton and zips she has
-                            in the studio.
-                          </p>
+                          <p><strong>Nice job!</strong></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
         </div>
-        <div class="course-button close-button popup-close-test" @click="popup2 = false">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
-        </div>
+        <a class="course-button close-button popup-close-test" href="#062">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </a>
     </div>
 </div>
-<div class="popup-bk popup" v-show="popup3">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content orange-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <h4>Knowledge</h4>
-                          <p class="db w100 tleft">
-                            Knowledge is an awareness of that information. For example
-                            Zoey knows what stock levels of fabrics, buttons, cotton
-                            and zips are in the studio. With knowledge comes understanding!
-                          </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
-        </div>
-        <div class="course-button close-button popup-close-test" @click="popup3 = false">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
-        </div>
-    </div>
-</div>
-<div class="popup-bk popup" v-show="popup4">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content orange-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <h4>Wisdom</h4>
-                          <p class="db w100 tleft">
-                            When Zoey has understanding, she then has wisdom and can make
-                            decisions and judgements that are best for her fashion
-                            business. For example she can take the knowledge of stock
-                            levels and decide when she needs to reorder fabrics. Wisdom
-                            is seeking out the right information, and choosing the right
-                            business direction and strategy.
-                          </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
-        </div>
-        <div class="course-button close-button popup-close-test" @click="popup4 = false">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
-        </div>
-    </div>
-</div>
-
 <div class="container-fluid h100">
-   <div class="row header-row">
-       <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
-           <div class="new-main-content">
-               <h2>From data to wisdom</h2>
-               <!-- Change Header -->
+       <div class="row header-row">
+           <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
+               <div class="new-main-content">
+                   <h2>Intro to data</h2>
+                   <!-- Change Header -->
+               </div>
            </div>
        </div>
-   </div>
 
-   <div class="row content-row flexy-parent pop-in">
-       <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
-           <div class="squiggle-container">
-               <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-               <div class="squiggle-content white-squiggle">
-                   <div class="row">
-                       <div class="col-md-12">
-                           <div class="squiggle-container flex-center">
-                             <div class="row">
-                               <div class="col-md-12">
-                                 <p>
-                                   Data, information, knowledge and wisdom form a hierarchy
-                                   of different but related concepts. It’s all about turning
-                                   data into information that gives you knowledge about your
-                                   business that you you didn’t have before. You can then
-                                   take this knowledge and make decisions based on your
-                                   new-found wisdom.
-                                 </p>
+       <div class="row content-row flexy-parent pop-in">
+           <div class="col-md-6 col-md-offset-3 col-xs-12 break-point">
+               <div class="squiggle-container">
+                   <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+                   <div class="squiggle-content white-squiggle">
+                       <div class="row">
+                           <div class="col-md-12">
+                               <div class="squiggle-container flex-center">
+                                 <div class="row">
+                                     <div class="col-md-12">
+                                  <p>
+                                    See if you can distinguish between the different
+                                    kinds of data.
+                                  </p>
+                                  <p class="tcenter blue-text">
+                                    Click on the boxes that are quantitative.
+                                  </p>
+                                </div>
+                              </div>
+                                  <form class="jba-checkbox one-line one-line-bot" action="#">
+                                     <p>
+                                       <input type="checkbox" id="test1" v-model="check1" v-on:change="$parent.saveData( 'check1', check1 ), toggleLocked()"/>
+                                       <label class="tlarger" for="test1">The fabric is reddish orange</label>
+                                     </p>
+                                     <p>
+                                       <input type="checkbox" id="test2" v-model="check2" v-on:change="$parent.saveData( 'check2', check2 ), toggleLocked()"/>
+                                       <label class="tlarger" for="test2">The fabric weight is 3kg</label>
+                                     </p>
+                                     <p>
+                                       <input type="checkbox" id="test3" v-model="check3" v-on:change="$parent.saveData( 'check3', check3 ), toggleLocked()"/>
+                                       <label class="tlarger" for="test3">The fabric is 1 metre wide</label>
+                                     </p>
+                                     <p>
+                                       <input type="checkbox" id="test4" v-model="check4" v-on:change="$parent.saveData( 'check4', check4 ), toggleLocked()"/>
+                                       <label class="tlarger" for="test4">The fabric is furry</label>
+                                     </p>
+                                     <p>
+                                       <input type="checkbox" id="test5" v-model="check5" v-on:change="$parent.saveData( 'check5', check5 ), toggleLocked()"/>
+                                       <label class="tlarger" for="test5">The fabric is 100% cotton</label>
+                                     </p>
+                                     <p>
+                                       <input type="checkbox" id="test6" v-model="check6" v-on:change="$parent.saveData( 'check6', check6 ), toggleLocked()"/>
+                                       <label class="tlarger" for="test6">The fabric roll is 50 metres long</label>
+                                     </p>
+                                   </form>
+                                  <!-- <ul class="w100 pl0">
 
+                                    <li class="row">
+                                      <p class="col-xs-10 magenta-blob plb pbm ptm tleft">
+                                        The fabric roll is 50 metres long
+                                      </p>
+                                      <div class="col-xs-2 plm prm">
+                                        <div class="imgWrap">
+                                          <img src="/images/course-numeracy/checkbox.png" alt="">
+                                        </div>
+                                        <div class="numeracy-check">
+                                          <img src="/images/course-numeracy/check.png" alt="">
+                                        </div>
+                                      </div>
+                                    </li>
+                                  </ul> -->
+
+                                   <!-- End Content -->
                                </div>
-                             </div>
-                               <!-- End Content -->
                            </div>
                        </div>
+
                    </div>
+                   <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
                </div>
-               <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
            </div>
        </div>
-       <p class="blue-text tcenter two-line-bot">
-         To see the relationship between the four, click on the titles below.
-       </p>
-      <div class="flexy-image-svg one-line-bot">
-        
-      </div>
-   </div>
-   <!-- end  content -->
-   <!-- =========================== -->
-   <!-- footer start -->
-   <div class="row progressWrap">
-       <div class="col-xs-12 col-pad0">
-           <!-- S:Progress Bar -->
-           <div class="progress-row">
-               <div class="hand-arrow">
-                   <div class="percentageTxt hidden">
-                       <p>60%</p>
-                   </div>
-                   <img class="percentageArrow hidden" src="/images/course-assets/progressBar/hand_arrow.png" alt="" />
-               </div>
-               <div class="container progressContainer">
-                   <div class="row">
-                       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                         <a href="#060" class="course-button prev-button"></a>
+       <!-- end  content -->
+       <!-- =========================== -->
+       <!-- footer start -->
+       <div class="row progressWrap">
+           <div class="col-xs-12 col-pad0">
+               <!-- S:Progress Bar -->
+               <div class="progress-row">
+                   <div class="hand-arrow">
+                       <div class="percentageTxt hidden">
+                           <p>60%</p>
                        </div>
-                       <!-- leftArrow -->
-                       <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
-                           <div class="course-progress-bar-wrap">
-                               <div class="courseProgressBar">
-                                   <p class="fixed hidden">60%</p>
-                                   <div class="percentageProgress"></div>
+                       <img class="percentageArrow hidden" src="/images/course-assets/progressBar/hand_arrow.png" alt="" />
+                   </div>
+                   <div class="container progressContainer">
+                       <div class="row">
+                           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                             <a href="#060" class="course-button prev-button"></a>
+                           </div>
+                           <!-- leftArrow -->
+                           <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
+                               <div class="course-progress-bar-wrap">
+                                   <div class="courseProgressBar">
+                                       <p class="fixed hidden">60%</p>
+                                       <div class="percentageProgress"></div>
+                                   </div>
                                </div>
                            </div>
+                           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                               <a @click="submitCheck" class="course-button jba-btn jba-btn-submit2" v-bind:class="{'jba-btn-locked':locked}">Submit <i class="arrowLock-13 fa fa-lock"  v-show="locked" aria-hidden="true"></i></a>
+                           </div>
+                           <!-- rightArrow -->
                        </div>
-                       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                           <a href="#062" class="course-button next-button"></a>
-                       </div>
-                       <!-- rightArrow -->
                    </div>
                </div>
+               <!-- E:Progress Bar -->
            </div>
-           <!-- E:Progress Bar -->
        </div>
    </div>
-</div>

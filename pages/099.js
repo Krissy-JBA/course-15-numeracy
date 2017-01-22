@@ -2,9 +2,9 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        retained: ''
+        runway: ''
       },
-      popup1: false,
+
       hideLocked: false,
       disabledInput: true
 
@@ -25,7 +25,7 @@ pageComponentry = {
     },
 
     validateInputFields: function(){
-      if(!this.pageData.retained ){
+      if(!this.pageData.runway ){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -51,7 +51,7 @@ pageComponentry = {
     courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
-    this.pageData.retained = this.exerciseData['activity-time.retained'];
+    this.pageData.runway = this.exerciseData['activity-time.runway'];
 
     //populate data before calling the validate function
     this.validateInputFields();

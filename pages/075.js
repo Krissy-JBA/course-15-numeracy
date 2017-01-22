@@ -1,18 +1,27 @@
 pageComponentry = {
   data: function() {
     return {
+      // Any data goes here.
       pageData: {
-        percentages: '',
-        decisions: ''
+        everyday: ''
       },
-
-      hideLocked: false,
-      disabledInput: true
+      disabledInput: true,
+      hideLocked: false
 
     }
   },
   methods: {
-    callPageTransition: function(){
+    validateInputFields: function(){
+      if(!this.pageData.everyday){
+        this.hideLocked = false,
+        this.disabledInput = true
+      } else {
+        this.hideLocked = true,
+        this.disabledInput = false
+      }
+    },
+
+   callPageTransition: function(){
       var poppedElement = $(".pop-in");
         $(poppedElement).each(function() {
             var thisPop = this;
@@ -25,35 +34,23 @@ pageComponentry = {
         },1000)
     },
 
-    validateInputFields: function(){
-      if(!this.pageData.percentages || !this.pageData.decisions){
-        this.hideLocked = false,
-        this.disabledInput = true
-      } else {
-        this.hideLocked = true,
-        this.disabledInput = false
-      }
-    },
-
     sendData: function(){
-      var obj = this.pageData;
       if(this.disabledInput){
         return;
       } else {
         this.callPageTransition();
       }
-    }
-
+    },
   },
   ready: function() {
+    //call transition
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateTextBoxUi();
+    courseFeatureJBA.activateDataPopups();
     courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
-    this.pageData.percentages = this.exerciseData['activity-time.percentages'];
-    this.pageData.decisions = this.exerciseData['activity-time.decisions'];
-
+    this.pageData.everyday = this.exerciseData['activity-time.everyday'];
     //populate data before calling the validate function
     this.validateInputFields();
   }

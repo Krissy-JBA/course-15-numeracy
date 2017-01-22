@@ -1,28 +1,18 @@
 pageComponentry = {
   data: function() {
     return {
-      // Any data goes here.
       pageData: {
-        what: ''
+        appeal: '',
+        difference: ''
       },
-
-      disabledInput: true,
-      hideLocked: false
+      hideLocked: false,
+      disabledInput: true
 
     }
   },
   methods: {
-    validateInputFields: function(){
-      if(!this.pageData.what){
-        this.hideLocked = false,
-        this.disabledInput = true
-      } else {
-        this.hideLocked = true,
-        this.disabledInput = false
-      }
-    },
-
-   callPageTransition: function(){
+    // Any page specific methods go here.
+    callPageTransition: function(){
       var poppedElement = $(".pop-in");
         $(poppedElement).each(function() {
             var thisPop = this;
@@ -34,24 +24,35 @@ pageComponentry = {
           window.location.href = "#029";
         },1000)
     },
-
+    validateInputFields: function(){
+      if(!this.pageData.appeal || !this.pageData.difference){
+        this.hideLocked = false,
+        this.disabledInput = true
+      } else {
+        this.hideLocked = true,
+        this.disabledInput = false
+      }
+    },
     sendData: function(){
+      var obj = this.pageData;
       if(this.disabledInput){
         return;
       } else {
         this.callPageTransition();
       }
-    },
+    }
   },
   ready: function() {
-    //call transition
+    // Ready will be fired when the page is loaded.
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateTextBoxUi();
     courseFeatureJBA.activateDataPopups();
     courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
-    this.pageData.what = this.exerciseData['numeracy-vs-maths.what'];
+    this.pageData.appeal = this.exerciseData['getting-zoeys-buy-in.appeal'];
+    this.pageData.difference = this.exerciseData['getting-zoeys-buy-in.difference'];
+
     //populate data before calling the validate function
     this.validateInputFields();
   }

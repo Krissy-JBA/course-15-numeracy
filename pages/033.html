@@ -10,76 +10,60 @@
 
        <div class="row content-row flexy-parent pop-in">
            <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
-             <div class="squiggle-container">
-                 <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-                 <div class="squiggle-content white-squiggle">
-                     <div class="row">
-                         <div class="col-md-12">
-                             <div class="squiggle-container flex-center">
-                               <div class="row">
+               <div class="squiggle-container">
+                   <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+                   <div class="squiggle-content white-squiggle">
+                       <div class="row">
+                           <div class="col-md-12">
+                               <div class="squiggle-container flex-center">
+                                 <div class="row">
                                    <div class="col-md-12">
-                                     <div class="row f-center mbb">
-                                       <div class="col-xs-5">
-                                         <p>Materials Cost</p>
-                                       </div>
-                                       <div class="col-xs-5 col-xs-offset-1">
-                                         <span class="purple-text">Total: $ <{ pageData.total }></span>
-                                       </div>
-                                     </div>
-                                     <div class="row">
-                                       <div class="col-xs-12">
-                                         <p>
-                                           Now we’ll look at the cost of assembling the shirt.
-                                         </p>
-                                         <p>
-                                           Calculate the cost based on an hourly rate of $15
-                                           and the number of minutes you think it’d take to cut
-                                           and sew the garment together. It’s up to you to decide
-                                           the number of minutes
-                                         </p>
-                                       </div>
-                                     </div>
+                                     <p>
+                                       Time to work out the cost of producing a piece of clothing, Zoey’s top selling shirt.
+                                     </p>
+                                     <p>
+                                       Choose the items you’d like to add to the shirt and your total cost will appear in the box below.
+                                     </p>
                                    </div>
+                                 </div>
+                                  <!-- End Content -->
                                </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
+               </div>
+               <p class="blue-text tcenter one-line">Drag the materials you want to the box below and tap NEXT when you’ve finished.</p>
+               <div class="drag-drop">
 
-                                <!-- End Content -->
-                             </div>
-                         </div>
+                   <div class="drag row pabsolute" style="min-height:100px;">
+                     <div class="row" id="drag-num">
+                       <li class="col-xs-3 mls mrs magenta-blob tcenter cpointer" id="cotton"><input type="hidden" value="0.10" />Cotton</li>
+                       <li class="col-xs-3 mls mrs magenta-blob tcenter cpointer" id="fabric"><input type="hidden" value="4.8" />Fabric</li>
+                       <li class="col-xs-3 mls mrs magenta-blob tcenter cpointer" id="zip"><input type="hidden" value="0.50" />Zip</li>
+                       <li class="col-xs-3 mls mrs magenta-blob tcenter cpointer" id="labels"><input type="hidden" value="0.10" />Labels</li>
+                       <li class="col-xs-3 mls mrs magenta-blob tcenter cpointer" id="buttons"><input type="hidden" value="0.20" />5 Buttons</li>
+                       <li class="col-xs-3 mls mrs magenta-blob tcenter cpointer" id="embroidery"><input type="hidden" value="0.10" />Embroidery</li>
                      </div>
-                 </div>
-                 <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
-             </div>
-             <div class="row two-line one-line-bot">
-               <div class="col-md-12">
-                 <p class="tcenter blue-text">
-                   Drag your chosen number of minutes to the ‘drop here’ box below and tap
-                   NEXT when you’ve finished.
-                 </p>
-               </div>
-             </div>
+                   </div>
 
-             <ul class="row pl0" id="drag-num">
-               <li class="col-xs-2 pl0 pr0" id="one-num"><input type="hidden" value="1" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">1</span></li>
-               <li class="col-xs-2 pl0 pr0" id="two-num"><input type="hidden" value="2" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">2</span></li>
-               <li class="col-xs-2 pl0 pr0" id="three-num"><input type="hidden" value="3" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">3</span></li>
-               <li class="col-xs-2 pl0 pr0" id="four-num"><input type="hidden" value="4" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">4</span></li>
-               <li class="col-xs-2 pl0 pr0" id="five-num"><input type="hidden" value="5" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">5</span></li>
-               <li class="col-xs-2 pl0 pr0" id="six-num"><input type="hidden" value="6" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">6</span></li>
-             </ul>
+                   <div class="row pabsolute" style="border:2px #dfcdb9 dotted;border-radius:10px;top:16px">
+                     <div class="row" id="sort-num" style="height:150px;padding:20px;">
+                     </div>
+                   </div>
 
-             <div class="row">
-               <div class="col-xs-4 two-line" >
-                 <div class="row" style="min-height:57px;"></div>
-                 <p id="renew" class="orange-blob-box mb0 ptm pbm cpointer" v-on:click="clear">Renew</p>
-               </div>
-               <div class="col-xs-8">
-                 <div class="row f-center" style="min-height:57px;"><span class="purple-text mb0 col-xs-8 tright">$ 15 per hour X </span><span class="ib mlm prelative mb0 col-xs-4" id="sort-num" style="width:100px"><span class="mb0 drop">Drop here</span></span></div>
-                 <div class="row two-line">
-                   <p class="col-xs-6 col-xs-offset-6 purple-blob-box mb0 ptm pbm pl0 pr0" style="width:50%">$ <span class="total-33"><{ pageData.hour }></span></p>
-                 </div>
-               </div>
-             </div>
+                   <div class="row">
+                     <div class="col-xs-4" style="top:35px;" >
+                       <p id="renew" class="orange-blob-box mb0 ptm pbm cpointer" v-on:click="clear">Renew</p>
+                     </div>
+                     <div class="col-xs-4 col-xs-offset-4" style="top:35px;">
+                       <p class="purple-blob-box mb0 ptm pbm">$ <span class="total-32" ><{ pageData.total }></span></p>
+                     </div>
+                   </div>
 
+               </div>
+
+              <!-- End Content -->
            </div>
        </div>
        <!-- end  content -->
@@ -110,7 +94,7 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                             <a href="#034" class="course-button next-button"></a>
+                            <a href="#034" class="course-button next-button"></a>
                            </div>
                            <!-- rightArrow -->
                        </div>

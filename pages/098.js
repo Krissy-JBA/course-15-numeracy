@@ -2,10 +2,12 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        snapshot: ''
+        demonstrate: ''
       },
+
       hideLocked: false,
       disabledInput: true
+
     }
   },
   methods: {
@@ -23,7 +25,7 @@ pageComponentry = {
     },
 
     validateInputFields: function(){
-      if(!this.pageData.snapshot ){
+      if(!this.pageData.demonstrate ){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -49,7 +51,7 @@ pageComponentry = {
     courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
-    this.pageData.snapshot = this.exerciseData['activity-time.snapshot'];
+    this.pageData.demonstrate = this.exerciseData['activity-time.demonstrate'];
 
     //populate data before calling the validate function
     this.validateInputFields();

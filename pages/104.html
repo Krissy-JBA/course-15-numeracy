@@ -1,63 +1,52 @@
-<div class="container-fluid h100 purpleBack" style="min-height:100vh;">
+<div class="container-fluid h100">
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
                <div class="new-main-content">
-                   <h2 class="white-text">Let’s rewind</h2>
+                   <h2>Applying numeracy</h2>
                    <!-- Change Header -->
                </div>
            </div>
        </div>
 
        <div class="row content-row flexy-parent pop-in">
-           <div class="m0auto" style="max-width:750px;">
-              <div class="row">
-                <div class="col-md-12">
-                  <ul class="two-line rewind white-text">
-                    <p class="marL5 white-text two-line-bot">
-                      In this module you learned:
-                    </p>
-                    <li>
-                      <div class="imgWrap mrm">
-                        <img class="back" src="/images/course-assets/check/green-circle.svg" alt="" />
-                        <img class="front firstCheck" src="/images/course-assets/check/checking.svg" alt="" />
-                      </div>
-                      <p>What numeracy is and why it’s so important</p>
-                    </li>
-                    <li class="two-line">
-                      <div class="imgWrap mrm">
-                        <img class="back" src="/images/course-assets/check/green-circle.svg" alt="" />
-                        <img class="front secondCheck" src="/images/course-assets/check/checking.svg" alt="" />
-                      </div>
-                      <p>How to apply maths to scenarios (numeracy)</p>
-                    </li>
-                    <li class="two-line">
-                      <div class="imgWrap mrm">
-                        <img class="back" src="/images/course-assets/check/green-circle.svg" alt="" />
-                        <img class="front thirdCheck" src="/images/course-assets/check/checking.svg" alt="" />
-                      </div>
-                      <p>How to confidently solve issues with numbers.</p>
-                    </li>
-                    <li class="two-line">
-                      <div class="imgWrap mrm">
-                        <img class="back" src="/images/course-assets/check/green-circle.svg" alt="" />
-                        <img class="front fourthCheck" src="/images/course-assets/check/checking.svg" alt="" />
-                      </div>
-                      <p>Some great techniques to keep on top of your numeracy skills.</p>
-                    </li>
-                    <li class="two-line">
-                      <div class="imgWrap mrm">
-                        <img class="back" src="/images/course-assets/check/green-circle.svg" alt="" />
-                        <img class="front fifthCheck" src="/images/course-assets/check/checking.svg" alt="" />
-                      </div>
-                      <p>Some of the critical numeric components in the business world.</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
+               <div class="squiggle-container">
+                   <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+                   <div class="squiggle-content white-squiggle">
+                       <div class="row">
+                           <div class="col-md-12">
+                               <div class="squiggle-container flex-center">
+                                 <div class="row">
+                                   <div class="col-md-12">
+                                     <p>
+                                       Explain how your view and knowledge of what numeracy
+                                       has changed as a result of this course – and give us
+                                       some key insights that you’ve taken away. A short
+                                       paragraph will be just fine.
+                                     </p>
+                                     <div class="squiggle-container">
+                                       <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
+                                       <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                         <div class="squiggle-container">
+                                           <!-- put all of your content into here div -->
+                                           <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv large-textarea">
+                                             <textarea v-on:keyup="validateInputFields" v-model="pageData.insights" v-on:change="$parent.saveData( 'applying-numeracy.insights', pageData.insights )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
+                                           </div>
+                                           <!-- End Content -->
+                                         </div>
+                                       </div>
+                                       <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
+                                     </div>
+                                   </div>
+                                 </div>
 
-
-             <!-- End Content -->
-
+                                   <!-- End Content -->
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
+               </div>
            </div>
        </div>
        <!-- end  content -->
@@ -88,7 +77,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a href="#105" class="course-button next-button"></a>
+                             <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
+                              <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

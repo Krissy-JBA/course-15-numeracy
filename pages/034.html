@@ -10,69 +10,76 @@
 
        <div class="row content-row flexy-parent pop-in">
            <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
-               <div class="squiggle-container">
-                   <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-                   <div class="squiggle-content white-squiggle">
+             <div class="squiggle-container">
+                 <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+                 <div class="squiggle-content white-squiggle">
                      <div class="row">
-                       <div class="col-md-12">
-                         <div class="row f-center mbm">
-                           <div class="col-xs-5">
-                             <p>Materials Cost</p>
-                           </div>
-                           <div class="col-xs-5 col-xs-offset-1">
-                             <span class="purple-text">$ <{ pageData.total }></span>
-                           </div>
-                         </div>
-                         <div class="row f-center mbb">
-                           <div class="col-xs-5">
-                             <p>Assembly Cost</p>
-                           </div>
-                           <div class="col-xs-5 col-xs-offset-1">
-                             <span class="purple-text">$ <{ pageData.hour }></span>
-                           </div>
-                         </div>
-                         <div class="row f-center mbm">
-                           <div class="col-xs-11">
-                             <p class="bold">
-                               This gives you a total production cost per
-                             </p>
-                           </div>
-                         </div>
-                         <div class="row f-center one-line-bot">
-                           <div class="col-xs-5">
-                             <p>funky shirt:</p>
-                           </div>
-                           <div class="col-xs-5 col-xs-offset-1">
-                             <span class="purple-text">$ <{ pageData.shirt }></span>
-                           </div>
-                         </div>
-                         <div class="row">
-                           <div class="col-md-12">
+                         <div class="col-md-12">
                              <div class="squiggle-container flex-center">
-                               <p>
-                                 Now you know your production costs, you can
-                                 add your other costs (i.e. the ones not
-                                 directly related to making the product).
-                               </p>
-                               <p>
-                                 This is only for one garment, but it
-                                 required some maths  just to get a snapshot
-                                 of what it costs Zoey's business to
-                                 manufacture the shirt. So, imagine how
-                                 complicated things could get with all the
-                                 different types of outfits she designs and
-                                 creates. That’s what numeracy is all about
-                                 -  and why it’s so important.
-                               </p>
+                               <div class="row">
+                                   <div class="col-md-12">
+                                     <div class="row f-center mbb">
+                                       <div class="col-xs-5">
+                                         <p>Materials Cost</p>
+                                       </div>
+                                       <div class="col-xs-5 col-xs-offset-1">
+                                         <span class="purple-text">Total: $ <{ pageData.total }></span>
+                                       </div>
+                                     </div>
+                                     <div class="row">
+                                       <div class="col-xs-12">
+                                         <p>
+                                           Now we’ll look at the cost of assembling the shirt.
+                                         </p>
+                                         <p>
+                                           Calculate the cost based on an hourly rate of $15
+                                           and the number of minutes you think it’d take to cut
+                                           and sew the garment together. It’s up to you to decide
+                                           the number of minutes
+                                         </p>
+                                       </div>
+                                     </div>
+                                   </div>
+                               </div>
+
+                                <!-- End Content -->
                              </div>
-                           </div>
                          </div>
-                       </div>
                      </div>
-                       <!-- End Content -->
-                   </div>
-                   <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
+                 </div>
+                 <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+             </div>
+             <div class="row two-line one-line-bot">
+               <div class="col-md-12">
+                 <p class="tcenter blue-text">
+                   Drag your chosen number of minutes to the ‘drop here’ box below and tap
+                   NEXT when you’ve finished.
+                 </p>
                </div>
+             </div>
+
+             <ul class="row pl0" id="drag-num">
+               <li class="col-xs-2 pl0 pr0" id="one-num"><input type="hidden" value="1" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">1</span></li>
+               <li class="col-xs-2 pl0 pr0" id="two-num"><input type="hidden" value="2" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">2</span></li>
+               <li class="col-xs-2 pl0 pr0" id="three-num"><input type="hidden" value="3" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">3</span></li>
+               <li class="col-xs-2 pl0 pr0" id="four-num"><input type="hidden" value="4" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">4</span></li>
+               <li class="col-xs-2 pl0 pr0" id="five-num"><input type="hidden" value="5" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">5</span></li>
+               <li class="col-xs-2 pl0 pr0" id="six-num"><input type="hidden" value="6" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">6</span></li>
+             </ul>
+
+             <div class="row">
+               <div class="col-xs-4 two-line" >
+                 <div class="row" style="min-height:57px;"></div>
+                 <p id="renew" class="orange-blob-box mb0 ptm pbm cpointer" v-on:click="clear">Renew</p>
+               </div>
+               <div class="col-xs-8">
+                 <div class="row f-center" style="min-height:57px;"><span class="purple-text mb0 col-xs-8 tright">$ 15 per hour X </span><span class="ib mlm prelative mb0 col-xs-4" id="sort-num" style="width:100px"><span class="mb0 drop">Drop here</span></span></div>
+                 <div class="row two-line">
+                   <p class="col-xs-6 col-xs-offset-6 purple-blob-box mb0 ptm pbm pl0 pr0" style="width:50%">$ <span class="total-33"><{ pageData.hour }></span></p>
+                 </div>
+               </div>
+             </div>
+
            </div>
        </div>
        <!-- end  content -->

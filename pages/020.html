@@ -1,4 +1,38 @@
-<div class="popup-bk popup" data-popup="popup-1">
+<div class="purple-bk-popup" v-show="popup1">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content white-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <h4 class="w100 black-text tcenter">Numeracy</h4>
+                            <p class="w100 ib tleft">
+                              The fashion design business is full of skills and
+                              competencies that need a really good understanding
+                              of numbers. All of the images you clicked show
+                              skills that require some knowledge of maths and
+                              some numeracy skills. We’ll explore these more
+                              as we go through the course.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flexy-image row two-line">
+                  <div class="col-xs-12">
+                    <img src="/course-files/course-15-numeracy/img/NumeracyArtboard 26.png" class="prelative">
+                  </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+        </div>
+        <a @click="popup1 = false">
+            <div class="course-button back-button"></div>
+        </a>
+    </div>
+</div>
+<div class="popupNew" v-show="pop1">
     <div class="popup-inner ">
         <div class="squiggle-container ">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
@@ -7,14 +41,8 @@
                 <div class="row">
                     <div class="col-md-12 ">
                         <div class="squiggle-container flex-center">
-                            <h4 class="w100 tcenter">Zoey's Numeracy needs.</h4>
                             <p class="w100 ib tleft">
-                              Being numerate means being able
-                              to deal with numbers and other mathematical concepts -
-                              and to be able to apply these in a range of situations
-                              to solve a variety of problems. Being numerate is as
-                              much about thinking and reasoning logically, as it is
-                              about 'doing sums'.
+                              Being able to create an idea and produce a design either by hand or using computer-aided design.
                             </p>
                         </div>
                     </div>
@@ -22,8 +50,192 @@
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
         </div>
-        <a data-popup-close="popup-1" href="#">
-            <div class="course-button back-button"></div>
+        <a class="course-button close-button popup-close-test" @click="pop1 = false">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="popupNew" v-show="pop2">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              The ability to use computer design packages and to deal with measurements and shapes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a class="course-button close-button popup-close-test" @click="pop2 = false">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="popupNew" v-show="pop3">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Having a good eye for colour, texture and shape (requires use of geometry).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a class="course-button close-button popup-close-test" @click="pop3 = false">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="popupNew" v-show="pop4">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Time Management - managing your own time and the time of others.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a class="course-button close-button popup-close-test" @click="pop4 = false">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="popupNew" v-show="pop5">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Mathematics - knowledge of arithmetic.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a class="course-button close-button popup-close-test" @click="pop5 = false">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="popupNew" v-show="pop6">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Being able to spot and develop trends. Using graphs and studies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a class="course-button close-button popup-close-test" @click="pop6 = false">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="popupNew" v-show="pop7">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Technical skills like pattern cutting and sewing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a class="course-button close-button popup-close-test" @click="pop7 = false">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="popupNew" v-show="pop8">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Managing marketing, finances and other business activities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a class="course-button close-button popup-close-test" @click="pop8 = false">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="popupNew" v-show="pop9">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <p class="w100 ib tleft">
+                              Sourcing, selecting and buying fabrics, trims, fastenings and decorative bits. Dealing with purchasing and costs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a class="course-button close-button popup-close-test" @click="pop9 = false">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
         </a>
     </div>
 </div>
@@ -31,59 +243,55 @@
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
                <div class="new-main-content">
-                   <h2>What is numeracy?</h2>
+                   <h2>Fashion Designer role – numeracy everywhere</h2>
                    <!-- Change Header -->
                </div>
            </div>
        </div>
 
        <div class="row content-row flexy-parent pop-in">
-           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12 two-column">
+           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
                <div class="squiggle-container">
                    <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
                    <div class="squiggle-content white-squiggle">
                        <div class="row">
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
-                                 <div class="row">
-                                     <div class="col-md-12">
-                                        <p>
-                                          So, you’ve seen all the competencies and skills
-                                          that Zoey needs in her career. Now can you see
-                                          how having good numeracy skills would be great
-                                          for her? Numeracy’s one of those everyday  skills
-                                          that’s hard for any of us to do without - either
-                                          at work or in our personal lives.
-                                        </p>
-                                        <p>
-                                          Remember, by numeracy we simply mean the ability
-                                          to use maths in everyday life.
-                                        </p>
-                                        <p>
-                                          By being numerate you’ll have the confidence and
-                                          skill to use numbers and mathematical approaches
-                                          in every area of your life. This can be at work,
-                                          in practical everyday activities at home, as
-                                          everyday consumers, in managing finances and as
-                                          parents helping their children.
+                                  <div class="row">
+                                    <div class="col-xs-4 cpointer" @click="pop1 = true">1</div>
+                                    <div class="col-xs-4">2</div>
+                                    <div class="col-xs-4">3</div>
+                                    <div class="col-xs-4">4</div>
+                                    <div class="col-xs-4">5</div>
+                                    <div class="col-xs-4">6</div>
+                                    <div class="col-xs-4">7</div>
+                                    <div class="col-xs-4">8</div>
+                                    <div class="col-xs-4">9</div>
+                                    <div class="col-xs-4">10</div>
+                                    <div class="col-xs-4">11</div>
+                                    <div class="col-xs-4">12</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-6">
+                                      <div class="row f-jcenter one-line">
+                                        <p class="blue-text"><img src="/images/course-assets/pointer.png" style="width:30px;"> Tap each item to reveal
+                                          the skills that Zoey needs. When you’ve gone
+                                          through all the items above, click on the
+                                          button.
                                         </p>
                                       </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                      <button class="jba-btn" @click="popup1 = true">Click</button>
+                                    </div>
                                   </div>
                                    <!-- End Content -->
                                </div>
                            </div>
                        </div>
                    </div>
-                   <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
+                   <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
                </div>
-           </div>
-           <div class="f-column flexy-image-svg">
-             <div class="flexy-image col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12 pop-in m0auto">
-               <img src="/images/course-numeracy/Numeracy-40.png" class="mw200 cpointer"  data-popup-open="popup-1">
-             </div>
-             <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12 pop-in plb pop-in f-jcenter one-line">
-               <p class="blue-text svg-tapme"><img src="/images/course-assets/pointer.png" style="width:30px;"> Tap me</p>
-             </div>
            </div>
        </div>
        <!-- end  content -->

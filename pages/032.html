@@ -2,7 +2,7 @@
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
                <div class="new-main-content">
-                   <h2>Zoey’s clothing costs</h2>
+                   <h2>Workplace numeracy</h2>
                    <!-- Change Header -->
                </div>
            </div>
@@ -17,14 +17,30 @@
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
                                  <div class="row">
-                                   <div class="col-md-12">
-                                     <p>
-                                       Time to work out the cost of producing a piece of clothing, Zoey’s top selling shirt.
-                                     </p>
-                                     <p>
-                                       Choose the items you’d like to add to the shirt and your total cost will appear in the box below.
-                                     </p>
-                                   </div>
+                                     <div class="col-md-12">
+                                       <p>
+                                         Based on everyone working full time (40 hours
+                                         each) how much will Zoey pay out in salary for
+                                         the week?
+                                       </p>
+                                       <p>Zoey – works 40 hours @ $30 hourly rate (hr)</p>
+                                       <p>Zoey’s Assistant – 40 hours  @ $24 hr</p>
+                                       <p>Both part-time students –15 hours @$15 hr</p>
+                                       <p>Do the maths and give your answer below.</p>
+                                       <div class="squiggle-container">
+                                         <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
+                                         <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                           <div class="squiggle-container">
+                                             <!-- put all of your content into here div -->
+                                             <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv large-textarea">
+                                               <textarea v-on:keyup="validateInputFields" v-on:change="$parent.saveData( 'workplace-numeracy.based', pageData.based )" v-model="pageData.based" placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black course-form-scroll-white jba-form-theme"></textarea>
+                                             </div>
+                                             <!-- End Content -->
+                                           </div>
+                                         </div>
+                                         <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
+                                       </div>
+                                     </div>
                                  </div>
                                   <!-- End Content -->
                                </div>
@@ -33,37 +49,6 @@
                    </div>
                    <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
                </div>
-               <p class="blue-text tcenter one-line">Drag the materials you want to the box below and tap NEXT when you’ve finished.</p>
-               <div class="drag-drop">
-
-                   <div class="drag row pabsolute" style="min-height:100px;">
-                     <div class="row" id="drag-num">
-                       <li class="col-xs-3 mls mrs magenta-blob tcenter cpointer" id="cotton"><input type="hidden" value="0.10" />Cotton</li>
-                       <li class="col-xs-3 mls mrs magenta-blob tcenter cpointer" id="fabric"><input type="hidden" value="4.8" />Fabric</li>
-                       <li class="col-xs-3 mls mrs magenta-blob tcenter cpointer" id="zip"><input type="hidden" value="0.50" />Zip</li>
-                       <li class="col-xs-3 mls mrs magenta-blob tcenter cpointer" id="labels"><input type="hidden" value="0.10" />Labels</li>
-                       <li class="col-xs-3 mls mrs magenta-blob tcenter cpointer" id="buttons"><input type="hidden" value="0.20" />5 Buttons</li>
-                       <li class="col-xs-3 mls mrs magenta-blob tcenter cpointer" id="embroidery"><input type="hidden" value="0.10" />Embroidery</li>
-                     </div>
-                   </div>
-
-                   <div class="row pabsolute" style="border:2px #dfcdb9 dotted;border-radius:10px;top:16px">
-                     <div class="row" id="sort-num" style="height:150px;padding:20px;">
-                     </div>
-                   </div>
-
-                   <div class="row">
-                     <div class="col-xs-4" style="top:35px;" >
-                       <p id="renew" class="orange-blob-box mb0 ptm pbm cpointer" v-on:click="clear">Renew</p>
-                     </div>
-                     <div class="col-xs-4 col-xs-offset-4" style="top:35px;">
-                       <p class="purple-blob-box mb0 ptm pbm">$ <span class="total-32" ><{ pageData.total }></span></p>
-                     </div>
-                   </div>
-
-               </div>
-
-              <!-- End Content -->
            </div>
        </div>
        <!-- end  content -->
@@ -94,7 +79,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#033" class="course-button next-button"></a>
+                              <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
+                               <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

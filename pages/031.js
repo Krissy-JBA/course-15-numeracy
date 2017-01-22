@@ -3,7 +3,7 @@ pageComponentry = {
     return {
       // Any data goes here.
       pageData: {
-        based: ''
+        describe: ''
       },
 
       disabledInput: true,
@@ -13,7 +13,7 @@ pageComponentry = {
   },
   methods: {
     validateInputFields: function(){
-      if(!this.pageData.based){
+      if(!this.pageData.describe){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -51,7 +51,7 @@ pageComponentry = {
     courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
-    this.pageData.based = this.exerciseData['workplace-numeracy.based'];
+    this.pageData.describe = this.exerciseData['workplace-numeracy.describe'];
     //populate data before calling the validate function
     this.validateInputFields();
   }

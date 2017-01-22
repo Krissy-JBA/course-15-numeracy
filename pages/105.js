@@ -1,16 +1,16 @@
 pageComponentry = {
   data: function() {
     return {
-      // Any data goes here.
-
+      // Any page specific data goes here.
     }
   },
   methods: {
-
+    // Any page specific methods go here.
   },
   ready: function() {
-    //call transition
+    // Ready will be fired when the page is loaded.
     courseFeatureJBA.transitionIn();
+    courseFeatureJBA.activateDataPopups();
     courseFeatureJBA.flexySpeckCheck();
   }
 }

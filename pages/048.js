@@ -2,8 +2,8 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        management: '',
-        interact: ''
+        inch: '',
+        writeLength: ''
       },
 
       hideLocked: false,
@@ -26,7 +26,7 @@ pageComponentry = {
     },
 
     validateInputFields: function(){
-      if(!this.pageData.management || !this.pageData.interact){
+      if(!this.pageData.inch || !this.pageData.writeLength){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -51,8 +51,8 @@ pageComponentry = {
     courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
-    this.pageData.management = this.exerciseData['activity-time.management'];
-    this.pageData.interact = this.exerciseData['activity-time.interact'];
+    this.pageData.inch = this.exerciseData['activity-time.inch'];
+    this.pageData.writeLength = this.exerciseData['activity-time.writeLength'];
 
     //populate data before calling the validate function
     this.validateInputFields();

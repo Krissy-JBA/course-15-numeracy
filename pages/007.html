@@ -37,7 +37,7 @@
                    <div class="squiggle-content white-squiggle">
                        <div class="row">
                            <div class="col-md-12">
-                               <div class="squiggle-container flex-center">
+                               <div class="squiggle-container flex-center col-pad0">
                                  <h4 class="tleft w100 pls black-text">Paint me a picture</h4>
                                   <p>
                                     Zoey loves painting. She’s got a canvas 1 metre high and 2 metres
@@ -49,20 +49,22 @@
                            </div>
                        </div>
                    </div>
-                   <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
+                   <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
                </div>
-
-               <ul class="row pl0 flexy-parent two-line">
-                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">50 cms</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">Not sure</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger wrong">1.5 meters</li>
-                 <li class="col-xs-4 ml0 jba-btn tcenter mlb mbm tlarger" v-bind:class="{'jba-visited' : pageData.visited == 1}" v-on:click="sendData" data-popup-open="popup-2">100 cms</li>
-                 <div class="w50 flexy-image flexy-image-mob-fix pop-in num-graph-wrap">
-                   <img src="/images/course-numeracy/NumeracyArtboard 8.png" class="num-graph mw150">
+               <div class="row two-line pop-in">
+                 <ul class="col-xs-6 pl0">
+                   <!-- <button v-bind:class="{'branding-03-button-hover' : pageData.logo}" v-on:click="clickBrand('logo')" type="button" class="branding-03-button"> -->
+                   <li class="col-xs-10 jba-btn tcenter mlb mbm tlarger wrong">50 cms</li>
+                   <li class="col-xs-10 jba-btn tcenter mlb mbm tlarger wrong">Not sure</li>
+                   <li class="col-xs-10 jba-btn tcenter mlb mbm tlarger wrong">1.5 meters</li>
+                   <li class="col-xs-10 jba-btn tcenter mlb mbm tlarger" v-bind:class="{'jba-visited' : pageData.visited == 1}" v-on:click="sendData" data-popup-open="popup-2">100 cms</li>
+                 </ul>
+                 <div class="col-xs-6 flexy-image f-jcenter">
+                    <img src="/course-files/course-15-numeracy/img/NumeracyArtboard 8.png" class="num-graph mw150">
                  </div>
-               </ul>
-               <div class="row plb f-jcenter one-line">
-                 <p class="blue-text svg-tapme"><img src="/images/course-assets/pointer.png" style="width:30px"> Tap the right answer..</p>
+                 <div class="row plb f-jcenter one-line">
+                   <p class="blue-text svg-tapme"><img src="/images/course-assets/pointer.png" style="width:30px"> Tap the right answer..</p>
+                 </div>
                </div>
            </div>
        </div>

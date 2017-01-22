@@ -1,18 +1,29 @@
 pageComponentry = {
   data: function() {
     return {
+      // Any data goes here.
       pageData: {
-        metric: '',
-        ratio: ''
+        fabric: ''
       },
-
-      hideLocked: false,
-      disabledInput: true
+      popup1:false,
+      popup2:false,
+      disabledInput: true,
+      hideLocked: false
 
     }
   },
   methods: {
-    callPageTransition: function(){
+    validateInputFields: function(){
+      if(!this.pageData.fabric){
+        this.hideLocked = false,
+        this.disabledInput = true
+      } else {
+        this.hideLocked = true,
+        this.disabledInput = false
+      }
+    },
+
+   callPageTransition: function(){
       var poppedElement = $(".pop-in");
         $(poppedElement).each(function() {
             var thisPop = this;
@@ -25,35 +36,23 @@ pageComponentry = {
         },1000)
     },
 
-    validateInputFields: function(){
-      if(!this.pageData.metric || !this.pageData.ratio){
-        this.hideLocked = false,
-        this.disabledInput = true
-      } else {
-        this.hideLocked = true,
-        this.disabledInput = false
-      }
-    },
-
     sendData: function(){
-      var obj = this.pageData;
       if(this.disabledInput){
         return;
       } else {
         this.callPageTransition();
       }
-    }
-
+    },
   },
   ready: function() {
+    //call transition
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateTextBoxUi();
+    courseFeatureJBA.activateDataPopups();
     courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
-    this.pageData.metric = this.exerciseData['activity-time.metric'];
-    this.pageData.ratio = this.exerciseData['activity-time.ratio'];
-
+    this.pageData.fabric = this.exerciseData['bringing-it-all-together.fabric'];
     //populate data before calling the validate function
     this.validateInputFields();
   }

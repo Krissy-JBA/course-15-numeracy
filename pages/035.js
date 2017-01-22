@@ -1,60 +1,31 @@
 pageComponentry = {
   data: function() {
     return {
-      pageData: {
-        quote: ''
-      },
-      popup1:false,
-      hideLocked: false,
-      disabledInput: true
-
+      // Any page specific data goes here.
+      pageData:{
+        total: '0.00',
+        hour: '0.00',
+        shirt: '0.00',
+      }
     }
   },
   methods: {
-    callPageTransition: function(){
-      var poppedElement = $(".pop-in");
-        $(poppedElement).each(function() {
-            var thisPop = this;
-            setInterval(function() {
-                $(thisPop).addClass("popOut");
-            }, 200);
-        });
-        setTimeout(function(){
-          window.location.href = "#035-1";
-        },1000)
-    },
-
-    validateInputFields: function(){
-      if(!this.pageData.quote ){
-        this.hideLocked = false,
-        this.disabledInput = true
-      } else {
-        this.hideLocked = true,
-        this.disabledInput = false
-      }
-    },
-
-    sendData: function(){
-      var obj = this.pageData;
-      if(this.disabledInput){
-        return;
-      } else {
-        this.callPageTransition();
-      }
-    }
-
+    // Any page specific methods go here.
   },
   ready: function() {
+    // Ready will be fired when the page is loaded.
+    var t = this;
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateDataPopups();
-    courseFeatureJBA.activateTextBoxUi();
     courseFeatureJBA.flexySpeckCheck();
 
-    //load data on page load
-    this.pageData.quote = this.exerciseData['quote-for-the-builder.quote'];
+    // funky shirt cost = material cost + assembly cost
+    this.pageData.total = this.exerciseData[ 'zoeys-clothing-cost.total' ];
+    this.pageData.hour = this.exerciseData[ 'zoeys-clothing-cost.hour' ];
+    this.pageData.shirt = this.exerciseData[ 'zoeys-clothing-cost.shirt' ];
+    // console.log(t.pageData.total , t.pageData.hour);
+    t.pageData.shirt = parseFloat(this.pageData.total) + parseFloat(this.pageData.hour);
+    t.$parent.saveData( 'zoeys-clothing-cost.shirt', t.pageData.shirt );
 
-    //populate data before calling the validate function
-    this.validateInputFields();
-    
   }
 }

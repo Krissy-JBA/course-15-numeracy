@@ -1,106 +1,89 @@
-
 <div class="container-fluid h100">
-    <div class="row header-row  ">
-        <div class="col-md-12 col-xs-8 col-xs-offset-2 col-md-offset-0">
-            <div class="new-main-content pop-in">
-                <h2>Activity time</h2>
-                <!-- Change Header -->
-            </div>
-        </div>
-    </div>
-    <div class="row content-row pop-in">
-        <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
-            <div class="squiggle-container">
-                <div class="top-squiggle"><img src="/course-files/course-22-branding/img/squiggle/white-top.svg" alt=""></div>
-                <div class="squiggle-content white-squiggle">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="squiggle-container flex-center">
-                                <!-- put all of your content into here div -->
-                                <div class="row">
-                                  <div class="col-md-12">
-                                    <p>
-                                      Imperial vs metric. Zoey’s quoted a measurement
-                                      as 94cm. But needs to convert it to inches. 1
-                                      inch = 2.54 cm. So, what’s 94cm in inches?
-                                    </p>
-                                    <div class="squiggle-container one-line-bot">
-                                      <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
-                                      <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                        <div class="squiggle-container">
-                                          <!-- put all of your content into here div -->
-                                          <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv">
-                                            <textarea v-on:keyup="validateInputFields" v-model="pageData.inch" v-on:change="$parent.saveData( 'activity-time.inch', pageData.inch )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
-                                          </div>
-                                          <!-- End Content -->
-                                        </div>
-                                      </div>
-                                      <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
-                                    </div>
-                                    <p>
-                                      Write down when you might need to use a metric
-                                      length during the day.
-                                    </p>
-                                    <div class="squiggle-container">
-                                      <div class="top-squiggle top-squiggle-change-2"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
-                                      <div class="squiggle-content textbox-colour-select-2 light-beige-textbox">
-                                        <div class="squiggle-container">
-                                          <!-- put all of your content into here div -->
-                                          <div id="courseFormWrapperDiv2" class="course-form-padding courseFormWrapDiv">
-                                            <textarea v-on:keyup="validateInputFields" v-model="pageData.writeLength" v-on:change="$parent.saveData( 'activity-time.writeLength', pageData.writeLength )" placeholder="Enter Text Here..." placeholder="E" class="form-control form-control-2 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
-                                          </div>
-                                          <!-- End Content -->
-                                        </div>
-                                      </div>
-                                      <div class="bot-squiggle bot-squiggle-change-2"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- End Content -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bot-squiggle"><img src="/course-files/course-22-branding/img/squiggle/white-bottom.svg" alt=""></div>
-            </div>
-        </div>
-    </div>
-    <!-- end  content -->
-    <!-- =========================== -->
-    <!-- footer start -->
-    <div class="row progressWrap">
-        <div class="col-xs-12 col-pad0">
-            <!-- S:Progress Bar -->
-            <div class="progress-row">
-                <div class="hand-arrow">
-                    <div class="percentageTxt hidden">
-                        <p>60%</p>
-                    </div>
-                    <img class="percentageArrow hidden" src="/images/course-assets/img/progressBar/hand_arrow.png" alt="" />
-                </div>
-                <div class="container progressContainer">
-                    <div class="row">
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#045" class="course-button prev-button"></a>
-                        </div>
-                        <!-- leftArrow -->
-                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
-                            <div class="course-progress-bar-wrap">
-                                <div class="courseProgressBar">
-                                    <p class="fixed hidden">60%</p>
-                                    <div class="percentageProgress"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                           <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
-                            <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
-                        </div>
-                        <!-- rightArrow -->
-                    </div>
-                </div>
-            </div>
-            <!-- E:Progress Bar -->
-        </div>
-    </div>
-</div>
+       <div class="row header-row">
+           <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
+               <div class="new-main-content">
+                   <h2>Intro to measurements</h2>
+                   <!-- Change Header -->
+               </div>
+           </div>
+       </div>
+
+       <div class="row content-row flexy-parent pop-in">
+           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
+               <div class="squiggle-container">
+                   <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+                   <div class="squiggle-content white-squiggle">
+                       <div class="row">
+                           <div class="col-md-12">
+                               <div class="squiggle-container flex-center">
+                                 <div class="row">
+                                   <div class="col-md-12">
+                                     <p>
+                                       Measuring isn’t just about using a ruler.
+                                       Businesses measure many different things in
+                                       different ways for many different reasons –
+                                       and they’re all important for Zoey if she’s
+                                       going to be successful.
+                                     </p>
+                                     <p>
+                                       There’s a well known business mantra that
+                                       says “if you can measure it, you can manage
+                                       it”.  A key factor for success in business
+                                       is knowing what to measure.  Many businesses
+                                       make the mistake of measuring the wrong
+                                       things, or just measuring things that are
+                                       easy to measure.
+                                     </p>
+                                   </div>
+                                 </div>
+
+                                   <!-- End Content -->
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
+               </div>
+           </div>
+           <div class="flexy-image flexy-image-mob-fix pop-in">
+             <img src="/images/course-numeracy/NumeracyArtboard 52.png">
+           </div>
+       </div>
+       <!-- end  content -->
+       <!-- =========================== -->
+       <!-- footer start -->
+       <div class="row progressWrap">
+           <div class="col-xs-12 col-pad0">
+               <!-- S:Progress Bar -->
+               <div class="progress-row">
+                   <div class="hand-arrow">
+                       <div class="percentageTxt hidden">
+                           <p>60%</p>
+                       </div>
+                       <img class="percentageArrow hidden" src="/images/course-assets/progressBar/hand_arrow.png" alt="" />
+                   </div>
+                   <div class="container progressContainer">
+                       <div class="row">
+                           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                             <a href="#045" class="course-button prev-button"></a>
+                           </div>
+                           <!-- leftArrow -->
+                           <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
+                               <div class="course-progress-bar-wrap">
+                                   <div class="courseProgressBar">
+                                       <p class="fixed hidden">60%</p>
+                                       <div class="percentageProgress"></div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                               <a href="#047" class="course-button next-button"></a>
+                           </div>
+                           <!-- rightArrow -->
+                       </div>
+                   </div>
+               </div>
+               <!-- E:Progress Bar -->
+           </div>
+       </div>
+   </div>

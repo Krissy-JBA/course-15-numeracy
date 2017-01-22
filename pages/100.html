@@ -2,7 +2,7 @@
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
                <div class="new-main-content">
-                   <h2>Lifetime value of a customer</h2>
+                   <h2>Activity time</h2>
                    <!-- Change Header -->
                </div>
            </div>
@@ -19,28 +19,27 @@
                                  <div class="row">
                                    <div class="col-md-12">
                                      <p>
-                                       Zoey’s business knows that an average customer will
-                                       contribute $3,500 in profit over the 7 years that they
-                                       stay with the business.
+                                       Explain why detailed business metrics like the ones
+                                       you’ve covered in this section, help give an overall
+                                       snapshot of the business and why getting a snapshot
+                                       is valuable.
                                      </p>
-                                     <p>
-                                       Here’s a good question to ask yourself: “How much would
-                                       I spend to make $3,500?”. That’s the sort of info used
-                                       to guide referral campaigns, as well as advertising
-                                       and marketing initiatives.
-                                     </p>
-                                     <p>
-                                       A business might have this figure for different
-                                       categories of customer, such as “occasional users”.
-                                       “regular users” and “wholesale customers”.
-                                     </p>
-                                     <p>
-                                       This measurement can also be tracked for individual
-                                       customers to ensure that the business takes active
-                                       steps to keep their high-value customers happy.
-                                     </p>
+                                     <div class="squiggle-container">
+                                       <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
+                                       <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                         <div class="squiggle-container">
+                                           <!-- put all of your content into here div -->
+                                           <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv large-textarea">
+                                             <textarea v-on:keyup="validateInputFields" v-model="pageData.snapshot" v-on:change="$parent.saveData( 'activity-time.snapshot', pageData.snapshot )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
+                                           </div>
+                                           <!-- End Content -->
+                                         </div>
+                                       </div>
+                                       <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
+                                     </div>
                                    </div>
                                  </div>
+
                                    <!-- End Content -->
                                </div>
                            </div>
@@ -48,9 +47,6 @@
                    </div>
                    <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
                </div>
-           </div>
-           <div class="flexy-image flexy-image-mob-fix pop-in one-line">
-             <img src="/images/course-numeracy/NumeracyArtboard 97.png">
            </div>
        </div>
        <!-- end  content -->
@@ -81,7 +77,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a href="#101" class="course-button next-button"></a>
+                             <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
+                              <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

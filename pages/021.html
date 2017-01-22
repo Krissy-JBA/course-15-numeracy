@@ -1,15 +1,44 @@
+<div class="popupNew" v-show="popup1">
+    <div class="popup-inner ">
+        <div class="squiggle-container ">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="squiggle-container flex-center">
+                            <h4 class="w100 tcenter">Zoey's Numeracy needs.</h4>
+                            <p class="w100 ib tleft">
+                              Being numerate means being able
+                              to deal with numbers and other mathematical concepts -
+                              and to be able to apply these in a range of situations
+                              to solve a variety of problems. Being numerate is as
+                              much about thinking and reasoning logically, as it is
+                              about 'doing sums'.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <a class="course-button close-button popup-close-test" @click="popup1 = false">
+          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
 <div class="container-fluid h100">
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
                <div class="new-main-content">
-                   <h2>That’s where we come in</h2>
+                   <h2>What is numeracy?</h2>
                    <!-- Change Header -->
                </div>
            </div>
        </div>
 
        <div class="row content-row flexy-parent pop-in">
-           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
+           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12 two-column">
                <div class="squiggle-container">
                    <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
                    <div class="squiggle-content white-squiggle">
@@ -17,34 +46,43 @@
                            <div class="col-md-12">
                                <div class="squiggle-container flex-center">
                                  <div class="row">
-                                     <div class="col-md-12">
+                                     <div class="col-md-12 col-pad0">
                                         <p>
-                                          Numeracy involves skills that are sometimes not
-                                          properly learnt at school, e.g. the ability to use
-                                          numbers and solve problems in real life. And that’s
-                                          where JBA comes in! We are not suggeting you can not
-                                          do maths, but the reality is that many of us don’t
-                                          know how to apply maths on a daily basis because we
-                                          just weren’t taught how. Being numerate means being
-                                          able to:
+                                          So, you’ve seen all the competencies and skills
+                                          that Zoey needs in her career. Now can you see
+                                          how having good numeracy skills would be great
+                                          for her? Numeracy’s one of those everyday  skills
+                                          that’s hard for any of us to do without - either
+                                          at work or in our personal lives.
                                         </p>
-                                      </div>
-                                  </div>
-                                  <ul class="row pl0 one-line">
-                                    <li class="col-xs-10 col-xs-offset-1 mbm tlarger pt0 pb0 f-center"><span class="num-list mb0 mrm"><img src="/images/course-assets/numbers/number1.png" alt=""></span>Interpret data</li>
-                                    <li class="col-xs-10 col-xs-offset-1 mbm tlarger pt0 pb0 f-center"><span class="num-list mb0 mrm"><img src="/images/course-assets/numbers/number2.png" alt=""></span>Process info</li>
-                                    <li class="col-xs-10 col-xs-offset-1 mbm tlarger pt0 pb0 f-center"><span class="num-list mb0 mrm"><img src="/images/course-assets/numbers/number3.png" alt=""></span>Solve problems</li>
-                                    <li class="col-xs-10 col-xs-offset-1 mbm tlarger pt0 pb0 f-center"><span class="num-list mb0 mrm"><img src="/images/course-assets/numbers/number4.png" alt=""></span>Check answers</li>
-                                    <li class="col-xs-10 col-xs-offset-1 mbm tlarger pt0 pb0 f-center"><span class="num-list mb0 mrm"><img src="/images/course-assets/numbers/number5.png" alt=""></span>Understand solutions</li>
-                                    <li class="col-xs-10 col-xs-offset-1 mbm tlarger pt0 pb0 f-center"><span class="num-list mb0 mrm"><img src="/images/course-assets/numbers/number6.png" alt=""></span>Make decisions</li>
-                                  </ul>
-
+                                        <p>
+                                          Remember, by numeracy we simply mean the ability
+                                          to use maths in everyday life.
+                                        </p>
+                                        <p>
+                                          By being numerate you’ll have the confidence and
+                                          skill to use numbers and mathematical approaches
+                                          in every area of your life. This can be at work,
+                                          in practical everyday activities at home, as
+                                          everyday consumers, in managing finances and as
+                                          parents helping their children.
+                                        </p>
+                                        <div class="row f-center">
+                                          <div class="col-xs-10 col-pad0">
+                                            <p class="blue-text fleft">
+                                              Click the lightbulb for more information.
+                                            </p>
+                                          </div>
+                                          <div class="col-md-2 col-xs-2 fright light-bulb cpointer" @click="popup1 = true"></div>
+                                        </div>
+                                    </div>
                                    <!-- End Content -->
                                </div>
                            </div>
+                         </div>
                        </div>
                    </div>
-                   <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
+                   <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
                </div>
            </div>
        </div>

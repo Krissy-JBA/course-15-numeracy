@@ -2,6 +2,11 @@ pageComponentry = {
   data: function() {
     return {
       // Any page specific data goes here.
+      popup1:false,
+      popup2:false,
+      popup3:false,
+      popup4:false,
+      popup5:false,
     }
   },
   methods: {

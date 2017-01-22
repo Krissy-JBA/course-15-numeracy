@@ -116,67 +116,67 @@ var courseFeatureJBA = (function() {
     ********************************************/
 
     var activateTextBoxUi = function() {
-        //focus inside textbox
-        $('#courseFormWrapperDiv1').focusin(function() {
-            $(".textbox-colour-select-1").removeClass("light-beige-textbox").addClass("dark-beige-textbox");
-            $(".form-control-1").addClass("dark-beige-textbox");
-            $(".top-squiggle-change-1 img").attr("src", "/course-files/course-22-branding/img/forms/darkTop.svg");
-            $(".bot-squiggle-change-1 img").attr("src", "/course-files/course-22-branding/img/forms/darkBott.svg");
+       //focus inside textbox
+       $('#courseFormWrapperDiv1').focusin(function() {
+           $(".textbox-colour-select-1").removeClass("light-beige-textbox").addClass("dark-beige-textbox");
+           $(".form-control-1").addClass("dark-beige-textbox");
+           $(".top-squiggle-change-1 img").attr("src", "/images/course-assets/forms/darkTop.svg");
+           $(".bot-squiggle-change-1 img").attr("src", "/images/course-assets/forms/darkBott.svg");
 
-        });
-        //focus outside textbox
-        $('#courseFormWrapperDiv1').focusout(function() {
-            $(".textbox-colour-select-1").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
-            $(".form-control-1").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
-            $(".top-squiggle-change-1 img").attr("src", "/course-files/course-22-branding/img/forms/lightTop.svg");
-            $(".bot-squiggle-change-1 img").attr("src", "/course-files/course-22-branding/img/forms/lightBott.svg");
-        });
+       });
+       //focus outside textbox
+       $('#courseFormWrapperDiv1').focusout(function() {
+           $(".textbox-colour-select-1").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
+           $(".form-control-1").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
+           $(".top-squiggle-change-1 img").attr("src", "/images/course-assets/forms/lightTop.svg");
+           $(".bot-squiggle-change-1 img").attr("src", "/images/course-assets/forms/lightBott.svg");
+       });
 
-        $('#courseFormWrapperDiv2').focusin(function() {
-            $(".textbox-colour-select-2").removeClass("light-beige-textbox").addClass("dark-beige-textbox");
-            $(".form-control-2").addClass("dark-beige-textbox");
-            $(".top-squiggle-change-2 img").attr("src", "/course-files/course-22-branding/img/forms/darkTop.svg");
-            $(".bot-squiggle-change-2 img").attr("src", "/course-files/course-22-branding/img/forms/darkBott.svg");
+       $('#courseFormWrapperDiv2').focusin(function() {
+           $(".textbox-colour-select-2").removeClass("light-beige-textbox").addClass("dark-beige-textbox");
+           $(".form-control-2").addClass("dark-beige-textbox");
+           $(".top-squiggle-change-2 img").attr("src", "/images/course-assets/forms/darkTop.svg");
+           $(".bot-squiggle-change-2 img").attr("src", "/images/course-assets/forms/darkBott.svg");
 
-        });
+       });
 
-        $('#courseFormWrapperDiv2').focusout(function() {
-            $(".textbox-colour-select-2").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
-            $(".form-control-2").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
-            $(".top-squiggle-change-2 img").attr("src", "/course-files/course-22-branding/img/forms/lightTop.svg");
-            $(".bot-squiggle-change-2 img").attr("src", "/course-files/course-22-branding/img/forms/lightBott.svg");
-        });
+       $('#courseFormWrapperDiv2').focusout(function() {
+           $(".textbox-colour-select-2").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
+           $(".form-control-2").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
+           $(".top-squiggle-change-2 img").attr("src", "/images/course-assets/forms/lightTop.svg");
+           $(".bot-squiggle-change-2 img").attr("src", "/images/course-assets/forms/lightBott.svg");
+       });
 
-        $('#courseFormWrapperDiv3').focusin(function() {
-            $(".textbox-colour-select-3").removeClass("light-beige-textbox").addClass("dark-beige-textbox");
-            $(".form-control-3").addClass("dark-beige-textbox");
-            $(".top-squiggle-change-3 img").attr("src", "/course-files/course-22-branding/img/forms/darkTop.svg");
-            $(".bot-squiggle-change-3 img").attr("src", "/course-files/course-22-branding/img/forms/darkBott.svg");
+       $('#courseFormWrapperDiv3').focusin(function() {
+           $(".textbox-colour-select-3").removeClass("light-beige-textbox").addClass("dark-beige-textbox");
+           $(".form-control-3").addClass("dark-beige-textbox");
+           $(".top-squiggle-change-3 img").attr("src", "/images/course-assets/forms/darkTop.svg");
+           $(".bot-squiggle-change-3 img").attr("src", "/images/course-assets/forms/darkBott.svg");
 
-        });
+       });
 
-        $('#courseFormWrapperDiv3').focusout(function() {
-            $(".textbox-colour-select-3").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
-            $(".form-control-3").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
-            $(".top-squiggle-change-3 img").attr("src", "/course-files/course-22-branding/img/forms/lightTop.svg");
-            $(".bot-squiggle-change-3 img").attr("src", "/course-files/course-22-branding/img/forms/lightBott.svg");
-        });
+       $('#courseFormWrapperDiv3').focusout(function() {
+           $(".textbox-colour-select-3").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
+           $(".form-control-3").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
+           $(".top-squiggle-change-3 img").attr("src", "/images/course-assets/forms/lightTop.svg");
+           $(".bot-squiggle-change-3 img").attr("src", "./images/course-assets/forms/ightBott.svg");
+       });
 
-        $('#courseFormWrapperDiv4').focusin(function() {
-            $(".textbox-colour-select-4").removeClass("light-beige-textbox").addClass("dark-beige-textbox");
-            $(".form-control-4").addClass("dark-beige-textbox");
-            $(".top-squiggle-change-4 img").attr("src", "/course-files/course-22-branding/img/forms/darkTop.svg");
-            $(".bot-squiggle-change-4 img").attr("src", "/course-files/course-22-branding/img/forms/darkBott.svg");
+       $('#courseFormWrapperDiv4').focusin(function() {
+           $(".textbox-colour-select-4").removeClass("light-beige-textbox").addClass("dark-beige-textbox");
+           $(".form-control-4").addClass("dark-beige-textbox");
+           $(".top-squiggle-change-4 img").attr("src", "/images/course-assets/forms/darkTop.svg");
+           $(".bot-squiggle-change-4 img").attr("src", "/images/course-assets/forms/darkBott.svg");
 
-        });
+       });
 
-        $('#courseFormWrapperDiv4').focusout(function() {
-            $(".textbox-colour-select-4").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
-            $(".form-control-4").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
-            $(".top-squiggle-change-4 img").attr("src", "/course-files/course-22-branding/img/forms/lightTop.svg");
-            $(".bot-squiggle-change-4 img").attr("src", "/course-files/course-22-branding/img/forms/lightBott.svg");
-        });
-    };
+       $('#courseFormWrapperDiv4').focusout(function() {
+           $(".textbox-colour-select-4").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
+           $(".form-control-4").removeClass("dark-beige-textbox").addClass("light-beige-textbox");
+           $(".top-squiggle-change-4 img").attr("src", "/images/course-assets/forms/lightTop.svg");
+           $(".bot-squiggle-change-4 img").attr("src", "/images/course-assets/forms/lightBott.svg");
+       });
+   };
 
     /*********************************************
       :: floating elements

@@ -2,8 +2,8 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        multiplication: '',
-        division: ''
+        symbol: '',
+        decimal: ''
       },
 
       hideLocked: false,
@@ -26,7 +26,7 @@ pageComponentry = {
     },
 
     validateInputFields: function(){
-      if(!this.pageData.multiplication || !this.pageData.division){
+      if(!this.pageData.symbol || !this.pageData.decimal){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -51,8 +51,8 @@ pageComponentry = {
     courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
-    this.pageData.multiplication = this.exerciseData['activity-time.multiplication'];
-    this.pageData.division = this.exerciseData['activity-time.division'];
+    this.pageData.symbol = this.exerciseData['activity-time.symbol'];
+    this.pageData.decimal = this.exerciseData['activity-time.decimal'];
 
     //populate data before calling the validate function
     this.validateInputFields();

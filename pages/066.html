@@ -2,14 +2,14 @@
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
                <div class="new-main-content">
-                   <h2>What is a metric?</h2>
+                   <h2>Activity time</h2>
                    <!-- Change Header -->
                </div>
            </div>
        </div>
 
        <div class="row content-row flexy-parent pop-in">
-           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12 one-line-bot">
+           <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
                <div class="squiggle-container">
                    <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
                    <div class="squiggle-content white-squiggle">
@@ -19,17 +19,25 @@
                                  <div class="row">
                                    <div class="col-md-12">
                                      <p>
-                                       A metric is a measurement used to compare performance
-                                       and production. A metric can be a number, a ratio,
-                                       or a percentage.
+                                       Explain briefly how data becomes wisdom at a high
+                                       level. A short paragraph will be fine!
                                      </p>
-                                     <p>
-                                       All these questions that Zoey has asked, are examples of metrics.
-                                     </p>
+                                     <div class="squiggle-container">
+                                       <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
+                                       <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                         <div class="squiggle-container">
+                                           <!-- put all of your content into here div -->
+                                           <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv large-textarea">
+                                             <textarea v-on:keyup="validateInputFields" v-on:change="$parent.saveData( 'activity-time.explain', pageData.explain )" v-model="pageData.explain" placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black course-form-scroll-white jba-form-theme"></textarea>
+                                           </div>
+                                           <!-- End Content -->
+                                         </div>
+                                       </div>
+                                       <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
+                                     </div>
                                    </div>
                                  </div>
-
-                                   <!-- End Content -->
+                                  <!-- End Content -->
                                </div>
                            </div>
                        </div>
@@ -37,15 +45,6 @@
                    <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
                </div>
            </div>
-             <!-- <ul class="pl0 row">
-               <li class="w50 magenta-blob ptm pbm plb tleft">How much red fabric is left?</li>
-               <li class="w50 magenta-blob ptm pbm plb tleft">What was the percentage increase in sale from last week?</li>
-               <li class="w50 magenta-blob ptm pbm plb tleft">What ratio of blue to yellow buttons do we have?</li>
-             </ul> -->
-             <div class="flexy-image flexy-image-mob-fix pop-in one-line-bot">
-               <img src="/images/course-numeracy/NumeracyArtboard 57.png">
-             </div>
-
        </div>
        <!-- end  content -->
        <!-- =========================== -->
@@ -75,7 +74,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a href="#067" class="course-button next-button"></a>
+                              <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
+                               <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

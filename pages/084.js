@@ -2,8 +2,8 @@ pageComponentry = {
   data: function() {
     return {
       pageData: {
-        apps: '',
-        enhance: ''
+        link: '',
+        puzzles: ''
       },
 
       hideLocked: false,
@@ -21,12 +21,12 @@ pageComponentry = {
             }, 200);
         });
         setTimeout(function(){
-          window.location.href = "#016";
+          window.location.href = "#085";
         },1000)
     },
 
     validateInputFields: function(){
-      if(!this.pageData.apps || !this.pageData.enhance){
+      if(!this.pageData.link || !this.pageData.puzzles){
         this.hideLocked = false,
         this.disabledInput = true
       } else {
@@ -51,8 +51,8 @@ pageComponentry = {
     courseFeatureJBA.flexySpeckCheck();
 
     //load data on page load
-    this.pageData.apps = this.exerciseData['activity-time.apps'];
-    this.pageData.enhance = this.exerciseData['activity-time.enhance'];
+    this.pageData.link = this.exerciseData['activity-time.link'];
+    this.pageData.puzzles = this.exerciseData['activity-time.puzzles'];
 
     //populate data before calling the validate function
     this.validateInputFields();

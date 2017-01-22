@@ -1,29 +1,8 @@
-<div class="popupNew" v-show="popup1">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content green-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <p><strong>Nice job!</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
-        </div>
-        <a class="course-button close-button popup-close-test" @click="popup1 = false">
-          <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
-        </a>
-    </div>
-</div>
 <div class="container-fluid h100">
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
                <div class="new-main-content">
-                   <h2>Types of measurements</h2>
+                   <h2>Your numeracy skills</h2>
                    <!-- Change Header -->
                </div>
            </div>
@@ -40,58 +19,30 @@
                                  <div class="row">
                                    <div class="col-md-12">
                                      <p>
-                                       Measurements are commonly made in $, in hours,
-                                       in size and in quantity.
+                                       Download a budget expense template (excel has
+                                       loads!). Pick a 7 day period and match income
+                                       for that week vs expenses for that week. Online
+                                       banking can help with this. Group your expenses
+                                       into categories. List the categories and anything
+                                       you notice about the numbers. How do you spend your
+                                       money? Describe any insights you find below.
                                      </p>
-                                     <p class="tcenter blue-text two-line-bot">
-                                       Drag the boxes to match the description.
-                                     </p>
-                                    <div class="row">
-                                      <ul class="col-xs-5 one-line" id="sortable">
-                                        <li class="squiggle-container one-line-bot" id="quantity">
-                                          <p class="db w100 tcenter magenta-blob-box" style="padding:25px 0">Quantity</p>
-                                          <i class="num"></i>
-                                        </li>
-                                        <li class="squiggle-container one-line-bot" id="sizeArea">
-                                          <p class="db w100 tcenter magenta-blob-box" style="padding:25px 0">Size/Area</p>
-                                          <i class="num"></i>
-                                        </li>
-                                        <li class="squiggle-container one-line-bot" id="dollor">
-                                          <p class="db w100 tcenter magenta-blob-box" style="padding:25px 0">$ Dollars</p>
-                                          <i class="num"></i>
-                                        </li>
-                                        <li class="squiggle-container one-line-bot" id="hour">
-                                          <p class="db w100 tcenter magenta-blob-box" style="padding:25px 0">Hours</p>
-                                          <i class="num"></i>
-                                        </li>
-                                      </ul>
-                                      <div class="col-xs-7">
-                                       <div class="row one-line one-line-bot f-center" style="height:70px;">
-                                         <div class="col-md-12">
-                                           <p>Profit is being measured</p>
+                                     <div class="squiggle-container">
+                                       <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
+                                       <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                         <div class="squiggle-container">
+                                           <!-- put all of your content into here div -->
+                                           <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv large-textarea">
+                                             <textarea v-on:keyup="validateInputFields" v-on:change="$parent.saveData( 'your-numeracy-skill.download', pageData.download )" v-model="pageData.download" placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black course-form-scroll-white jba-form-theme"></textarea>
+                                           </div>
+                                           <!-- End Content -->
                                          </div>
                                        </div>
-                                       <div class="row one-line-bot f-center" style="height:70px;">
-                                         <div class="col-md-12">
-                                           <p class="pb0">Employee workload is being measured</p>
-                                         </div>
-                                       </div>
-                                       <div class="row one-line-bot f-center" style="height:70px;">
-                                         <div class="col-md-12">
-                                           <p class="pb0">Employee workspce is being measured</p>
-                                         </div>
-                                       </div>
-                                       <div class="row one-line-bot f-center" style="height:70px;">
-                                         <div class="col-md-12">
-                                           <p class="pb0">Goods for re-sale are being measured</p>
-                                         </div>
-                                       </div>
+                                       <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
                                      </div>
-                                    </div>
-
                                    </div>
                                  </div>
-                                   <!-- End Content -->
+                                  <!-- End Content -->
                                </div>
                            </div>
                        </div>
@@ -128,7 +79,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                              <a href="#055" class="course-button jba-btn next-button" v-bind:class="{'next-button-locked disabled':locked}"></a>
+                              <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
+                               <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

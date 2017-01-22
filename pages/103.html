@@ -2,7 +2,7 @@
        <div class="row header-row">
            <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
                <div class="new-main-content">
-                   <h2>Congratulations!</h2>
+                   <h2>Activity time</h2>
                    <!-- Change Header -->
                </div>
            </div>
@@ -19,13 +19,28 @@
                                  <div class="row">
                                    <div class="col-md-12">
                                      <p>
-                                       You have done it! You’ve just completed the course
-                                       on numeracy, well done you. We’ve covered quite a
-                                       bit, but it’s all valuable stuff and it’s going to
-                                       set you right for your career. Now check out our fab
-                                       courses on Financial Literacy and Funding (if you
-                                       haven’t done them already!)
+                                       Using the calculation for lifetime value of a
+                                       customer, put yourself in the customer’s shoes.
+                                       Think of a brand you’ve been with for a while,
+                                       and try to work out your value to that business
+                                       (you’ll have to make up the cost figure, but
+                                       that’s for the purpose of this exercise). Maybe
+                                       use your mobile phone provider for this exercise,
+                                       as you’ve probably been with them for a while.
                                      </p>
+                                     <div class="squiggle-container">
+                                       <div class="top-squiggle top-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightTop.svg" alt=""></div>
+                                       <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                         <div class="squiggle-container">
+                                           <!-- put all of your content into here div -->
+                                           <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv large-textarea">
+                                             <textarea v-on:keyup="validateInputFields" v-model="pageData.lifetime" v-on:change="$parent.saveData( 'activity-time.lifetime', pageData.lifetime )" placeholder="Enter Text Here..." placeholder="Enter Text Here..." class="form-control form-control-1 course-input-field-black jba-form-theme course-form-scroll-white"></textarea>
+                                           </div>
+                                           <!-- End Content -->
+                                         </div>
+                                       </div>
+                                       <div class="bot-squiggle bot-squiggle-change-1"><img src="/course-files/course-22-branding/img/forms/lightBott.svg" alt=""></div>
+                                     </div>
                                    </div>
                                  </div>
 
@@ -36,9 +51,6 @@
                    </div>
                    <div class="bot-squiggle"><img src="/images/course-assets//squiggle/white-bottom.svg" alt=""></div>
                </div>
-           </div>
-           <div class="flexy-image flexy-image-mob-fix pop-in one-line">
-             <img src="/images/course-numeracy/NumeracyArtboard 98.png">
            </div>
        </div>
        <!-- end  content -->
@@ -69,7 +81,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a href="#104" class="course-button next-button"></a>
+                             <button v-on:click="sendData" type="button" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked': disabledInput}">Submit</button>
+                              <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': hideLocked}"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>
