@@ -2262,7 +2262,7 @@ a.disable {
 .z-index0 {
   z-index:0 !important;
 }
-.hint-container {
+.hint-container, .solution-container {
   background-repeat: no-repeat !important;
   background-size: 100% 100% !important;
 }
@@ -2597,17 +2597,43 @@ ul.rewind {
   }
 }
 .light-bulb {
-  background-image: url(/images/course-assets/buttons/lightbulb1.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width:50px;
-  height:50px;
-  transition:background .15s ease-in-out;
-  &:hover {
-    background-image: url(/images/course-assets/buttons/lightbulb2.png);
+    background-image: url(/images/course-assets/buttons/lightbulb1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width:50px;
+    height:50px;
     transition:background .15s ease-in-out;
+    &:hover {
+      background-image: url(/images/course-assets/buttons/lightbulb2.png);
+      transition:background .15s ease-in-out;
 
-  }
+    }
+}
+.solution-container {
+    height: 100px;
+    width: 100px;
+    background: url(/images/course-assets/buttons/solutionButton-2.svg);
+    background-size: contain;
+    float: right;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transform: translateY(-76px) translateX(-140px);
+    transition: .2s all;
+    position: absolute;
+    right: 0;
+    cursor:pointer;
+    &:hover {
+        transform: translateY(-70px) translateX(-140px);
+    }
+    p {
+      color:white;
+    }
 }
 /*********************************************
   :: Testing Global Changes
