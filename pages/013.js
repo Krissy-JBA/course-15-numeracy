@@ -13,6 +13,6 @@ pageComponentry = {
     // Ready will be fired when the page is loaded.
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateDataPopups();
-    courseFeatureJBA.flexySpeckCheck();
+    // courseFeatureJBA.flexySpeckCheck();
   }
 }

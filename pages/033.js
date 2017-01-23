@@ -68,7 +68,7 @@ pageComponentry = {
             total += Number($('#embroidery input').attr('value'));
             $('#drag-num #embroidery').remove;
          }
-         var sum = Math.round(total * 100) / 100;
+         var sum = parseFloat(Math.round(total * 100) / 100).toFixed(2);
 
          t.pageData.total = sum;
          t.$parent.saveData('zoeys-clothing-cost.total', t.pageData.total);

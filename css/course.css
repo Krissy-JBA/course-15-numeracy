@@ -1,3 +1,23 @@
+.purple-bk-popup {
+  display: block; }
+  .purple-bk-popup .popup-inner {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.display-n {
+  display: none; }
+
+.module-btn {
+  width: 300px;
+  white-space: normal !important; }
+
+.module-btn p,
+.module-btn2 p {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333; }
+
 /*********************************************
   :: Conor's Css
 ********************************************/
@@ -259,6 +279,11 @@ a.disable {
           width: 33%; }
 
 @media only screen and (min-device-width: 300px) and (max-device-width: 680px) and (orientation: landscape) {
+  .num-graph-wrap img {
+    display: none !important; }
+  .squiggle-content {
+    height: 200px;
+    overflow: scroll; }
   .branding-08-phone-container {
     pointer-events: none;
     position: fixed;
@@ -1659,7 +1684,7 @@ a.disable {
 
 .svg-tapme {
   animation: svgTapme 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 3;
   transform-origin: center;
   transform: scale(1);
   fill: #75cee2; }
@@ -1775,13 +1800,11 @@ a.disable {
     margin: 0 !important;
     transition: margin .35s ease-in !important; }
     #wrapper #page-content-wrapper .popup, #wrapper #page-content-wrapper .purple-bk-popup {
-      width: 100%;
       height: 100%;
       bottom: 0;
       right: 0;
       top: 0;
-      left: 0;
-      position: absolute !important; }
+      position: fixed !important; }
   #wrapper.toggled #page-content-wrapper {
     margin-left: 230px !important; }
     @media (min-width: 480px) and (max-width: 650px) {
@@ -1816,6 +1839,11 @@ a.disable {
   .progressContainer .row .jba-btn-locked {
     background: url(/images/course-assets/buttons/rectangle-button-locked.svg) no-repeat !important;
     background-size: 100% 100% !important; }
+  .progressContainer .row .jba-btn-unlocked {
+    display: none; }
+    .progressContainer .row .jba-btn-unlocked .jba-btn-locked {
+      background: url(/images/course-assets/buttons/rectangle-button-locked.svg) no-repeat !important;
+      background-size: 100% 100% !important; }
   .progressContainer .row .next-button-locked {
     margin-top: 10px; }
   .progressContainer .row .jba-course-submit {
@@ -1845,7 +1873,7 @@ a.disable {
 .z-index0 {
   z-index: 0 !important; }
 
-.hint-container {
+.hint-container, .hint-top-container, .solution-container {
   background-repeat: no-repeat !important;
   background-size: 100% 100% !important; }
 
@@ -1928,6 +1956,9 @@ button.jba-btn, button.jba-btn:hover {
 .z10 {
   z-index: 10; }
 
+.magenta-squiggle {
+  background-color: #D51A68 !important; }
+
 .green-text {
   color: #38B449 !important; }
 
@@ -1940,6 +1971,9 @@ button.jba-btn, button.jba-btn:hover {
 .blue-text {
   color: #59C7D9 !important; }
 
+.a-color a {
+  color: #59c7d9 !important; }
+
 .black-text {
   color: #000 !important; }
 
@@ -1950,16 +1984,24 @@ button.jba-btn, button.jba-btn:hover {
   position: relative !important; }
 
 .f-jcenter {
-  display: flex;
+  display: flex !important;
   justify-content: center; }
 
 .f-space {
   display: flex;
   justify-content: space-around; }
 
+.f-end {
+  display: flex;
+  justify-content: flex-end; }
+
 .f-center {
   display: flex;
   align-items: center; }
+
+.f-column {
+  display: flex;
+  flex-direction: column; }
 
 .f-direct {
   display: flex;
@@ -1971,8 +2013,19 @@ button.jba-btn, button.jba-btn:hover {
 .mw100 {
   max-width: 100px !important; }
 
+.mw150 {
+  max-width: 150px !important; }
+
 .mw200 {
   max-width: 200px !important; }
+
+@media screen and (max-width: 320px) {
+  .mwbig {
+    max-width: 145px !important; } }
+
+@media (min-width: 321px) and (max-width: 420px) {
+  .mwbig {
+    max-width: 160px !important; } }
 
 .bor-dot {
   border-top: 1px dotted #ddd; }
@@ -1999,10 +2052,6 @@ a.disabled {
 
 .wauto {
   width: auto !important; }
-
-.magenta-squiggle {
-  background-color: #D51A68 !important;
-  color: white; }
 
 .magenta-blob {
   background: url(/images/course-assets/blob-box/magenta-blob-box.svg);
@@ -2037,77 +2086,302 @@ a.hvr-url:hover {
   text-decoration: underline !important;
   color: #59C7D9 !important; }
 
-.blue-text-ul li {
-  color: #59C7D9 !important; }
-
 .num-list {
   display: inline-block;
   width: 32px; }
 
-.clearfix:after {
-  content: "";
-  visibility: hidden;
-  display: table;
-  height: 0;
-  clear: both; }
+.popupNew {
+  width: 100%;
+  height: 100%;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 99999; }
+  .popupNew .popup-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
-.circleyellow {
+ul.rewind li {
+  list-style-type: none;
+  display: flex;
+  align-items: center; }
+  ul.rewind li .imgWrap {
+    width: 15%;
+    max-width: 60px;
+    position: relative;
+    z-index: 10050; }
+    ul.rewind li .imgWrap img {
+      display: block; }
+    ul.rewind li .imgWrap .back {
+      width: 100%; }
+    ul.rewind li .imgWrap .front {
+      position: absolute;
+      z-index: 10080;
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      transform: translate(-50%, -50%); }
+  ul.rewind li p {
+    float: left;
+    width: 85%; }
+    @media (max-width: 340px) {
+      ul.rewind li p {
+        padding: 8px !important; } }
+
+.fa-check.num {
+  position: absolute;
+  font-size: 30px;
+  right: 0;
+  top: 0;
+  color: #38B449; }
+
+.arrowLock.num {
+  top: 0;
+  right: 0;
+  transform: translateX(-7px) translateY(7px) !important; }
+
+.mar-hint {
+  margin-bottom: 35px; }
+
+.mar-hint-top {
+  margin-top: 35px; }
+
+#sort-num {
+  height: 70px; }
+  #sort-num li .purple-blob-box {
+    padding: 1em !important; }
+  #sort-num .drop {
+    position: absolute;
+    width: 75px;
+    height: 70px;
+    border: 2px #dfcdb9 dotted;
+    /* top: -23px; */
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #e7daca;
+    left: 0 !important; }
+
+.light-bulb {
+  background-image: url(/images/course-assets/buttons/lightbulb1.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
   width: 50px;
   height: 50px;
-  background: #f8b500;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -webkit-transition: background 1s;
-  border-radius: 25px;
-  float: left;
-  position: relative; }
+  transition: background .15s ease-in-out; }
+  .light-bulb:hover {
+    background-image: url(/images/course-assets/buttons/lightbulb2.png);
+    transition: background .15s ease-in-out; }
 
-.circleyellow:hover {
-  background: #ffd35a;
-  -webkit-transition: background 1s; }
-
-#circle-list li:nth-child(2) {
-  margin: 0 0 10px 50px; }
-
-#circle-list li:nth-child(4) {
-  margin: 0 0 10px -50px; }
-
-#circle-list li:nth-child(5) {
+.solution-container {
+  height: 100px;
+  width: 100px;
+  background: url(/images/course-assets/buttons/solutionButton-2.svg);
+  background-size: contain;
+  float: right;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -ms-flex-pack: center;
+  justify-content: center;
+  transform: translateY(-76px) translateX(-140px);
+  transition: .2s all;
   position: absolute;
-  margin-left: 150px;
-  margin-bottom: 10px; }
+  right: 0;
+  cursor: pointer; }
+  .solution-container:hover {
+    transform: translateY(-70px) translateX(-140px); }
+  .solution-container p {
+    color: white; }
 
-#circle-list li:nth-child(7) {
-  margin: 0 0 10px -50px; }
-
-#circle-list li:nth-child(8) {
+.hint-top-container {
+  height: 100px;
+  width: 100px;
+  background: url(/images/course-assets/buttons/hintButton-2.svg);
+  background-size: contain;
+  float: right;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -ms-flex-pack: center;
+  justify-content: center;
+  transform: translateY(-30px) translateX(10px);
+  transition: .2s all;
   position: absolute;
-  margin-left: 150px;
-  margin-bottom: 10px; }
+  left: 0;
+  cursor: pointer; }
+  .hint-top-container .hint-bulb {
+    height: 20px;
+    width: 20px;
+    background: url(/images/course-assets/buttons/hintBulb.png);
+    background-size: contain;
+    margin-top: 5px; }
+  .hint-top-container:hover {
+    transform: translateY(-35px) translateX(10px); }
+  .hint-top-container p {
+    color: white; }
 
-#circle-list li:nth-child(11) {
-  margin: 0 0 0px 50px; }
+/*********************************************
+  :: Testing Global Changes
+********************************************/
+/*  Fixes the scrollbars showing up on firefox   */
+.form-control {
+  overflow-y: auto; }
 
-#finance-perf li:nth-child(1) {
-  margin: 0 0 10px -50px; }
+@media only screen and (max-device-width: 680px) and (min-device-width: 300px) and (orientation: landscape) {
+  .flexy-image {
+    width: 50%; } }
 
-#finance-perf li:nth-child(3) {
-  margin: 0 0 10px 100px; }
+.hint-container {
+  background-size: 100% 100%; }
 
-#finance-perf li:nth-child(5) {
-  margin: 0 0 10px 0; }
+.magenta-blob-box {
+  background-size: 100% 100%; }
 
-#customer-ms li:nth-child(1) {
-  margin: 0 0 10px 25px; }
+.blue-blob-box {
+  background-size: 100% 100%; }
 
-#customer-ms li:nth-child(3) {
-  margin: 0 0 10px -50px; }
+.orange-blob-box {
+  background-size: 100% 100%; }
 
-#customer-ms li:nth-child(4) {
-  margin: 0 0 10px 100px; }
+.blue-blob-box {
+  background-size: 100% 100%; }
 
-#customer-ms li:nth-child(6) {
-  margin: 0 0 10px -50px; }
+.flexy-image {
+  /*align-items: -moz- center;*/
+  /*align-items:stretch;*/
+  /*justify-content:flex-start;*/ }
 
-#customer-ms li:nth-child(7) {
-  margin: 0 0 10px 100px; }
+.flexy-image img {
+  /*position: static!important;*/
+  transform: none !important;
+  /*left: auto!important;*/
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.prev-button {
+  background-size: auto !important; }
+
+.prev-button {
+  background-size: auto !important; }
+
+.jba-btn {
+  background-size: 100% 100% !important;
+  transition: transform 0.15s !important; }
+
+.jba-btn:hover {
+  background-size: 100% 100% !important; }
+
+.courseProgressBar {
+  background-size: 100% 100%; }
+
+.course-button {
+  transition: .15s transform; }
+
+.jba-form-theme:focus {
+  outline: none !important; }
+
+/*.  Popup size fix.  */
+.toggled .popup, .toggled .popupNew {
+  width: 100vw; }
+
+.toggled .purple-bk-popup {
+  width: 100vw; }
+
+.popup, .popupNew {
+  width: calc(100vw - 230px); }
+
+.purple-bk-popup {
+  width: calc(100vw - 230px); }
+
+@media (max-width: 1024px) {
+  .toggled .popup, .popupNew {
+    width: calc(100vw - 230px); }
+  .popup, .popupNew {
+    width: 100vw; }
+  .toggled .purple-bk-popup {
+    width: calc(100vw - 230px); }
+  .purple-bk-popup, .popupNew {
+    width: 100vw; } }
+
+/*.  Popup size fix end.  */
+/*.  This part fixes the scrollbars on firefox.  */
+#courseFormWrapperDiv1 textarea, #courseFormWrapperDiv2 textarea, #courseFormWrapperDiv3 textarea, #courseFormWrapperDiv4 textarea {
+  overflow-y: auto !important; }
+
+/*   Fixes videos not appearing in firefox. Ugly though   */
+@-moz-document url-prefix() {
+  .aspect-ratio {
+    height: 180px; } }
+
+/*********************************************
+  :: animated-course-outline
+********************************************/
+.pageSixLine {
+  background-size: 100% 100%; }
+
+.pageSix {
+  display: flex;
+  align-items: center; }
+
+.pageSix .pSixBlob {
+  white-space: normal;
+  min-height: 60px;
+  padding: 1em !important; }
+
+.pageSix .pageSixLine {
+  transform: rotateZ(270deg);
+  background-image: url(/images/course-assets/progressBar/progress.svg);
+  transform-origin: bottom right;
+  width: 0px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-color: transparent !important;
+  position: absolute;
+  bottom: 20px;
+  right: 60px;
+  cursor: default; }
+
+.pageSix .pageSixLine.showing {
+  width: 45px;
+  transition: width 0.3s linear; }
+
+.transparent {
+  opacity: 0 !important; }
+
+.arrowLock {
+  right: 0 !important;
+  top: 0 !important;
+  transform: none; }
+
+.module-btn {
+  width: 300px;
+  white-space: normal !important; }
+
+.module-btn p,
+.module-btn2 p {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333; }
+
+@media screen and (max-width: 480px) {
+  .module-btn {
+    width: 230px;
+    height: 70px; } }

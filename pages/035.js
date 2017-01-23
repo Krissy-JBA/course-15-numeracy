@@ -24,7 +24,7 @@ pageComponentry = {
     this.pageData.hour = this.exerciseData[ 'zoeys-clothing-cost.hour' ];
     this.pageData.shirt = this.exerciseData[ 'zoeys-clothing-cost.shirt' ];
     // console.log(t.pageData.total , t.pageData.hour);
-    t.pageData.shirt = parseFloat(this.pageData.total) + parseFloat(this.pageData.hour);
+    t.pageData.shirt = (parseFloat(this.pageData.total) + parseFloat(this.pageData.hour)).toFixed(2);
     t.$parent.saveData( 'zoeys-clothing-cost.shirt', t.pageData.shirt );
 
   }

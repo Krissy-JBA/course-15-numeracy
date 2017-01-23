@@ -86,7 +86,7 @@ pageComponentry = {
             });
             // console.log();
             // $( '.total-33' ).text( 15*(num/60) );
-            var sum = 15*(num/60);
+            var sum = parseFloat(15*(num/60)).toFixed(2);
             t.pageData.hour = sum;
             t.$parent.saveData( 'zoeys-clothing-cost.hour', t.pageData.hour );
             var drag = document.getElementById("drag-num").innerHTML;

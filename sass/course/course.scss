@@ -2262,7 +2262,7 @@ a.disable {
 .z-index0 {
   z-index:0 !important;
 }
-.hint-container, .solution-container {
+.hint-container, .hint-top-container, .solution-container {
   background-repeat: no-repeat !important;
   background-size: 100% 100% !important;
 }
@@ -2578,6 +2578,9 @@ ul.rewind {
 .mar-hint {
   margin-bottom:35px;
 }
+.mar-hint-top {
+  margin-top: 35px;
+}
 #sort-num {
   height:70px;
   li {
@@ -2634,6 +2637,39 @@ ul.rewind {
     cursor:pointer;
     &:hover {
         transform: translateY(-70px) translateX(-140px);
+    }
+    p {
+      color:white;
+    }
+}
+.hint-top-container {
+    height: 100px;
+    width: 100px;
+    background: url(/images/course-assets/buttons/hintButton-2.svg);
+    background-size: contain;
+    float: right;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transform: translateY(-30px) translateX(10px);
+    transition: .2s all;
+    position: absolute;
+    left: 0;
+    cursor:pointer;
+    .hint-bulb {
+      height: 20px;
+      width: 20px;
+      background: url(/images/course-assets/buttons/hintBulb.png);
+      background-size: contain;
+      margin-top: 5px;
+    }
+    &:hover {
+        transform: translateY(-35px) translateX(10px);
     }
     p {
       color:white;
@@ -2822,3 +2858,26 @@ ul.rewind {
 .transparent {
   opacity:0 !important;
 }
+
+//Krissy wants add css
+
+.arrowLock {
+    right: 0 !important;
+    top: 0 !important;
+    transform: none;
+}
+.module-btn {
+    width: 300px;
+    white-space: normal !important;
+}
+.module-btn p,
+.module-btn2 p {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+}
+@media screen and (max-width: 480px) {
+  .module-btn {
+      width: 230px;
+      height: 70px;
+  }}
