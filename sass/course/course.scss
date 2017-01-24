@@ -2570,11 +2570,6 @@ ul.rewind {
   top: 0;
   color: #38B449;
 }
-.arrowLock.num {
-  top: 0;
-  right: 0;
-  transform: translateX(-7px) translateY(7px) !important;
-}
 .mar-hint {
   margin-bottom:35px;
 }
@@ -2642,7 +2637,7 @@ ul.rewind {
       color:white;
     }
 }
-.hint-top-container {
+.hint-left-container {
     height: 100px;
     width: 100px;
     background: url(/images/course-assets/buttons/hintButton-2.svg);
@@ -2652,11 +2647,11 @@ ul.rewind {
     display: flex;
     -ms-flex-direction: row;
     flex-direction: row;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
     -ms-flex-pack: center;
     justify-content: center;
-    transform: translateY(-30px) translateX(10px);
+    transform: translateY(-76px) translateX(20px);
     transition: .2s all;
     position: absolute;
     left: 0;
@@ -2666,20 +2661,20 @@ ul.rewind {
       width: 20px;
       background: url(/images/course-assets/buttons/hintBulb.png);
       background-size: contain;
-      margin-top: 5px;
+      margin-bottom: 10px;
     }
     &:hover {
-        transform: translateY(-35px) translateX(10px);
+        transform: translateY(-70px) translateX(20px);
     }
     p {
       color:white;
     }
 }
+
+
 /*********************************************
   :: Testing Global Changes
 ********************************************/
-
-
 
 /*  Fixes the scrollbars showing up on firefox   */
 .form-control{
@@ -2880,4 +2875,33 @@ ul.rewind {
   .module-btn {
       width: 230px;
       height: 70px;
-  }}
+}}
+.aspect-ratio {
+  width:90%;
+  margin:16px 0;
+}
+.popupNext {
+  margin-top:10px;
+  background: url(/images/course-assets/buttons/next-button.svg);
+  width: 400px;
+  padding: 2em;
+  color: white;
+  background-repeat: no-repeat;
+  transition: .15s all;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-size: contain;
+  cursor:pointer;
+  &:hover {
+    background: url(/images/course-assets/buttons/next-button-hover.svg);
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &:active {
+    transform: scale(0.9);
+    background-size: contain;
+  }
+}

@@ -2144,11 +2144,6 @@ ul.rewind li {
   top: 0;
   color: #38B449; }
 
-.arrowLock.num {
-  top: 0;
-  right: 0;
-  transform: translateX(-7px) translateY(7px) !important; }
-
 .mar-hint {
   margin-bottom: 35px; }
 
@@ -2205,7 +2200,7 @@ ul.rewind li {
   .solution-container p {
     color: white; }
 
-.hint-top-container {
+.hint-left-container {
   height: 100px;
   width: 100px;
   background: url(/images/course-assets/buttons/hintButton-2.svg);
@@ -2215,24 +2210,24 @@ ul.rewind li {
   display: flex;
   -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
   -ms-flex-pack: center;
   justify-content: center;
-  transform: translateY(-30px) translateX(10px);
+  transform: translateY(-76px) translateX(20px);
   transition: .2s all;
   position: absolute;
   left: 0;
   cursor: pointer; }
-  .hint-top-container .hint-bulb {
+  .hint-left-container .hint-bulb {
     height: 20px;
     width: 20px;
     background: url(/images/course-assets/buttons/hintBulb.png);
     background-size: contain;
-    margin-top: 5px; }
-  .hint-top-container:hover {
-    transform: translateY(-35px) translateX(10px); }
-  .hint-top-container p {
+    margin-bottom: 10px; }
+  .hint-left-container:hover {
+    transform: translateY(-70px) translateX(20px); }
+  .hint-left-container p {
     color: white; }
 
 /*********************************************
@@ -2385,3 +2380,30 @@ ul.rewind li {
   .module-btn {
     width: 230px;
     height: 70px; } }
+
+.aspect-ratio {
+  width: 90%;
+  margin: 16px 0; }
+
+.popupNext {
+  margin-top: 10px;
+  background: url(/images/course-assets/buttons/next-button.svg);
+  width: 400px;
+  padding: 2em;
+  color: white;
+  background-repeat: no-repeat;
+  transition: .15s all;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-size: contain;
+  cursor: pointer; }
+  .popupNext:hover {
+    background: url(/images/course-assets/buttons/next-button-hover.svg);
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .popupNext:active {
+    transform: scale(0.9);
+    background-size: contain; }
