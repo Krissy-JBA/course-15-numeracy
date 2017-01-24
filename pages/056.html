@@ -130,7 +130,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                              <a href="#057" class="course-button jba-btn next-button" v-bind:class="{'next-button-locked disabled':locked}"></a>
+                              <a href="#057" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked disabled':locked}">Submit</a>
+                              <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': locked == false}"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

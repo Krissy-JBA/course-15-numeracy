@@ -32,8 +32,9 @@ pageComponentry = {
                 snap: ".drop-zone",
                 snapMode: "inner",
                 snapTolerance: 15,
-                containment: ".row.content-row",
+                containment: ".content-row",
                 revert: "invalid",
+                stack:'.my-draggable',
                 zIndex: 999999,
                 stop: function(event, ui) {
                     /* Get the possible snap targets: */
@@ -116,7 +117,7 @@ pageComponentry = {
                 }
             }
         }
-        self.total = parseFloat(self.exerciseData[ 'cost.total' ]);
+        self.total = self.exerciseData[ 'focus.total' ];
 
         checkDropzones();
         self.toggleLocked();

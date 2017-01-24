@@ -65,7 +65,7 @@
                                       </p>
                                     </div>
                                   </div>
-                                  <form class="jba-checkbox one-line one-line-bot" action="#">
+                                  <form class="jba-checkbox w100 one-line one-line-bot" action="#">
                                     <div class="row">
                                       <div class="col-md-12 col-pad0">
                                         <p>
@@ -140,7 +140,8 @@
                                </div>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                               <a @click="submitCheck" class="course-button jba-btn jba-btn-submit2" v-bind:class="{'jba-btn-locked':locked}">Submit <i class="arrowLock-13 fa fa-lock"  v-show="locked" aria-hidden="true"></i></a>
+                               <a @click="submitCheck" class="jba-btn jba-course-submit" v-bind:class="{'jba-btn-locked':locked}">Submit</a>
+                               <i class="arrowLock fa fa-lock" aria-hidden="true" v-bind:class="{'display-n': locked == false}"></i>
                            </div>
                            <!-- rightArrow -->
                        </div>

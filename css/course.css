@@ -2190,13 +2190,18 @@ ul.rewind li {
   align-items: flex-end;
   -ms-flex-pack: center;
   justify-content: center;
-  transform: translateY(-76px) translateX(-140px);
+  transform: translateY(-79px) translateX(-140px);
   transition: .2s all;
   position: absolute;
   right: 0;
   cursor: pointer; }
   .solution-container:hover {
-    transform: translateY(-70px) translateX(-140px); }
+    transform: translateY(-73px) translateX(-140px); }
+  @media screen and (max-width: 480px) {
+    .solution-container {
+      transform: translateY(-79px) translateX(-79px); }
+      .solution-container:hover {
+        transform: translateY(-73px) translateX(-79px); } }
   .solution-container p {
     color: white; }
 
@@ -2399,6 +2404,9 @@ ul.rewind li {
   display: inline-block;
   background-size: contain;
   cursor: pointer; }
+  @media screen and (max-width: 480px) {
+    .popupNext {
+      padding: 1.5em; } }
   .popupNext:hover {
     background: url(/images/course-assets/buttons/next-button-hover.svg);
     cursor: pointer;
@@ -2407,6 +2415,10 @@ ul.rewind li {
   .popupNext:active {
     transform: scale(0.9);
     background-size: contain; }
+
+@media only screen and (max-device-width: 680px) and (min-device-width: 300px) and (orientation: landscape) {
+  .header-row {
+    height: 60px !important; } }
 
 .my-draggable {
   display: inline-block;

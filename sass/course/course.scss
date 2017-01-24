@@ -2625,13 +2625,19 @@ ul.rewind {
     align-items: flex-end;
     -ms-flex-pack: center;
     justify-content: center;
-    transform: translateY(-76px) translateX(-140px);
+    transform: translateY(-79px) translateX(-140px);
     transition: .2s all;
     position: absolute;
     right: 0;
     cursor:pointer;
     &:hover {
-        transform: translateY(-70px) translateX(-140px);
+        transform: translateY(-73px) translateX(-140px);
+    }
+    @media screen and (max-width: 480px) {
+      transform: translateY(-79px) translateX(-79px);
+      &:hover {
+        transform: translateY(-73px) translateX(-79px);
+      }
     }
     p {
       color:white;
@@ -2804,14 +2810,12 @@ ul.rewind {
     overflow-y: auto !important;
 }
 
-
 /*   Fixes videos not appearing in firefox. Ugly though   */
 @-moz-document url-prefix() {
   .aspect-ratio{
     height:180px;
   }
 }
-
 
 /*********************************************
   :: animated-course-outline
@@ -2894,6 +2898,9 @@ ul.rewind {
   display: inline-block;
   background-size: contain;
   cursor:pointer;
+  @media screen and (max-width: 480px) {
+    padding: 1.5em;
+  }
   &:hover {
     background: url(/images/course-assets/buttons/next-button-hover.svg);
     cursor: pointer;
@@ -2905,6 +2912,12 @@ ul.rewind {
     background-size: contain;
   }
 }
+@media only screen and (max-device-width: 680px) and (min-device-width: 300px) and (orientation: landscape) {
+   .header-row {
+       height: 60px !important;
+   }
+}
+
 
 ////drag-drop
 
