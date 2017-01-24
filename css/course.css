@@ -2407,3 +2407,82 @@ ul.rewind li {
   .popupNext:active {
     transform: scale(0.9);
     background-size: contain; }
+
+.my-draggable {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: url(/images/course-assets/buttons/rectangle-button.svg);
+  background-repeat: no-repeat;
+  color: white;
+  transition: none;
+  border-width: 0px;
+  padding: 10px 16px;
+  font-size: 10px;
+  line-height: 1.3333333;
+  margin: 0 !important;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.focus-dropzone-row {
+  display: flex;
+  justify-content: center; }
+
+.focus-dropzone-row .focus-dropzone-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.2em; }
+
+.focus-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em; }
+
+.focus-text p {
+  margin: auto;
+  text-align: center; }
+
+.drop-zone-parent {
+  padding: 1em .5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+
+.drop-zone {
+  width: 73px;
+  height: 33px;
+  border-radius: 10px; }
+
+#dropzone1 {
+  background: transparent; }
+
+#dropzone2 {
+  background: transparent; }
+
+.focus-orange {
+  background-color: #aaa;
+  background-size: 100% 100%; }
+
+.focus-magenta {
+  background-color: #666;
+  background-size: 100% 100%; }
+
+.focus-drag-item {
+  width: 15%; }
