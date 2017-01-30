@@ -2924,7 +2924,7 @@ ul.rewind {
 .my-draggable{
      display: inline-block;
      padding: 6px 12px;
-     width:73px;
+     width:66px;
      margin-bottom: 0;
      font-size: 14px;
      font-weight: 400;
@@ -2999,9 +2999,12 @@ ul.rewind {
 }
 
 .drop-zone{
- width:73px;
+ width:66px;
  height:33px;
  border-radius:10px;
+ @media screen and ( max-width:649px ) {
+   width:50px;
+ }
 }
 
 

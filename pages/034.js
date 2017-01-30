@@ -97,6 +97,11 @@ pageComponentry = {
                 }
                 var hour = parseFloat(15*(sum/60)).toFixed(2);
 
+                if( $( '#dropzone1 .my-draggable' ).length ) {
+                  $('.my-draggable').draggable( "disable" )
+                  $( '#dropzone1 .my-draggable' ).draggable( "enable" );
+                }
+
                 self.pageData.hour = hour;
                 self.$parent.saveData('zoeys-clothing-cost.hour', self.pageData.hour );
                 self.toggleLocked()

@@ -2423,7 +2423,7 @@ ul.rewind li {
 .my-draggable {
   display: inline-block;
   padding: 6px 12px;
-  width: 73px;
+  width: 66px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 400;
@@ -2489,9 +2489,12 @@ ul.rewind li {
   justify-content: space-around; }
 
 .drop-zone {
-  width: 73px;
+  width: 66px;
   height: 33px;
   border-radius: 10px; }
+  @media screen and (max-width: 649px) {
+    .drop-zone {
+      width: 50px; } }
 
 #dropzone1 {
   background: rgba(0, 0, 0, 0.1);
