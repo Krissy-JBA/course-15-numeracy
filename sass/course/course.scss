@@ -2953,6 +2953,9 @@ ul.rewind {
      display: flex;
      align-items: center;
      justify-content: center;
+     @media screen and ( max-width:649px ) {
+       width:50px !important;
+     }
 }
 
 .focus-dropzone-row{
@@ -2965,7 +2968,7 @@ ul.rewind {
   height: 53px !important;
   padding: 10px 0 !important;
   p {
-    margin:0 10px !important;
+    margin:0 2px !important;
   }
 }
 .focus-dropzone-row .focus-dropzone-container{
@@ -3004,6 +3007,7 @@ ul.rewind {
 
 #dropzone1 {
  background:rgba(0,0,0,.1);
+ margin: 0 2px;
 }
 .focus-orange{
  // background-color:#aaa;

@@ -2451,6 +2451,9 @@ ul.rewind li {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media screen and (max-width: 649px) {
+    .my-draggable {
+      width: 50px !important; } }
 
 .focus-dropzone-row {
   display: flex;
@@ -2462,7 +2465,7 @@ ul.rewind li {
   height: 53px !important;
   padding: 10px 0 !important; }
   .focus-drag-container p {
-    margin: 0 10px !important; }
+    margin: 0 2px !important; }
 
 .focus-dropzone-row .focus-dropzone-container {
   display: flex;
@@ -2491,7 +2494,8 @@ ul.rewind li {
   border-radius: 10px; }
 
 #dropzone1 {
-  background: rgba(0, 0, 0, 0.1); }
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 2px; }
 
 .focus-orange {
   border-radius: 10px;
