@@ -1,101 +1,127 @@
 pageComponentry = {
- data: function() {
-   return {
-     // Any page specific data goes here.
-     pageData: {
-       total: '0.00',
-       drag: '',
-       sort: '',
-     },
-   }
- },
- methods: {
-   // Any page specific methods go here.
-   clear: function(){
-     this.pageData.drag = '';
-     this.pageData.sort = '';
-     this.pageData.total = '0.00';
+    data: function() {
+        return {
+            // Any page specific data goes here.
+            total: '0.00',
+            locked: true
+        }
+    },
+    methods: {
+        // Any page specific methods go here.
+        toggleLocked: function() {
+            if (this.goal1 == '' || this.goal2 == '' || this.goal3 == '') {
+                this.locked = true;
+            } else {
+                this.locked = false;
+            }
 
-     this.$parent.saveData( 'zoeys-clothing-cost.drag', this.pageData.drag );
-     this.$parent.saveData( 'zoeys-clothing-cost.sort', this.pageData.sort );
-     this.$parent.saveData( 'zoeys-clothing-cost.total', this.pageData.total );
+        }
+    },
+    ready: function() {
+        var self = this;
 
-     location.reload();
-   },
- },
- ready: function() {
-   var t = this;
+        $.ui.draggable.prototype.destroy = function(ul, item) {};
 
-  //  console.log($('#cotton input').attr('value'));
+        courseFeatureJBA.flexySpeckCheck();
+        courseFeatureJBA.transitionIn();
 
-   // Ready will be fired when the page is loaded.
-   courseFeatureJBA.transitionIn();
-   courseFeatureJBA.activateDataPopups();
-   courseFeatureJBA.activateTextBoxUi();
-   courseFeatureJBA.flexySpeckCheck();
 
-   $( function(){
-     $("#drag-num li").draggable({
-       connectToSortable: '#sort-num',
-       revert: true
-    });
-     $( '#sort-num' ).sortable({
-       revert: true,
-       update: function() {
 
-         var total = 0;
-         if( $('#sort-num #cotton').length ) {
-           total += Number($('#cotton input').attr('value'));
-           $('#drag-num #cotton').remove;
-         }
-         if( $('#sort-num #fabric').length ) {
-            total += Number($('#fabric input').attr('value'));
-            $('#drag-num #fabric').remove;
-         }
-         if( $('#sort-num #zip').length ) {
-            total += Number($('#zip input').attr('value'));
-            $('#drag-num #zip').remove;
-         }
-         if( $('#sort-num #labels').length ) {
-            total += Number($('#labels input').attr('value'));
-            $('#drag-num #labels').remove;
-         }
-         if( $('#sort-num #buttons').length ) {
-            total += Number($('#buttons input').attr('value'));
-            $('#drag-num #buttons').remove;
-         }
-         if( $('#sort-num #embroidery').length ) {
-            total += Number($('#embroidery input').attr('value'));
-            $('#drag-num #embroidery').remove;
-         }
-         var sum = parseFloat(Math.round(total * 100) / 100).toFixed(2);
+        $(function() {
+            $(".my-draggable").draggable({
+                snap: ".drop-zone",
+                snapMode: "inner",
+                snapTolerance: 15,
+                containment: ".content-row",
+                revert: "invalid",
+                stack:'.my-draggable',
+                zIndex: 999999,
+                stop: function(event, ui) {
+                    /* Get the possible snap targets: */
+                    var currentDraggableId = $(event.target).attr("id");
+                    // console.log(testing)
+                    var snapped = $(this).data('ui-draggable').snapElements;
 
-         t.pageData.total = sum;
-         t.$parent.saveData('zoeys-clothing-cost.total', t.pageData.total);
-         if( $( '#sort-num li').length ){
-           $('#sort-num li').addClass('tsmaller').removeAttr('style');
-         }
+                    /* Pull out only the snap targets that are "snapping": */
+                    var snappedTo = $.map(snapped, function(element) {
+                        return element.snapping ? element.item : null;
+                    });
 
-         //example
-          var drag = document.getElementById("drag-num").innerHTML;
-          var sort = document.getElementById("sort-num").innerHTML;
-          t.$parent.saveData('zoeys-clothing-cost.drag', drag);
-          t.$parent.saveData('zoeys-clothing-cost.sort', sort);
-         //example
+                    /* Display the results: */
+                    var result = '';
+                    $.each(snappedTo, function(idx, item) {
+                        result += $(item).attr("id");
+                    });
+                    var trimmedResult = result.substring(0, 9);
+                    var total = 0;
+                    console.log(trimmedResult);
+                    if (currentDraggableId == "focus-draggble-1") {
+                        self.$parent.saveData('zoeys-clothing-cost.input1', trimmedResult);
+                    } else if (currentDraggableId == "focus-draggble-2") {
+                        self.$parent.saveData('zoeys-clothing-cost.input2', trimmedResult);
+                    } else if (currentDraggableId == "focus-draggble-3") {
+                        self.$parent.saveData('zoeys-clothing-cost.input3', trimmedResult)
+                    } else if (currentDraggableId == "focus-draggble-4") {
+                        self.$parent.saveData('zoeys-clothing-cost.input4', trimmedResult)
+                    } else if (currentDraggableId == "focus-draggble-5") {
+                        self.$parent.saveData('zoeys-clothing-cost.input5', trimmedResult)
+                    } else if (currentDraggableId == "focus-draggble-6") {
+                        self.$parent.saveData('zoeys-clothing-cost.input6', trimmedResult)
+                    }
+                    if( $( '#dropzone1 #focus-draggble-1' ).length ){
+                      total += Number($('#focus-draggble-1 input').attr('value'));
+                    }
+                    if( $( '#dropzone1 #focus-draggble-2' ).length ){
+                      total += Number($('#focus-draggble-2 input').attr('value'));
+                    }
+                    if( $( '#dropzone1 #focus-draggble-3' ).length ){
+                      total += Number($('#focus-draggble-3 input').attr('value'));
+                    }
+                    if( $( '#dropzone1 #focus-draggble-4' ).length ){
+                      total += Number($('#focus-draggble-4 input').attr('value'));
+                    }
+                    if( $( '#dropzone1 #focus-draggble-5' ).length ){
+                      total += Number($('#focus-draggble-5 input').attr('value'));
+                    }
+                    if( $( '#dropzone1 #focus-draggble-6' ).length ){
+                      total += Number($('#focus-draggble-6 input').attr('value'));
+                    }
+                    var sum = parseFloat(Math.round(total * 100) / 100).toFixed(2);
 
-       }
-     });
-   });//function
-   t.pageData.total = t.exerciseData[ 'zoeys-clothing-cost.total' ];
-   t.pageData.drag = t.exerciseData[ 'zoeys-clothing-cost.drag' ];
-   t.pageData.sort = t.exerciseData[ 'zoeys-clothing-cost.sort' ];
+                    self.total = sum;
+                    self.$parent.saveData('zoeys-clothing-cost.total', self.total );
+                    self.toggleLocked()
+                }
+            });
 
-  //  console.log(t.pageData.save);
-   if(t.pageData.drag){
-     document.getElementById("drag-num").innerHTML = t.pageData.drag;
-   }
-   if(t.pageData.sort){
-     document.getElementById("sort-num").innerHTML = t.pageData.sort;
-   }
- }
+            $(".drop-zone").droppable({
+                drop: function(ev, ui) {
+                    $(ui.draggable).detach().css({ top: 0, left: 0 }).appendTo(this);
+                }
+            });
+        });
+
+        var checkDropzones = function() {
+
+            for (i = 1; i<7; i++){
+                if (self.goal+i !== ''){
+                    var myCurrentZone = self.exerciseData['zoeys-clothing-cost.input'+i];
+                    $($(".drop-zone").get().reverse()).each(function(){
+                        // var currentDroppable = this;
+                        if(this.id == myCurrentZone){
+                            if (!this.firstChild) {
+                                $("#focus-draggble-"+i).detach().css({ top: 0, left: 0 }).appendTo(this);
+                            }
+                        }
+                    });
+                }
+            }
+        }
+        self.total = self.exerciseData[ 'zoeys-clothing-cost.total' ];
+
+        checkDropzones();
+        self.toggleLocked();
+    }
+
+
 }

@@ -48,28 +48,42 @@
                  <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
              </div>
 
-             <ul class="row pl0 two-line" id="drag-num">
-               <li class="col-xs-2 pl0 pr0" id="one-num"><input type="hidden" value="1" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">1</span></li>
-               <li class="col-xs-2 pl0 pr0" id="two-num"><input type="hidden" value="2" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">2</span></li>
-               <li class="col-xs-2 pl0 pr0" id="three-num"><input type="hidden" value="3" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">3</span></li>
-               <li class="col-xs-2 pl0 pr0" id="four-num"><input type="hidden" value="4" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">4</span></li>
-               <li class="col-xs-2 pl0 pr0" id="five-num"><input type="hidden" value="5" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">5</span></li>
-               <li class="col-xs-2 pl0 pr0" id="six-num"><input type="hidden" value="6" /><span class="col-xs-10 col-xs-offset-1 magenta-blob tcenter">6</span></li>
-             </ul>
 
-             <div class="row">
-               <div class="col-xs-4 two-line" >
-                 <div class="row" style="min-height:57px;"></div>
-                 <p id="renew" class="orange-blob-box mb0 ptm pbm cpointer" v-on:click="clear">Clear</p>
-               </div>
-               <div class="col-xs-8">
-                 <div class="row f-center" style="min-height:57px;"><span class="purple-text mb0 col-xs-8 tright">$ 15 per hour X </span><span class="ib mlm prelative mb0 col-xs-4" id="sort-num" style="width:100px"><span class="mb0 drop">Drop here</span></span></div>
-                 <div class="row two-line">
-                   <p class="col-xs-6 col-xs-offset-6 purple-blob-box mb0 ptm pbm pl0 pr0" style="width:50%">$ <span class="total-33"><{ pageData.hour }></span></p>
-                 </div>
+             <div class="pop-in col-xs-12 two-line" style="z-index:9999;">
+               <div class="drop-zone focus-drag-container row f-jcenter">
+                 <p id="focus-draggble-1" class="my-draggable">1<input type="hidden" value="1" /></p>
+                 <p id="focus-draggble-2" class="my-draggable">2<input type="hidden" value="2" /></p>
+                 <p id="focus-draggble-3" class="my-draggable">3<input type="hidden" value="3" /></p>
+                 <p id="focus-draggble-4" class="my-draggable">4<input type="hidden" value="4" /></p>
+                 <p id="focus-draggble-5" class="my-draggable">5<input type="hidden" value="5" /></p>
+                 <p id="focus-draggble-6" class="my-draggable">6<input type="hidden" value="6" /></p>
                </div>
              </div>
+             <div class="pop-in col-xs-12 one-line">
+                 <!-- <h2 id="drop-zone">add interactive post it notes</h2> -->
 
+                 <div class="row">
+
+                   <div class="col-xs-12">
+                     <div class="row f-center" style="min-height:57px;">
+                       <span class="purple-text mb0 col-xs-8 tright">$ 15 per hour X </span>
+                       <div class="focus-dropzone-row">
+                           <div class="focus-dropzone-container col-xs-12 focus-orange">
+                               <div class="focus-text">
+                                   <p>Drop here</p>
+                               </div>
+                               <div class="drop-zone-parent">
+                                   <div id="dropzone1" class="drop-zone"></div>
+                               </div>
+                           </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="col-xs-12 two-line">
+                     <p class="col-xs-4 col-xs-offset-8 purple-blob-box mb0 ptm pbm pl0 pr0" style="width:33.33% !important;">$ <span class="total-33"><{ pageData.hour }></span></p>
+                   </div>
+                 </div>
+             </div>
            </div>
        </div>
        <!-- end  content -->

@@ -2423,6 +2423,7 @@ ul.rewind li {
 .my-draggable {
   display: inline-block;
   padding: 6px 12px;
+  width: 73px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 400;
@@ -2455,6 +2456,14 @@ ul.rewind li {
   display: flex;
   justify-content: center; }
 
+.focus-drag-container {
+  width: 100% !important;
+  background: rgba(0, 0, 0, 0.1);
+  height: 53px !important;
+  padding: 10px 0 !important; }
+  .focus-drag-container p {
+    margin: 0 10px !important; }
+
 .focus-dropzone-row .focus-dropzone-container {
   display: flex;
   flex-direction: column;
@@ -2473,7 +2482,6 @@ ul.rewind li {
 .drop-zone-parent {
   padding: 1em .5em;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-around; }
 
@@ -2483,17 +2491,11 @@ ul.rewind li {
   border-radius: 10px; }
 
 #dropzone1 {
-  background: transparent; }
-
-#dropzone2 {
-  background: transparent; }
+  background: rgba(0, 0, 0, 0.1); }
 
 .focus-orange {
-  background-color: #aaa;
-  background-size: 100% 100%; }
-
-.focus-magenta {
-  background-color: #666;
+  border-radius: 10px;
+  border: 2px #F79131 dashed;
   background-size: 100% 100%; }
 
 .focus-drag-item {

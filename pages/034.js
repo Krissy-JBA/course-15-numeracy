@@ -13,105 +13,125 @@ pageComponentry = {
   },
   methods: {
     // Any page specific methods go here.
-    clear: function(){
-      this.pageData.drag = '';
-      this.pageData.sort = '';
-      this.pageData.hour = '0.00';
+    toggleLocked: function() {
+        if (this.goal1 == '' || this.goal2 == '' || this.goal3 == '') {
+            this.locked = true;
+        } else {
+            this.locked = false;
+        }
 
-      this.$parent.saveData( 'zoeys-clothing-cost2.drag', this.pageData.drag );
-      this.$parent.saveData( 'zoeys-clothing-cost2.sort', this.pageData.sort );
-      this.$parent.saveData( 'zoeys-clothing-cost.hour', this.pageData.hour );
-
-      location.reload();
-    },
+    }
   },
   ready: function() {
     // Ready will be fired when the page is loaded.
-    var t = this;
+    var self = this;
 
    //  console.log($('#cotton input').attr('value'));
 
     // Ready will be fired when the page is loaded.
+    $.ui.draggable.prototype.destroy = function(ul, item) {};
+
     courseFeatureJBA.transitionIn();
     courseFeatureJBA.activateDataPopups();
     courseFeatureJBA.activateTextBoxUi();
     courseFeatureJBA.flexySpeckCheck();
 
-    $( function(){
-      $("#drag-num li").draggable({
-        connectToSortable: '#sort-num',
-        revert: true
-     });
-      $( '#sort-num' ).sortable({
-        revert: true,
-        update: function() {
-         //  if( $('#sort-num #cotton').length || $('#sort-num #fabric').length || $('#sort-num #zip').length || $('#sort-num #buttons').length || $('#sort-num #labels').length || $('#sort-num #embroidery').length  ) {
-         //    this.validateInputFields();
-         //  }
-          var num = 0;
-          if( $( '#sort-num #one-num' ).length ) {
-            num = $('#one-num input').attr('value');
-            $('#drag-num #one-num').remove;
-          }
-          if( $( '#sort-num #two-num' ).length ) {
-             num = Number($('#two-num input').attr('value'));
-             $('#drag-num #two-num').remove;
-          }
-          if( $( '#sort-num #three-num' ).length ) {
-             num = Number($('#three-num input').attr('value'));
-             $('#drag-num #three-num').remove;
-          }
-          if( $( '#sort-num #four-num' ).length ) {
-             num = Number($('#four-num input').attr('value'));
-             $('#drag-num #four-num').remove;
-          }
-          if( $( '#sort-num #five-num' ).length ) {
-             num = Number($('#five-num input').attr('value'));
-             $('#drag-num #five-num').remove;
-          }
-          if( $( '#sort-num #six-num' ).length ) {
-             num = Number($('#six-num input').attr('value'));
-             $('#drag-num #six-num').remove;
-          }
-          if( $( '#sort-num li').length ){
-            $( '#sort-num' ).css( 'background-image','none' );
-            $( '#sort-num .drop').text('');
-            $( '#sort-num li span' ).removeClass('magenta-blob').addClass('purple-blob-box');
-            $( '#sort-num li' ).css({
-              'top': '50%',
-              'width': '50px',
-              'height': '57px',
-              'position': 'relative',
-              'transform': 'translateY(-50%)'
-            });
-            // console.log();
-            // $( '.total-33' ).text( 15*(num/60) );
-            var sum = parseFloat(15*(num/60)).toFixed(2);
-            t.pageData.hour = sum;
-            t.$parent.saveData( 'zoeys-clothing-cost.hour', t.pageData.hour );
-            var drag = document.getElementById("drag-num").innerHTML;
-            var sort = document.getElementById("sort-num").innerHTML;
-            t.$parent.saveData('zoeys-clothing-cost2.drag', drag);
-            t.$parent.saveData('zoeys-clothing-cost2.sort', sort);
+    $(function() {
+        $(".my-draggable").draggable({
+            snap: ".drop-zone",
+            snapMode: "inner",
+            snapTolerance: 15,
+            containment: ".content-row",
+            revert: "invalid",
+            stack:'.my-draggable',
+            zIndex: 999999,
+            stop: function(event, ui) {
+                /* Get the possible snap targets: */
+                var currentDraggableId = $(event.target).attr("id");
+                // console.log(testing)
+                var snapped = $(this).data('ui-draggable').snapElements;
 
-          }
+                /* Pull out only the snap targets that are "snapping": */
+                var snappedTo = $.map(snapped, function(element) {
+                    return element.snapping ? element.item : null;
+                });
 
+                /* Display the results: */
+                var result = '';
+                $.each(snappedTo, function(idx, item) {
+                    result += $(item).attr("id");
+                });
+                var trimmedResult = result.substring(0, 9);
+                var sum = 0;
+                console.log(trimmedResult);
+                if (currentDraggableId == "focus-draggble-1") {
+                    self.$parent.saveData('zoeys-clothing-cost2.input1', trimmedResult);
+                } else if (currentDraggableId == "focus-draggble-2") {
+                    self.$parent.saveData('zoeys-clothing-cost2.input2', trimmedResult);
+                } else if (currentDraggableId == "focus-draggble-3") {
+                    self.$parent.saveData('zoeys-clothing-cost2.input3', trimmedResult)
+                } else if (currentDraggableId == "focus-draggble-4") {
+                    self.$parent.saveData('zoeys-clothing-cost2.input4', trimmedResult)
+                } else if (currentDraggableId == "focus-draggble-5") {
+                    self.$parent.saveData('zoeys-clothing-cost2.input5', trimmedResult)
+                } else if (currentDraggableId == "focus-draggble-6") {
+                    self.$parent.saveData('zoeys-clothing-cost2.input6', trimmedResult)
+                }
+                if( $( '#dropzone1 #focus-draggble-1' ).length ){
+                  sum = Number($('#focus-draggble-1 input').attr('value'));
+                }
+                if( $( '#dropzone1 #focus-draggble-2' ).length ){
+                  sum = Number($('#focus-draggble-2 input').attr('value'));
+                }
+                if( $( '#dropzone1 #focus-draggble-3' ).length ){
+                  sum = Number($('#focus-draggble-3 input').attr('value'));
+                }
+                if( $( '#dropzone1 #focus-draggble-4' ).length ){
+                  sum = Number($('#focus-draggble-4 input').attr('value'));
+                }
+                if( $( '#dropzone1 #focus-draggble-5' ).length ){
+                  sum = Number($('#focus-draggble-5 input').attr('value'));
+                }
+                if( $( '#dropzone1 #focus-draggble-6' ).length ){
+                  sum = Number($('#focus-draggble-6 input').attr('value'));
+                }
+                var hour = parseFloat(15*(sum/60)).toFixed(2);
+
+                self.pageData.hour = hour;
+                self.$parent.saveData('zoeys-clothing-cost.hour', self.pageData.hour );
+                self.toggleLocked()
+            }
+        });
+
+        $(".drop-zone").droppable({
+            drop: function(ev, ui) {
+                $(ui.draggable).detach().css({ top: 0, left: 0 }).appendTo(this);
+            }
+        });
+    });
+
+    var checkDropzones = function() {
+
+        for (i = 1; i<7; i++){
+            if (self.goal+i !== ''){
+                var myCurrentZone = self.exerciseData['zoeys-clothing-cost.input'+i];
+                $($(".drop-zone").get().reverse()).each(function(){
+                    // var currentDroppable = this;
+                    if(this.id == myCurrentZone){
+                        if (!this.firstChild) {
+                            $("#focus-draggble-"+i).detach().css({ top: 0, left: 0 }).appendTo(this);
+                        }
+                    }
+                });
+            }
         }
-      });
-    });//function
-    courseFeatureJBA.transitionIn();
-    courseFeatureJBA.activateDataPopups();
+    }
     this.pageData.total = this.exerciseData[ 'zoeys-clothing-cost.total' ];
     this.pageData.hour = this.exerciseData[ 'zoeys-clothing-cost.hour' ];
-    t.pageData.drag = t.exerciseData[ 'zoeys-clothing-cost2.drag' ];
-    t.pageData.sort = t.exerciseData[ 'zoeys-clothing-cost2.sort' ];
 
-   //  console.log(t.pageData.save);
-    if(t.pageData.drag){
-      document.getElementById("drag-num").innerHTML = t.pageData.drag;
-    }
-    if(t.pageData.sort){
-      document.getElementById("sort-num").innerHTML = t.pageData.sort;
-    }
+    checkDropzones();
+    self.toggleLocked();
   }
-}
+
+
+  }
